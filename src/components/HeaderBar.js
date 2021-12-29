@@ -26,11 +26,11 @@ function HeaderBar(props) {
             <Toolbar
                 component="nav"
                 variant="dense"
-                sx={{ justifyContent: 'space-between' }}
+                sx={{ justifyContent: 'center' }}
             >
                 {props.sections.map((section) => (
                     <Link to={section.url}>
-                        <Button>
+                        <Button >
                             {section.title}
                         </Button>
                     </Link>

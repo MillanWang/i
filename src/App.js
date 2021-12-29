@@ -2,9 +2,14 @@ import './App.css';
 import { Route, Switch } from "react-router-dom";
 import * as React from 'react';
 import HeaderBar from './components/HeaderBar';
+import IntroPage from './components/navigationPages/IntroPage';
+import ExperiencePage from './components/navigationPages/ExperiencePage';
+import ProjectsPage from './components/navigationPages/ProjectsPage';
+import EducationPage from './components/navigationPages/EducationPage';
+import ExtracurricularsPage from './components/navigationPages/ExtracurricularsPage';
 
 const introductionNavSection = { title: "Introduction", url: "/" };
-const workExperienceNavSection = { title: "Work Experience", url: "/experience" };
+const workExperienceNavSection = { title: "Experience", url: "/experience" };
 const projectsNavSection = { title: "Projects", url: "/projects" };
 const educationNavSection = { title: "Education", url: "/education" };
 const extracurricularsNavSection = { title: "Extracurriculars", url: "/extracurriculars" };
@@ -27,19 +32,19 @@ function App() {
       <div id="PageContent">
         <Switch>
           <Route exact path={introductionNavSection.url}>
-            <p>intro</p>
+            <IntroPage />
           </Route>
           <Route path={workExperienceNavSection.url}>
-            <p>work experience</p>
+            <ExperiencePage />
           </Route>
           <Route exact path={projectsNavSection.url}>
-            <p>projects</p>
+            <ProjectsPage />
           </Route>
           <Route exact path={educationNavSection.url}>
-            <p>education</p>
+            <EducationPage />
           </Route>
           <Route exact path={extracurricularsNavSection.url}>
-            <p>extracurrics</p>
+            <ExtracurricularsPage />
           </Route>
         </Switch>
       </div>{/* End PageContent */}
