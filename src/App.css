@@ -1,10 +1,18 @@
 .App {
   text-align: center;
+  width: 90%;
+  /* opacity: 70%; */
+  background-color: azure;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Background{
+  background: aliceblue;
+  text-align: -webkit-center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
