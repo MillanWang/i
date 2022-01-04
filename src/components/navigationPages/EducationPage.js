@@ -12,6 +12,19 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import HtmlTooltip from '@mui/material/Tooltip';
+import Divider from '@mui/material/Divider';
+
+import carletonLogoImage from "../../images/CarletonLogo.jpg";
+
+const carletonInfoStrings = [
+    "Bachelor of Engineering, Software Engineering",
+    "Expected Graduation Date: April 2023",
+    "4th Year Standing, Co-Op Status",
+    "Cumulative Grade Point Average: 11.55/12.00 (A)",
+    "Number of Academic (4 Month) Terms Completed: 6",
+    "Co-op (4 Month) Work Terms Completed: 3",
+    "Courses Remaining Before Graduation: 4(In progress) + 2(Engineering Project) + 6"
+];
 
 const fall2018Courses = [
     createCourse("ECOR 1010", "Introduction to Engineering", "A ", "Technology, society and the environment. Graphical design communication: \nsketching, graphical projections, CAD. \nManaging data: statistical methods, spreadsheets. \nDesign analysis: matrix programming software, symbolic computer algebra systems. \nDesign process: proposals, reports, presentations, reporting software.", "Pretty cool course about engineering"),
@@ -100,29 +113,22 @@ function createSemester(semesterName, courses) {
 
 function EducationPage() {
     return (
-        <React.Fragment>
-            <div>
-                Carleton info here
-                -Carleton image and logo
-                -Background image of Carleton campus?
+        <div style={{ "justify-content": "center", "text-align": "-webkit-center" }}>
+            <Paper
+                sx={{ width: "70%" }}
+            >
+                <img src={carletonLogoImage} alt="Carleton University" />
 
-
-
-                From resume transcript
-                Bachelor of Engineering, Software Engineering
-                4th Year Standing, Co-Op Status
-                Cumulative Grade Point Average: 11.55/12.00 (A)
-                Number of Academic (4 Month) Terms Completed: 6
-                Co-op (4 Month) Work Terms Completed: 3
-                Expected Graduation Date: April 2023
-                Courses Remaining Before Graduation: 4(In progress) + 2(Engineering Project) + 6
-
-                Mention hover for course description (from Carleton) and personal experience with it
-            </div>
-            <div>
+                <div style={{ textAlign: "left", width: "70%" }}>
+                    {carletonInfoStrings.map((s) => (
+                        <Typography>{s}</Typography>
+                    ))}
+                </div>
+                <Divider variant="middle" big >Transcript</Divider>
                 <SemesterTabs />
-            </div>
-        </React.Fragment >
+
+            </Paper>
+        </div >
     )
 }
 
@@ -137,29 +143,31 @@ function SemesterTabs() {
         <Box
             sx={{
                 flexGrow: 1,
-                bgcolor: 'background.paper',
+                // bgcolor: 'background.paper',
                 display: 'flex',
-                width: '100%',
+                "justify-content": "center",
+                "margin-top": 21,
+
             }}
         >
+
 
             <Tabs
                 value={value}
                 onChange={handleChange}
-                // variant="scrollable"
                 orientation="vertical"
                 sx={{
                     borderRight: 1,
                     borderColor: 'divider',
-                    // maxHeight: 400
+
                 }}
             >
                 {semesters.map((semester, i) => {
-                    return <Tab label={semester.semesterName} {...a11yProps(i++)} />
+                    return <Tab sx={{ bgcolor: 'primary', }} label={semester.semesterName} {...a11yProps(i++)} />
                 })}
             </Tabs>
-            {/* Tab content */}
 
+            {/* Tab content */}
             {semesters.map((currentSemester, i) => {
                 return (
                     <TabPanel value={value} index={i++}>
@@ -203,8 +211,11 @@ function a11yProps(index) {
 function GradeTable(props) {
     const { semesterName, courses } = props.semester;
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableContainer component={Paper} >
+            <Typography variant="caption">
+                Hover course codes for course info and grades for my personal notes
+            </Typography>
+            <Table>
                 <TableHead>
                     <TableRow>
                         <TableCell width={100}>
@@ -224,24 +235,41 @@ function GradeTable(props) {
                 </TableHead>
                 <TableBody>
                     {courses.map((course) => (
-                        <HtmlTooltip
-                            // When time to style, need to set the maxwidth properly
 
-                            followCursor
-                            title={
-                                <DescriptionAndPersonalNotesTooltip description={course.description} personalNotes={course.personalNotes} />
-                            }
+                        <TableRow
+                            key={semesterName}
+                            hover
                         >
-                            <TableRow
-                                key={semesterName}
-                                hover
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                            <HtmlTooltip
+                                followCursor
+                                title={
+                                    <DescriptionTooltip description={course.description} />
+                                }
                             >
-                                <TableCell >{course.courseCode}</TableCell>
-                                <TableCell >{course.courseName}</TableCell>
-                                <TableCell align="right">{course.grade}</TableCell>
-                            </TableRow>
-                        </HtmlTooltip>
+                                <TableCell >
+                                    {course.courseCode}
+                                </TableCell>
+                            </HtmlTooltip>
+
+                            <TableCell>
+                                {course.courseName}
+                            </TableCell>
+
+                            <HtmlTooltip
+                                followCursor
+                                title={
+                                    <PersonalNotesTooltip personalNotes={course.personalNotes} />
+                                }
+                            >
+                                <TableCell
+                                    sx={{ maxWidth: 90 }}
+                                    align="right"
+                                >
+                                    {course.grade}
+                                </TableCell>
+                            </HtmlTooltip>
+                        </TableRow>
+
                     ))}
                 </TableBody>
             </Table>
@@ -249,18 +277,24 @@ function GradeTable(props) {
     )
 }
 
-function DescriptionAndPersonalNotesTooltip(props) {
-
+function DescriptionTooltip(props) {
     return (
         <Box >
             <Typography align="center" variant="h6"> Course Description</Typography>
             <Typography>
-                {/* <pre style={{ fontFamily: 'inherit' }}> */}
                 {props.description}
-                {/* </pre> */}
             </Typography>
+        </Box>
+    )
+}
+
+function PersonalNotesTooltip(props) {
+    return (
+        <Box >
             <Typography align="center" variant="h6"> Personal Course Experience</Typography>
-            <Typography> {props.personalNotes}</Typography>
+            <Typography>
+                {props.personalNotes}
+            </Typography>
         </Box>
     )
 }

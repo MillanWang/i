@@ -5,10 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 
+import img from "../../logo.svg";
 
 const testproj1 = {
     title: "Project name",
@@ -19,61 +17,50 @@ const testproj1 = {
     link: "https://www.google.ca"
 }
 
-const projects = [testproj1]
+const projects = [testproj1, testproj1, testproj1, testproj1]
 
 function ProjectsPage() {
     return (
-        <React.Fragment>
-            {projects.map((project) => (
-                projectCard(project)
+        <div style={{
+            display: "flex",
+            "justify-content": "center"
+        }}>
+            {projects.map((currProject) => (
+                <ProjectCard project={currProject} />
             ))}
-        </React.Fragment>
+        </div>
     )
 }
 
-function projectCard(project) {
+function ProjectCard(props) {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, margin: 1 }} raised>
             <CardMedia
                 component="img"
                 alt="green iguana"
                 height="140"
-                image="/logo192.png"
+                image={img}
             />
-            {/* HOW TO IMAGES WORK MY DUDE!? */}
 
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    {project.title}
+                    {props.project.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {project.timeframe}
+                    {props.project.timeframe}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {project.description}
+                    {props.project.description}
                 </Typography>
 
                 <Typography variant="body2" color="text.secondary">
-                    {"Technologies: " + project.technologies}
+                    {"Technologies: " + props.project.technologies}
                 </Typography>
-                {/* 
-Does a list even make sense here???
-                <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                    <ListItem>
-                        <ListItemText primary="Photos" />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="Work" />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="Vacation" />
-                    </ListItem>
-                </List> */}
             </CardContent>
 
             <CardActions style={{ justifyContent: 'center' }}>
                 {/* Link opens in new tab */}
-                <a href={project.link} target="_blank" rel="noreferrer noopener">
+                <a href={props.project.link} target="_blank" rel="noreferrer noopener">
                     <Button size="small">View in new tab</Button>
                 </a>
             </CardActions>

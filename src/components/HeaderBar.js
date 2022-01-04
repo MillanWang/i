@@ -10,7 +10,7 @@ function HeaderBar(props) {
     return (
         <React.Fragment>
             {/* Top title toolbar */}
-            <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Toolbar sx={{ borderBottom: 2, borderColor: 'divider' }}>
                 <Typography
                     component="h2"
                     variant="h5"
@@ -26,7 +26,7 @@ function HeaderBar(props) {
             <Toolbar
                 component="nav"
                 variant="dense"
-                sx={{ justifyContent: 'center' }}
+                sx={{ justifyContent: 'center', borderBottom: 2, borderColor: 'divider', marginBottom: "2%" }}
             >
                 {props.sections.map((section) => (
                     <Link to={section.url}>

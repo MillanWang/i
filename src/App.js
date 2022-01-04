@@ -7,7 +7,6 @@ import ExperiencePage from './components/navigationPages/ExperiencePage';
 import ProjectsPage from './components/navigationPages/ProjectsPage';
 import EducationPage from './components/navigationPages/EducationPage';
 import ExtracurricularsPage from './components/navigationPages/ExtracurricularsPage';
-
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const mainAppTheme = createTheme({
@@ -41,7 +40,6 @@ const navigationSections =
 function App() {
   return (
     <div className="Background">
-
       <div className="App">
         <ThemeProvider theme={mainAppTheme}>
           <div id="Header">
