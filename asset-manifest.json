@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/i/static/css/main.dc8826fd.css",
-    "main.js": "/i/static/js/main.1788908e.js",
+    "main.css": "/i/static/css/main.d088f904.css",
+    "main.js": "/i/static/js/main.1e6baf29.js",
     "static/js/787.e8a613bc.chunk.js": "/i/static/js/787.e8a613bc.chunk.js",
+    "static/media/penguin.jpg": "/i/static/media/penguin.41ed18b15c12a3a1f18a.jpg",
+    "static/media/CarletonLogo.jpg": "/i/static/media/CarletonLogo.47e2b48106516d21d156.jpg",
+    "static/media/logo.svg": "/i/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/i/index.html",
-    "main.dc8826fd.css.map": "/i/static/css/main.dc8826fd.css.map",
-    "main.1788908e.js.map": "/i/static/js/main.1788908e.js.map",
+    "main.d088f904.css.map": "/i/static/css/main.d088f904.css.map",
+    "main.1e6baf29.js.map": "/i/static/js/main.1e6baf29.js.map",
     "787.e8a613bc.chunk.js.map": "/i/static/js/787.e8a613bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc8826fd.css",
-    "static/js/main.1788908e.js"
+    "static/css/main.d088f904.css",
+    "static/js/main.1e6baf29.js"
   ]
 }
