@@ -1,29 +1,65 @@
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
-import { Typography } from '@mui/material';
+import ImageLinkCard, { createImageLinkCardProps, createLink } from './cards/ImageLinkCard';
+import PureTextCard, { createPureTextCard } from './cards/PureTextCard';
+
 import portraitImage from "../../penguin.jpg"; //UPDATE WITH PORTRAIT
+
+
+
+const introCard = createPureTextCard(
+    "Hello!!!",
+    ["Welcome to my personal website!",],
+    [
+        "This site was developed using React, Material UI, and Github pages",
+    ],
+)
+
+const aboutMeCard = createPureTextCard(
+    "About Me",
+    [],
+    [
+        "What am I? Describe meself bro",
+    ],
+)
+
+const githubProfile = createImageLinkCardProps(
+    "Github Profile",
+    "",
+    [
+        "Check out my Github profile and repositories!"
+    ],
+    [
+        createLink("Link", "https://github.com/MillanWang")
+    ],
+    null //No image for this particular ImageLinkCard
+)
 
 const images = [portraitImage];
 
-const textBlocks = [
-    textBlock("I am a title", "I am the text body, much longer with lots to say about words"),
-    textBlock("I am another title", "Penguin buddy is a placeholder for a recent portrait. Penguins are very professional. I would trust them with my business"),
+const pureTextCards = [
+    introCard,
+    aboutMeCard
+]
+
+const imageLinkCards = [
+    // introCard,
+    githubProfile
 ];
 
-function textBlock(localTitle, textBody) {
-    return { localTitle, textBody }
-}
+
 
 function IntroPage() {
     return (
 
         <div style={{
             display: "flex",
-            "justify-content": "center"
+            "justify-content": "center",
+            paddingBottom: 34
         }}>
-            {/* Images Stack Column */}
-            < Stack spacing={1} width={"40%"} >
+            {/* Left Column Stack */}
+            < Stack spacing={2} width={"40%"} >
                 {
                     images.map((currentImage) => (
                         <Paper width={"100%"} maxHeight={"20%"}>
@@ -38,19 +74,26 @@ function IntroPage() {
                 }
             </Stack >
 
+
             {/* Middle column spacer */}
             <div style={{ width: "1%" }} />
 
-            {/* TextBlocks Stack Column */}
-            < Stack spacing={1} width={"40%"} >
+
+            {/* Right Column Stack */}
+            < Stack spacing={2} width={"40%"} >
                 {
-                    textBlocks.map((textBlock) => (
-                        <Paper>
-                            <Typography variant="h4">{textBlock.localTitle}</Typography>
-                            <Typography>{textBlock.textBody}</Typography>
-                        </Paper>
+                    pureTextCards.map((card) => (
+                        <PureTextCard pureTextCardProps={card} />
                     ))
                 }
+                {
+                    imageLinkCards.map((card) => (
+                        <ImageLinkCard imageLinkCardProps={card} />
+                    ))
+                }
+
+
+
             </Stack >
         </div >
 

@@ -1,23 +1,60 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import ImageLinkCard from './cards/ImageLinkCard';
+import { createImageLinkCardProps, createLink } from './cards/ImageLinkCard';
 
-import img from "../../logo.svg";
+import img from "../../images/CarletonLogo.jpg";
 
-const testproj1 = {
-    title: "Project name",
-    timeframe: "2021",
-    media: "images or links",
-    description: "what is this project, what it does, why is it cool",
-    technologies: "computers, brains, thinkings",
-    link: "https://www.google.ca"
-}
+/*
+Lettered Tabs
+MSP Circboard
+3110 Risk Game
 
-const projects = [testproj1, testproj1, testproj1, testproj1]
+*/
+const letteredTabs = createImageLinkCardProps(
+    "Lettered Tabs Web App",
+    "2019 Personal Project",
+    [
+        "Designed & developed a web application that converts fret numbers in guitar tabs into their corresponding notes in any tuning to help musicians enhance their music theory knowledge through learning songs",
+        "Developed the conversion algorithms using Python, and the webapp using HTML, CSS, & JavaScript to create an simple user experience"
+    ],
+    [
+        createLink("Video Demo", "https://youtu.be/hG0Y2D5sdWU"),
+        createLink("Tool", "https://lettered-tabs.herokuapp.com/"),
+        createLink("Source Code", "https://gitlab.com/MillanWang/lettered-tabs"),
+    ],
+    img//NEED UPDATE
+);
+
+const mspPerformance = createImageLinkCardProps(
+    "Circuitboard Buzzer Instrument",
+    "2020 Personal Project",
+    [
+        "Developed & deployed embedded code to circuitboard to map musical notes to joystick positions to create an instrument for performances",
+        "This performance was then used as an example to demonstrate the hardware's capabilities to future classes "
+    ],
+    [
+        createLink("Video Demo", "https://youtu.be/FasY_z7dEuU"),
+    ],
+    img//NEED UPDATE
+);
+
+const riskGame = createImageLinkCardProps(
+    "RISK GUI Board Game",
+    "2020 Academic Group Project",
+    [
+        "Designed and implemented MVC design pattern to build a GUI, ensuring code maintainability for the continuous integration of new features",
+        "Developed and tested behavior for AI players to provide users with automated opponents",
+        "Developed processes for saving/loading using Java de/serialization libraries",
+        "Led and organized team meetings to assign tasks and to parallelize workflow resulting in an A+ on the project"
+    ],
+    [
+        createLink("Source Code", "https://github.com/MillanWang/3110Project"),
+    ],
+    img//NEED UPDATE
+);
+
+
+const projects = [letteredTabs, mspPerformance, riskGame]
 
 function ProjectsPage() {
     return (
@@ -26,47 +63,13 @@ function ProjectsPage() {
             "justify-content": "center"
         }}>
             {projects.map((currProject) => (
-                <ProjectCard project={currProject} />
+                <ImageLinkCard imageLinkCardProps={currProject} maxWidth={400} />
+
             ))}
         </div>
     )
 }
 
-function ProjectCard(props) {
-    return (
-        <Card sx={{ maxWidth: 345, margin: 1 }} raised>
-            <CardMedia
-                component="img"
-                alt="green iguana"
-                height="140"
-                image={img}
-            />
-
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    {props.project.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {props.project.timeframe}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {props.project.description}
-                </Typography>
-
-                <Typography variant="body2" color="text.secondary">
-                    {"Technologies: " + props.project.technologies}
-                </Typography>
-            </CardContent>
-
-            <CardActions style={{ justifyContent: 'center' }}>
-                {/* Link opens in new tab */}
-                <a href={props.project.link} target="_blank" rel="noreferrer noopener">
-                    <Button size="small">View in new tab</Button>
-                </a>
-            </CardActions>
-        </Card>
-    )
-}
 
 // 2.4 - Setup projects page
 // 2.4.1 - Create project components 
