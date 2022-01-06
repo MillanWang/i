@@ -10,11 +10,13 @@ export function createPureTextCard(title, subtitles, descriptions) {
 
 export default function PureTextCard(props) {
     return (
-        <Card raised
+        <Card
+            raised
             sx={{
                 maxWidth: props.maxWidth,
                 margin: 1,
-                height: "fit-content"
+                height: "fit-content",
+                bgcolor: "primary.main"
             }}
         >
             <CardContent>
@@ -28,13 +30,18 @@ export default function PureTextCard(props) {
                     </Typography>
                 ))}
 
-                <Divider sx={{ marginBottom: 2, borderBottomWidth: 3 }} ></Divider>
-
-                {props.pureTextCardProps.descriptions.map((description) => (
-                    <Typography variant="body2" color="text.secondary" gutterBottom>
-                        {description}
-                    </Typography>
-                ))}
+                <Divider sx={{ marginBottom: 1, borderBottomWidth: 3, borderColor: "text.disabled" }} />
+                <div style={{ textAlign: props.bodyTextAlignment }}>
+                    {props.pureTextCardProps.descriptions.map((description) => (
+                        <Typography
+                            variant="body2"
+                            color="text.secondary"
+                            sx={{ marginBottom: 1.5 }}
+                        >
+                            {description}
+                        </Typography>
+                    ))}
+                </div>
             </CardContent>
         </Card>
     )

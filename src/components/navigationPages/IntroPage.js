@@ -20,18 +20,19 @@ const aboutMeCard = createPureTextCard(
     "About Me",
     [],
     [
-        "What am I? Describe meself bro",
+        "My name is Millan Wang and I am a fourth year software engineering student at Carleton University, expecting to graduate April 2023.",
+        "I am very passionate about software development, with a special interest in full-stack application design, and working with multimedia technologies",
     ],
 )
 
 const githubProfile = createImageLinkCardProps(
-    "Github Profile",
+    "Links",
     "",
+    [],
     [
-        "Check out my Github profile and repositories!"
-    ],
-    [
-        createLink("Link", "https://github.com/MillanWang")
+        createLink("Resume", "https://docs.google.com/document/d/1fJpibJ1Cb_HbVXiF-PU8EkPah9ylEPLp_XWIe8xxkPY/edit?usp=sharing"),
+        createLink("Github", "https://github.com/MillanWang"),
+        createLink("LinkedIn", "https://www.linkedin.com/in/real-millan-wang/"),
     ],
     null //No image for this particular ImageLinkCard
 )
@@ -44,7 +45,6 @@ const pureTextCards = [
 ]
 
 const imageLinkCards = [
-    // introCard,
     githubProfile
 ];
 

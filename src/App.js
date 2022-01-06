@@ -7,19 +7,25 @@ import ExperiencePage from './components/navigationPages/ExperiencePage';
 import ProjectsPage from './components/navigationPages/ProjectsPage';
 import EducationPage from './components/navigationPages/EducationPage';
 import ExtracurricularsPage from './components/navigationPages/ExtracurricularsPage';
-import { createTheme, ThemeProvider } from '@mui/material';
+import { Container, createTheme, ThemeProvider } from '@mui/material';
+
+import { blueGrey } from '@mui/material/colors';
 
 const mainAppTheme = createTheme({
   palette: {
     primary: {
-      main: '#111111',
+      main: blueGrey[700],
+      light: blueGrey[600],
+      dark: blueGrey[800],
+      constrastText: '#ffffff',
     },
-    secondary: {
-      main: '#111111',
-    },
+    text: {
+      primary: '#ffffff',
+      secondary: blueGrey[100],
+      disabled: blueGrey[300]
+    }
   },
   typography: {
-    // fontFamily: ["math"]
   }
 });
 
@@ -42,11 +48,14 @@ function App() {
     <div className="Background">
       <div className="App">
         <ThemeProvider theme={mainAppTheme}>
-          <div id="Header">
-            <HeaderBar sections={navigationSections} />
-          </div>
 
-          <div id="PageContent">
+          <HeaderBar sections={navigationSections} />
+
+          <Container
+            id="PageContent"
+            maxWidth="false"
+            sx={{ backgroundColor: "primary.dark", margin: 0, paddingTop: 3, justifyContent: "center", minHeight: "100%" }}
+          >
             <Switch>
               <Route exact path={introductionNavSection.url}>
                 <IntroPage />
@@ -64,9 +73,9 @@ function App() {
                 <ExtracurricularsPage />
               </Route>
             </Switch>
-          </div>{/* End PageContent */}
+          </Container>{/* End PageContent */}
         </ThemeProvider>
-      </div>
+      </div>{/* End App */}
     </div>
   );
 }

@@ -63,17 +63,11 @@ function ProjectsPage() {
             "justify-content": "center"
         }}>
             {projects.map((currProject) => (
-                <ImageLinkCard imageLinkCardProps={currProject} maxWidth={400} />
+                <ImageLinkCard imageLinkCardProps={currProject} maxWidth={400} bodyTextAlignment="left" />
 
             ))}
         </div>
     )
 }
-
-
-// 2.4 - Setup projects page
-// 2.4.1 - Create project components 
-//     -Title, Timeframe, Media, Explanation, Technologies, Link
-// 2.4.2 - Populate project components with project info
 
 export default ProjectsPage;

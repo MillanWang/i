@@ -131,10 +131,10 @@ function ExperiencePage() {
         }}>
             <Stack spacing={2}>
                 {/* Move this title out to a higher level */}
-                <Typography variant="h6">Software Engineering Experience</Typography>
+                <Typography variant="h6" sx={{ color: "text.primary", "text-decoration": "underline" }}>Software Engineering Experience</Typography>
 
                 {softwareExperiences.map((ex) => (
-                    <PureTextCard pureTextCardProps={ex} maxWidth={500} />
+                    <PureTextCard pureTextCardProps={ex} maxWidth={500} bodyTextAlignment="left" />
                 ))}
             </Stack>
 
@@ -143,44 +143,14 @@ function ExperiencePage() {
 
             <Stack spacing={2}>
                 {/* Move this title out to a higher level */}
-                <Typography variant="h6">Education Experience</Typography>
+                <Typography variant="h6" sx={{ color: "text.primary", "text-decoration": "underline" }}>Education Experience</Typography>
 
                 {communicationsExperiences.map((ex) => (
-                    <PureTextCard pureTextCardProps={ex} maxWidth={500} />
+                    <PureTextCard pureTextCardProps={ex} maxWidth={500} bodyTextAlignment="left" />
                 ))}
             </Stack>
         </div>
     )
 }
-
-// function PureTextCard(props) {
-//     return (
-//         <Card sx={{ width: 500 }} raised >
-//             <CardContent>
-//                 <Typography variant="h5">
-//                     {props.pureTextCardProps.title}
-//                 </Typography>
-//                 {/* <Typography variant="body2" color="text.secondary">
-//                     {props.pureTextCardProps.timeframe}
-//                 </Typography>
-//                 <Typography variant="body2" color="text.secondary" gutterBottom sx={{ borderBottom: 1 }}>
-//                     {props.pureTextCardProps.position}
-//                 </Typography> */}
-//                 {props.pureTextCardProps.subtitles.map((subtitle) => (
-//                     <Typography variant="body2" color="text.secondary" >
-//                         {subtitle}
-//                     </Typography>
-//                 ))}
-//                 <Divider sx={{ marginBottom: 2, borderBottomWidth: 3 }} ></Divider>
-
-//                 {props.pureTextCardProps.descriptions.map((description) => (
-//                     <Typography variant="body2" color="text.secondary" gutterBottom>
-//                         {description}
-//                     </Typography>
-//                 ))}
-//             </CardContent>
-//         </Card>
-//     )
-// }
 
 export default ExperiencePage;

@@ -267,27 +267,32 @@ function createSemester(semesterName, courses) {
 
 function EducationPage() {
     return (
-        <div style={{ "justify-content": "center", "text-align": "-webkit-center" }}>
-            <Paper
-                sx={{ width: "70%" }}
-            >
-                <img src={carletonLogoImage} alt="Carleton University" style={{
-                    flex: 1,
-                    width: "80%",
-                    resizeMode: 'contain'
-                }} />
+        // <div style={{ "justify-content": "center", "text-align": "-webkit-center", "background-color": "primary.main" }}>
+        <Paper
+            sx={{
+                width: "70%", paddingTop: 2,
+                // "background-color": "#607d8b"
+            }}
+        >
+            <img src={carletonLogoImage} alt="Carleton University" style={{
+                flex: 1,
+                width: "70%",
+                resizeMode: 'contain'
+            }} />
 
 
-                <div style={{ textAlign: "left", width: "70%" }}>
-                    {carletonInfoStrings.map((s) => (
-                        <Typography>{s}</Typography>
-                    ))}
-                </div>
-                <Divider variant="middle" sx={{ marginTop: 3, }} >Transcript</Divider>
-                <SemesterTabs />
+            <div style={{ textAlign: "left", width: "70%" }}>
+                {carletonInfoStrings.map((s) => (
+                    <Typography sx={{ color: "primary.dark" }}>{s}</Typography>
+                ))}
+            </div>
 
-            </Paper>
-        </div >
+            <Divider variant="middle" sx={{ marginTop: 3, color: "primary.dark" }} >Transcript</Divider>
+            <Divider variant="middle" sx={{ marginTop: 0, fontSize: 10, color: "primary.dark" }} >(Hover course codes and grades for course info and personal notes )</Divider>
+            <SemesterTabs />
+
+        </Paper>
+        // </div >
     )
 }
 
@@ -302,11 +307,11 @@ function SemesterTabs() {
         <Box
             sx={{
                 flexGrow: 1,
-                // bgcolor: 'background.paper',
                 display: 'flex',
-                "justify-content": "center",
                 "margin-top": 21,
-                paddingBottom: 5
+                paddingBottom: 5,
+                justifyContent: "left",
+                width: "90%"
 
             }}
         >
@@ -319,20 +324,25 @@ function SemesterTabs() {
                 sx={{
                     borderRight: 1,
                     borderColor: 'divider',
-
+                    width: 100
                 }}
             >
                 {semesters.map((semester, i) => {
-                    return <Tab sx={{ bgcolor: 'primary', }} label={semester.semesterName} {...a11yProps(i++)} />
+                    return <Tab sx={{ bgcolor: 'primary', color: "primary.dark" }} label={semester.semesterName} {...a11yProps(i++)} />
                 })}
             </Tabs>
 
             {/* Tab content */}
             {semesters.map((currentSemester, i) => {
                 return (
-                    <TabPanel value={value} index={i++}>
+                    <TabPanel
+                        value={value}
+                        index={i++}
+
+                    >
                         <GradeTable semester={currentSemester} />
-                    </TabPanel>)
+                    </TabPanel>
+                )
             })}
         </Box>
     );
@@ -346,12 +356,12 @@ function TabPanel(props) {
             role="tabpanel"
             hidden={value !== index}
             id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
+            style={{ width: "100%" }}
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                <Box id="bruh" sx={{ p: 3, minWidth: 100 }}>
+                    {children}
                 </Box>
             )}
         </div>
@@ -372,28 +382,22 @@ function GradeTable(props) {
     const { semesterName, courses } = props.semester;
     return (
         <TableContainer component={Paper} >
-            <Table>
+            <Table >
                 <TableHead>
-                    <TableRow>
+                    <TableRow >
                         <TableCell width={100}>
-                            <Typography>
+                            <Typography sx={{ color: "primary.dark" }}>
                                 Course Code
-                            </Typography>
-                            <Typography variant="caption">
-                                Hover for course info
                             </Typography>
                         </TableCell>
                         <TableCell>
-                            <Typography>
+                            <Typography sx={{ color: "primary.dark" }}>
                                 Course Name
                             </Typography>
                         </TableCell>
                         <TableCell align="right">
-                            <Typography>
+                            <Typography sx={{ color: "primary.dark" }}>
                                 Grade
-                            </Typography>
-                            <Typography variant="caption">
-                                Hover for personal notes
                             </Typography>
                         </TableCell>
                     </TableRow>
@@ -411,12 +415,12 @@ function GradeTable(props) {
                                     <DescriptionTooltip description={course.description} />
                                 }
                             >
-                                <TableCell >
+                                <TableCell sx={{ color: "primary.dark" }} >
                                     {course.courseCode}
                                 </TableCell>
                             </HtmlTooltip>
 
-                            <TableCell>
+                            <TableCell sx={{ color: "primary.dark" }}>
                                 {course.courseName}
                             </TableCell>
 
@@ -427,7 +431,7 @@ function GradeTable(props) {
                                 }
                             >
                                 <TableCell
-                                    sx={{ maxWidth: 90 }}
+                                    sx={{ maxWidth: 90, color: "primary.dark" }}
                                     align="right"
                                 >
                                     {course.grade}
@@ -445,10 +449,8 @@ function GradeTable(props) {
 function DescriptionTooltip(props) {
     return (
         <Box >
-            <Typography align="center" variant="h6"> Course Description</Typography>
-            <Typography>
-                {props.description}
-            </Typography>
+            <Typography align="center" variant="h6">Course Description</Typography>
+            <Typography>{props.description}</Typography>
         </Box>
     )
 }
@@ -456,10 +458,8 @@ function DescriptionTooltip(props) {
 function PersonalNotesTooltip(props) {
     return (
         <Box >
-            <Typography align="center" variant="h6"> Personal Course Experience</Typography>
-            <Typography>
-                {props.personalNotes}
-            </Typography>
+            <Typography align="center" variant="h6">Personal Course Experience</Typography>
+            <Typography>{props.personalNotes}</Typography>
         </Box>
     )
 }

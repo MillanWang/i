@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ImageLinkCard from './cards/ImageLinkCard';
 import { createImageLinkCardProps, createLink } from './cards/ImageLinkCard';
-
 import img from "../../logo.svg";
 import sine from "../../images/sine.gif";
 
@@ -49,14 +48,17 @@ const extracurriculars = [martialArts, audioProduction, videoProduction,];
 
 function ExtracurricularsPage() {
     return (
-        <div style={{
-            display: "flex",
-            "justify-content": "center"
-        }}>
+        <div
+            style={{
+                display: "flex",
+                "justify-content": "center",
+                backgroundColor: "primary.dark",
+                margin: 0
+            }}>
             {extracurriculars.map((ec) => (
-                <ImageLinkCard imageLinkCardProps={ec} maxWidth={400} />
+                <ImageLinkCard imageLinkCardProps={ec} maxWidth={400} bodyTextAlignment="left" />
             ))}
-        </div>
+        </div >
     )
 }
 
