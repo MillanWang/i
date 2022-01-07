@@ -70,7 +70,7 @@ function getImage(img) {
             <CardMedia
                 component="img"
                 alt="Image Error"
-                height="140"
+                height="200"
                 image={img}
             />)
     }

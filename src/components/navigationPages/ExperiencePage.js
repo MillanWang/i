@@ -114,11 +114,6 @@ const carletonEMLC = createPureTextCard(
     ],
 )
 
-
-// function createPureTextCard(title, subtitles, descriptions) {
-//     return { title, subtitles, descriptions }
-// };
-
 const softwareExperiences = [kinaxisFall, jsiSummer, jsiWinter, carletonResearch2019];
 const communicationsExperiences = [carletonTA2022, oneclass, carletonTA2020, carletonEMLC];
 
@@ -143,7 +138,14 @@ function ExperiencePage() {
 
             <Stack spacing={2}>
                 {/* Move this title out to a higher level */}
-                <Typography variant="h6" sx={{ color: "text.primary", "text-decoration": "underline" }}>Education Experience</Typography>
+                <Typography
+                    variant="h6"
+                    sx={{
+                        color: "text.primary",
+                        "text-decoration": "underline"
+                    }}>
+                    Education Experience
+                </Typography>
 
                 {communicationsExperiences.map((ex) => (
                     <PureTextCard pureTextCardProps={ex} maxWidth={500} bodyTextAlignment="left" />

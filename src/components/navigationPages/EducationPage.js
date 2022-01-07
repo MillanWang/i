@@ -16,6 +16,10 @@ import Divider from '@mui/material/Divider';
 
 import carletonLogoImage from "../../images/CarletonLogo.jpg";
 
+
+//TODO: Consolidate repetitive sx tags into css classes
+
+
 const carletonInfoStrings = [
     "Bachelor of Engineering, Software Engineering",
     "Expected Graduation Date: April 2023",
@@ -63,7 +67,7 @@ const winter2019Courses = [
         "Mechanics I",
         "A+",
         "Introduction to mechanics. Scalars and vectors. Concurrent forces: resultant and components. Statics of particles. Moments and couples. Force system resultants. Rigid body equilibrium. Frames and machines. Internal forces. Kinematics and kinetics of particles. Conservation theorems: work-energy; impulse-momentum. Centroids and centres of gravity.",
-        "My favourite 1st year course. Solving these questions was like turning my brain into an algorithm executor. Was very tough, but completely fair, making it super satisfying."),
+        "My favourite 1st year course. Solving these questions was like turning my brain into an algorithm executor. It was very tough, but completely fair, making it super satisfying to get right."),
     createCourse("PHYS 1004",
         "Introductory Electromagnetism and Wave Motion",
         "A+",
@@ -189,9 +193,9 @@ const fall2020Courses = [
         "Balancing 3 similtaneous part time jobs with these four courses was tough. This course surprised me with it's lack of programming and focus on electricity & mechanics."),
     createCourse("SYSC 4602",
         "Computer Communication",
-        "A ",
+        "A-",
         "Layered network architectures, TCP/IP suite, circuit switching, packet switching. Physical media, data transmission, multiplexing. Data link controls, MAC protocols, random access, polling, IEEE 802 standards. Bridges, switched Ethernet, VLANs. Routing algorithms, Internet routing protocols, datagram networks, virtual circuit networks. Transport protocols.",
-        "Balancing 3 similtaneous part time jobs with these four courses was tough. Though I really liked learning about internet networking systems and protocols"),
+        "I really liked learning about internet networking systems and protocols. Learning to use wireshark was fun as well."),
 ];
 const winter2021Courses = [
     createCourse("SYSC 3999",
@@ -222,22 +226,22 @@ const fall2021Courses = [
 const winter2022Courses = [
     createCourse("SYSC 3303",
         "Real-Time Concurrent Systems",
-        "In Progress: Jan.10-Apr.28",
+        "Exams end Apr.28",
         "Principles and practice of a systems engineering approach to the development of software for real-time, concurrent, distributed systems. Designing to achieve concurrency, performance, and robustness, using visual notations. Converting designs into programs. Introduction to hard real-time systems. Team project.",
         "In progress. I hope it's fun and I learn some useful stuff"),
     createCourse("SYSC 4001",
         "Operating Systems",
-        "In Progress: Jan.10-Apr.28",
+        "Exams end Apr.28",
         "Introduction to operating system principles. Processes and threads. CPU scheduling. Managing concurrency: mutual exclusion and synchronization, deadlock and starvation. Managing memory and input/output. Concurrent programming, including interprocess communication in distributed systems.",
         "In progress. I hope it's fun and I learn some useful stuff"),
     createCourse("SYSC 4005",
         "Discrete Simulation/Modelling",
-        "In Progress: Jan.10-Apr.28",
+        "Exams end Apr.28",
         "Simulation as a problem solving tool. Random variable generation, general discrete simulation procedure: event table and statistical gathering. Analyses of simulation data: point and interval estimation. Confidence intervals. Overview of modeling, simulation, and problem solving using SIMSCRIPT, MODSIM, and other languages.",
         "In progress. I hope it's fun and I learn some useful stuff"),
     createCourse("SYSC 4106",
         "The Software Economy and Project Management",
-        "In Progress: Jan.10-Apr.28",
+        "Exams end Apr.28",
         "Introduction to software project management and economics; Return on software investments; Software life cycle; Work breakdown structure, scheduling and planning; Risk analysis and management; Product size and cost estimation; Earn value management; Statistical process control; Managing project team and process improvement; Bidding and contract types.",
         "In progress. I hope it's fun and I learn some useful stuff"),
 ];
@@ -267,11 +271,9 @@ function createSemester(semesterName, courses) {
 
 function EducationPage() {
     return (
-        // <div style={{ "justify-content": "center", "text-align": "-webkit-center", "background-color": "primary.main" }}>
         <Paper
             sx={{
                 width: "70%", paddingTop: 2,
-                // "background-color": "#607d8b"
             }}
         >
             <img src={carletonLogoImage} alt="Carleton University" style={{
@@ -292,7 +294,6 @@ function EducationPage() {
             <SemesterTabs />
 
         </Paper>
-        // </div >
     )
 }
 
@@ -312,11 +313,8 @@ function SemesterTabs() {
                 paddingBottom: 5,
                 justifyContent: "left",
                 width: "90%"
-
             }}
         >
-
-
             <Tabs
                 value={value}
                 onChange={handleChange}
@@ -328,7 +326,17 @@ function SemesterTabs() {
                 }}
             >
                 {semesters.map((semester, i) => {
-                    return <Tab sx={{ bgcolor: 'primary', color: "primary.dark" }} label={semester.semesterName} {...a11yProps(i++)} />
+                    return <Tab
+
+                        sx={{
+                            bgcolor: 'primary',
+                            color: "primary.dark",
+                            background: "#dddddd",
+                            margin: 0.3,
+                            borderRadius: 5
+                        }}
+                        label={semester.semesterName}
+                        {...a11yProps(i++)} />
                 })}
             </Tabs>
 
@@ -338,7 +346,6 @@ function SemesterTabs() {
                     <TabPanel
                         value={value}
                         index={i++}
-
                     >
                         <GradeTable semester={currentSemester} />
                     </TabPanel>
@@ -384,61 +391,77 @@ function GradeTable(props) {
         <TableContainer component={Paper} >
             <Table >
                 <TableHead>
-                    <TableRow >
+                    <TableRow sx={{ "background-color": "#dddddd" }}>
                         <TableCell width={100}>
-                            <Typography sx={{ color: "primary.dark" }}>
-                                Course Code
-                            </Typography>
+                            <Typography children="Course Code" sx={{ color: "primary.dark" }} />
+
+
+
+
+
+
+
+                            {/* TODO::::   THAT SX FOR EACH ONE SHOULD BE A CSS CLASS*/}
+
+
+
+
+
+
+
+
+
+
+
+
                         </TableCell>
                         <TableCell>
-                            <Typography sx={{ color: "primary.dark" }}>
-                                Course Name
-                            </Typography>
+                            <Typography children="Course Name" sx={{ color: "primary.dark" }} />
                         </TableCell>
                         <TableCell align="right">
-                            <Typography sx={{ color: "primary.dark" }}>
-                                Grade
-                            </Typography>
+                            <Typography children="Grade" sx={{ color: "primary.dark" }} />
                         </TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {courses.map((course) => (
-
                         <TableRow
                             key={semesterName}
                             hover
+                            sx={{ "background-color": "#eeeeee" }}
                         >
                             <HtmlTooltip
                                 followCursor
                                 title={
-                                    <DescriptionTooltip description={course.description} />
+                                    <HeaderDescriptionTooltip
+                                        description={course.description}
+                                        header="Course Description" />
                                 }
                             >
-                                <TableCell sx={{ color: "primary.dark" }} >
+                                <TableCell
+                                    sx={{ color: "primary.dark" }} >
                                     {course.courseCode}
                                 </TableCell>
                             </HtmlTooltip>
 
-                            <TableCell sx={{ color: "primary.dark" }}>
+                            <TableCell
+                                sx={{ color: "primary.dark" }}>
                                 {course.courseName}
                             </TableCell>
 
                             <HtmlTooltip
                                 followCursor
                                 title={
-                                    <PersonalNotesTooltip personalNotes={course.personalNotes} />
-                                }
-                            >
+                                    <HeaderDescriptionTooltip
+                                        description={course.personalNotes}
+                                        header="Personal Course Experience" />}>
                                 <TableCell
                                     sx={{ maxWidth: 90, color: "primary.dark" }}
-                                    align="right"
-                                >
+                                    align="right">
                                     {course.grade}
                                 </TableCell>
                             </HtmlTooltip>
                         </TableRow>
-
                     ))}
                 </TableBody>
             </Table>
@@ -446,20 +469,11 @@ function GradeTable(props) {
     )
 }
 
-function DescriptionTooltip(props) {
+function HeaderDescriptionTooltip(props) {
     return (
         <Box >
-            <Typography align="center" variant="h6">Course Description</Typography>
+            <Typography align="center" variant="h6">{props.header}</Typography>
             <Typography>{props.description}</Typography>
-        </Box>
-    )
-}
-
-function PersonalNotesTooltip(props) {
-    return (
-        <Box >
-            <Typography align="center" variant="h6">Personal Course Experience</Typography>
-            <Typography>{props.personalNotes}</Typography>
         </Box>
     )
 }

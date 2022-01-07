@@ -8,6 +8,11 @@ export function createPureTextCard(title, subtitles, descriptions) {
     return { title, subtitles, descriptions }
 };
 
+
+// TODO: Consolidate this into a usecase of ImageLinkCard so that only one card is needed to address all needs!!!!!
+
+
+
 export default function PureTextCard(props) {
     return (
         <Card

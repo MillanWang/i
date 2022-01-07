@@ -1,0 +1,5 @@
+TODO LIST
+
+Adress todos throughout code. Mostly related to css stuff at this time
+Update ReadMe and remove unused files
+Incorporate custom favicon

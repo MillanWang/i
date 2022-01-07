@@ -1,8 +1,10 @@
 import * as React from 'react';
 import ImageLinkCard from './cards/ImageLinkCard';
 import { createImageLinkCardProps, createLink } from './cards/ImageLinkCard';
-import img from "../../logo.svg";
-import sine from "../../images/sine.gif";
+
+import tornadoKick from "../../images/tornadoKick.gif";
+import soundWaves from "../../images/soundWaves.gif";
+import zollySpin from "../../images/ZollySpin.gif";
 
 
 const martialArts = createImageLinkCardProps(
@@ -19,7 +21,7 @@ const martialArts = createImageLinkCardProps(
         createLink("2014 Worlds", "https://www.toronto.com/community-story/4881165-csma-academy-athletes-capture-33-medals/"),
         createLink("2012 Worlds", "https://www.toronto.com/community-story/3961498-stittsville-youth-heading-to-2012-world-karate-championships-west-end-teen-qualifies-for-world-kickboxing-and-karate-championship-in-orlando-fla-/")
     ],
-    sine//NEED UPDATE
+    tornadoKick
 );
 
 const audioProduction = createImageLinkCardProps(
@@ -30,7 +32,7 @@ const audioProduction = createImageLinkCardProps(
         "5 Years of guitar teaching before self teaching"
     ],
     [createLink("1 min Guitar solo", "https://youtu.be/oVREEHV2s54")],
-    sine//NEED UPDATE
+    soundWaves
 );
 
 const videoProduction = createImageLinkCardProps(
@@ -41,7 +43,7 @@ const videoProduction = createImageLinkCardProps(
         "Experienced with DSLRs, gimbals, lighting, & streaming"
     ],
     [createLink("100km Bike ride video", "https://youtu.be/Z-KnKM-gzQA")],
-    img //NEED UPDATE
+    zollySpin
 );
 
 const extracurriculars = [martialArts, audioProduction, videoProduction,];

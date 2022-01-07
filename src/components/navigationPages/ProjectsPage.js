@@ -2,14 +2,10 @@ import * as React from 'react';
 import ImageLinkCard from './cards/ImageLinkCard';
 import { createImageLinkCardProps, createLink } from './cards/ImageLinkCard';
 
-import img from "../../images/CarletonLogo.jpg";
+import letteredTabsGif from "../../images/LetteredTabs.gif";
+import mspBoardGif from "../../images/MSPBoard.gif";
+import riskGameImg from "../../images/risk.jpg"
 
-/*
-Lettered Tabs
-MSP Circboard
-3110 Risk Game
-
-*/
 const letteredTabs = createImageLinkCardProps(
     "Lettered Tabs Web App",
     "2019 Personal Project",
@@ -22,7 +18,7 @@ const letteredTabs = createImageLinkCardProps(
         createLink("Tool", "https://lettered-tabs.herokuapp.com/"),
         createLink("Source Code", "https://gitlab.com/MillanWang/lettered-tabs"),
     ],
-    img//NEED UPDATE
+    letteredTabsGif
 );
 
 const mspPerformance = createImageLinkCardProps(
@@ -35,7 +31,7 @@ const mspPerformance = createImageLinkCardProps(
     [
         createLink("Video Demo", "https://youtu.be/FasY_z7dEuU"),
     ],
-    img//NEED UPDATE
+    mspBoardGif
 );
 
 const riskGame = createImageLinkCardProps(
@@ -50,7 +46,7 @@ const riskGame = createImageLinkCardProps(
     [
         createLink("Source Code", "https://github.com/MillanWang/3110Project"),
     ],
-    img//NEED UPDATE
+    riskGameImg
 );
 
 
