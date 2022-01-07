@@ -1,19 +1,25 @@
 {
   "files": {
     "main.css": "/i/static/css/main.062ee436.css",
-    "main.js": "/i/static/js/main.bc2d119d.js",
+    "main.js": "/i/static/js/main.cdfc6688.js",
     "static/js/787.e8a613bc.chunk.js": "/i/static/js/787.e8a613bc.chunk.js",
-    "static/media/sine.gif": "/i/static/media/sine.8e3aa37452935906ae9f.gif",
-    "static/media/penguin.jpg": "/i/static/media/penguin.41ed18b15c12a3a1f18a.jpg",
+    "static/media/tornadoKick.gif": "/i/static/media/tornadoKick.d9640150117fcc19c974.gif",
+    "static/media/MSPBoard.gif": "/i/static/media/MSPBoard.4f0e816f64757b94febf.gif",
+    "static/media/ZollySpin.gif": "/i/static/media/ZollySpin.916efbf4e0d7cc56127b.gif",
+    "static/media/MillPortrait.jpg": "/i/static/media/MillPortrait.5e0761c1a800fee48682.jpg",
+    "static/media/soundWaves.gif": "/i/static/media/soundWaves.c9e0df1abb4836a5585a.gif",
+    "static/media/Looking4Work.gif": "/i/static/media/Looking4Work.027a59d97e95f6ab6116.gif",
+    "static/media/MillNameGlow.gif": "/i/static/media/MillNameGlow.84761f328e963a8f7ff6.gif",
+    "static/media/LetteredTabs.gif": "/i/static/media/LetteredTabs.a270cef8cd2418a8ceda.gif",
+    "static/media/risk.jpg": "/i/static/media/risk.57cbb533d79aa04a4489.jpg",
     "static/media/CarletonLogo.jpg": "/i/static/media/CarletonLogo.47e2b48106516d21d156.jpg",
-    "static/media/logo.svg": "/i/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/i/index.html",
     "main.062ee436.css.map": "/i/static/css/main.062ee436.css.map",
-    "main.bc2d119d.js.map": "/i/static/js/main.bc2d119d.js.map",
+    "main.cdfc6688.js.map": "/i/static/js/main.cdfc6688.js.map",
     "787.e8a613bc.chunk.js.map": "/i/static/js/787.e8a613bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.062ee436.css",
-    "static/js/main.bc2d119d.js"
+    "static/js/main.cdfc6688.js"
   ]
 }
