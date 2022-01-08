@@ -11,6 +11,25 @@ import titleGif from "../images/MillNameGlow.gif";
 import looking4WorkGif from "../images/Looking4Work.gif";
 import contactEmail from "../images/ContactEmail.gif";
 
+const contactNavGif = createNavGifTooltips(
+    "Contact:",
+    [
+        "Email: real.millan.wang@gmail.com",
+        "Phone: (613) 600-8604"
+    ]
+)
+
+const looking4WorkNavGif = createNavGifTooltips(
+    "Availability:",
+    [
+        "May 2nd - August 26th 2022",
+        "(17 Weeks || 4 Months)"
+    ]
+)
+
+function createNavGifTooltips(header, descriptions) {
+    return { header, descriptions }
+}
 
 //TODO: Figure out why Navigation toolbar images popout of the toolbars when the window is resized.
 //TODO: Consolidate repetitive sx tags into css classes
@@ -19,7 +38,13 @@ function HeaderBar(props) {
     return (
         <React.Fragment>
             {/* Title toolbar */}
-            <Toolbar sx={{ borderBottom: 2, borderColor: 'text.disabled', bgcolor: "primary.dark", "justify-content": "center" }}>
+            <Toolbar
+                sx={{
+                    borderBottom: 2,
+                    borderColor: 'text.disabled',
+                    bgcolor: "primary.dark",
+                    "justify-content": "center"
+                }}>
 
                 <Link to="/">
                     <Box
@@ -39,6 +64,11 @@ function HeaderBar(props) {
             </Toolbar>
 
             {/* Navigation toolbar */}
+            {/* 
+TODO: For smaller screens, this isn't gonna work out.
+Should implement a drop down menu or sidebar type thing to navigate on mobile.
+Also should reconsider the use of contact&looking4work gifs in mobile. Screen real estate will be limited
+*/}
             <Toolbar
                 component="nav"
                 variant="dense"
@@ -54,7 +84,7 @@ function HeaderBar(props) {
                 <NavBarImage
                     image={contactEmail}
                     alt="Contact: real.millan.wang@gmail.com"
-                    tooltip={<ContactTooltip />} />
+                    tooltip={<NavGifTooltip navGifTooltipProps={contactNavGif} />} />
 
 
                 {props.sections.map((section) => (
@@ -68,7 +98,7 @@ function HeaderBar(props) {
                 <NavBarImage
                     image={looking4WorkGif}
                     alt="Looking for work: Summer 2022"
-                    tooltip={<Looking4WorkTooltip />} />
+                    tooltip={<NavGifTooltip navGifTooltipProps={looking4WorkNavGif} />} />
 
             </Toolbar>
         </React.Fragment>
@@ -93,34 +123,18 @@ function NavBarImage(props) {
     )
 }
 
-function ContactTooltip() {
+function NavGifTooltip(props) {
     return (
         <Box>
             <Typography variant="h5">
-                Contact:
+                {props.navGifTooltipProps.header}
             </Typography>
-            <Typography>
-                Email: real.millan.wang@gmail.com
-            </Typography>
-            <Typography>
-                Phone: (613) 600-8604
-            </Typography>
-        </Box>
-    )
-}
 
-function Looking4WorkTooltip() {
-    return (
-        <Box >
-            <Typography variant="h5">
-                Availability:
-            </Typography>
-            <Typography>
-                May 2nd - August 26th 2022
-            </Typography>
-            <Typography>
-                (17 Weeks || 4 Months)
-            </Typography>
+            {props.navGifTooltipProps.descriptions.map((text) => (
+                <Typography>
+                    {text}
+                </Typography>
+            ))}
         </Box>
     )
 }

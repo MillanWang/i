@@ -31,7 +31,10 @@ const audioProduction = createImageLinkCardProps(
         "Self taught in FL Studio for composing, sample recording, sound synthesis, FX chaining, and parameter automation",
         "5 Years of guitar teaching before self teaching"
     ],
-    [createLink("1 min Guitar solo", "https://youtu.be/oVREEHV2s54")],
+    [
+        createLink("Soundcloud", "https://soundcloud.com/user-507249210/sets/mills-beat-tape/s-Twm49p7Rfzb?si=7d0f0edb57a24f709e1c1bf9d79145a2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"),
+        createLink("1 min Guitar solo", "https://youtu.be/oVREEHV2s54")
+    ],
     soundWaves
 );
 
