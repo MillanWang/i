@@ -18,6 +18,8 @@ import carletonLogoImage from "../../images/CarletonLogo.jpg";
 
 
 //TODO: Consolidate repetitive sx tags into css classes
+//TODO:  Change whole thing to match color theme. Bright white is brutal on the eyes.
+// Extract the white background from the carleton image by making it transparent with rgba-alpha cause that's the only barrier 
 
 
 const carletonInfoStrings = [
@@ -40,12 +42,12 @@ const fall2018Courses = [
         "Introductory Mechanics and Thermodynamics",
         "A+",
         "Mechanics, gravitation, oscillations, and thermodynamics. The application of calculus to solve problems in these areas of physics is introduced. This course is intended for students in the physical sciences and engineering.",
-        "My grade 12 physics teacher was really intense and well prepared me for this. Lightweight"),
+        "Prof was spectacular and made everything super clear. Hefty labs, but satisfying"),
     createCourse("MATH 1004",
         "Calculus for Engineering or Physics",
         "A+",
         "Limits. Differentiation of the elementary functions. Rules of differentiation. Inverse trigonometric functions. Applications of differentiation: max-min problems, curve sketching, approximations. Definite and indefinite integrals, techniques of integration. Applications to areas and volumes.",
-        "Unsatisfying for being too easy. Exam was multiple choice meaning that you didn't need to do any integrals if you can differentiate all the options."),
+        "Unsatisfying for being too easy. We were told early on that the exam was multiple choice meaning that you didn't need to do any integrals if you can differentiate all the options. This removed the incentive to really lern integration which felt like a cheap A+."),
     createCourse("MATH 1104",
         "Linear Algebra for Engineering or Science",
         "A+",
@@ -55,7 +57,7 @@ const fall2018Courses = [
         "Introduction to Software Development",
         "A+",
         "Software development as an engineering discipline, using a modern programming language, Language syntax. Algorithm design. Tracing and visualizing program execution. Testing and debugging. Program style, documentation, reliability. Lab projects are drawn from a variety of application domains: digital image manipulation, computer games, robotics.",
-        "Crazy me decided to choose to go into software engineering despite never programming before. Learned how program in this course and found it super fun. Then I TA'd the new equivalent of this course"),
+        "Crazy me decided to choose to go into software engineering despite never programming before. Learned how program in this course and found it super fun. Now I TA the new equivalent of this course"),
 ];
 const winter2019Courses = [
     createCourse("CHEM 1101",
@@ -77,7 +79,7 @@ const winter2019Courses = [
         "Differential Equations and Infinite Series for Engineering",
         "A+",
         "First-order differential equations. Second-order linear equations with constant coefficients, undetermined coefficients, variation of parameters. Sequences and series, convergence tests, estimation of sums. Power series, Taylor series, remainders. Fourier series.",
-        "This A+ felt hollow. Too easy to be satisfying, especially with multiple choice final exam. Cool learning about fourier series though"),
+        "This A+ felt hollow. Too easy to be satisfying, especially with multiple choice final exam. It was cool learning about fourier series though"),
     createCourse("SYSC 2006",
         "Foundations of Imperative Programming",
         "A+",
@@ -89,12 +91,12 @@ const fall2019Courses = [
         "Communication for Engineers",
         "A+",
         "Development of competence in written and oral communication in engineering. Focus on professional written documents (proposals, technical explanations, research reports, summaries); written responses to engineering communications; related oral work. Attendance and participation are compulsory.",
-        "Loved doing the presentations, and eventually grew to love writing the essays. A great test for my leadership skills to keep the team organized"),
+        "I loved doing the presentations, and eventually grew to love writing the essays. A great test for my leadership skills to keep the team organized"),
     createCourse("ELEC 2501",
         "Circuits and Signals",
         "A+",
         "Properties of signals. Basic circuit elements: voltage and current sources. Kirchhoff's laws, linearity, superposition. Thevenin and Norton's theorems. Circuit simplification. AC steady-state analysis: impedance, admittance, phasors, frequency response. Transient response of RL and RC circuits: form of response, initial and final conditions. RLC circuits: resonance.",
-        "BRUTAL COURSE, but I grew to find the surgical handling of circuits satisfying once I could do it consistently. Classmates made petitions against the prof who wrote the exam. My mark is probably curved up. Many late coffees and long nights. "),
+        "BRUTAL COURSE, but I grew to find the surgical handling of circuits satisfying once I could do it consistently. Classmates made petitions against the prof who wrote the exam. My mark is probably curved up. Many dinnertime coffees and long nights. "),
     createCourse("MATH 2004",
         "Multivariable Calculus for Engineering or Physics",
         "A-",
@@ -104,7 +106,7 @@ const fall2019Courses = [
         "Object Oriented Software Development",
         "A+",
         "Designing and implementing small-scale programs as communities of collaborating objects, using a dynamically-typed or statically-typed programming language. Fundamental concepts: classes, objects, encapsulation, information hiding, inheritance, polymorphism. Iterative, incremental development and test-driven development.",
-        "Learning how to develop GUIs in Java was super fun. Thoroughly enjoyed this course"),
+        "Learning how to develop GUIs in Java was super fun. I thoroughly enjoyed this course"),
     createCourse("SYSC 2310",
         "Introduction to Digital Systems",
         "A+",
@@ -116,12 +118,12 @@ const winter2020Courses = [
         "Discrete Structures I",
         "A+",
         "Introduction to discrete mathematics and discrete structures. Topics include: propositional logic, predicate calculus, set theory, complexity of algorithms, mathematical reasoning and proof techniques, recurrences, induction, finite automata and graph theory. Material is illustrated through examples from computing.",
-        "I enjoyed the material, but somewhat confusing that some of it was repeated from earlier courses."),
+        "I enjoyed the material, but somewhat disapointing that a lot of it was repeated from earlier courses."),
     createCourse("MUSI 1002",
         "Issues in Popular Music",
         "A+",
         "History of world popular music from the 19th century until the present. Topics may include the growth of the music industry, the impact of technology, stardom, world music, the role of the press, copyright, censorship, and sexuality.",
-        "The history of music and how it interacts with technology, culture, & society is super interesting. Favourite elective."),
+        "The history of music and how it interacts with technology, culture, & society is super interesting. Favourite elective and prof was spectacular."),
     createCourse("PHIL 1301",
         "Mind, World, and Knowledge",
         "A ",
@@ -136,7 +138,7 @@ const winter2020Courses = [
         "Introduction to Computer Organization and Architecture",
         "A+",
         "Computer organization: processor, memory, input/output, system bus. Microarchitecture. Instruction set architecture. Assembly language programming: addressing modes, instruction encoding, execution. Assembler. Simple digital I/O, programmable timer. Input/output methods: polling, hardware interrupts.",
-        "Tied for favourite second year course. The design of ARM processors is truly a work of art. Also very satisfying because it was tough, but fair"),
+        "Tied for favourite second year course. The design of ARM processors is truly a work of art. Also very satisfying because it was really tough, but fair"),
     createCourse("SYSC 3101",
         "Programming Languages",
         "A ",
@@ -214,14 +216,14 @@ const summer2021Courses = [
         "Co-op Work Term - JSI",
         "SAT",
         "Position: Software Developer - Backend",
-        "This term was fun. It was an interesting challenge learning Delphi"),
+        "This term was really fun thanks to my team. It was an interesting challenge learning Delphi"),
 ];
 const fall2021Courses = [
     createCourse("SYSC 3999",
         "Co-op Work Term - Kinaxis",
         "SAT",
         "Position: Software Developer, Application Server, Platform",
-        "This term was fun. I really enjoyed learning about supply chain planning"),
+        "This term was fun. I really enjoyed learning about supply chain planning and sharpening my Java skills"),
 ];
 const winter2022Courses = [
     createCourse("SYSC 3303",
@@ -273,24 +275,28 @@ function EducationPage() {
     return (
         <Paper
             sx={{
-                width: "70%", paddingTop: 2,
+                width: "70%",
+                paddingTop: 2,
             }}
         >
-            <img src={carletonLogoImage} alt="Carleton University" style={{
-                flex: 1,
-                width: "70%",
-                resizeMode: 'contain'
-            }} />
+            <img src={carletonLogoImage}
+                alt="Carleton University"
+                style={{
+                    flex: 1,
+                    width: "70%",
+                    resizeMode: 'contain'
+                }} />
 
-
+            {/* Carleton logo image */}
             <div style={{ textAlign: "left", width: "70%" }}>
                 {carletonInfoStrings.map((s) => (
                     <Typography sx={{ color: "primary.dark" }}>{s}</Typography>
                 ))}
             </div>
 
-            <Divider variant="middle" sx={{ marginTop: 3, color: "primary.dark" }} >Transcript</Divider>
-            <Divider variant="middle" sx={{ marginTop: 0, fontSize: 10, color: "primary.dark" }} >(Hover course codes and grades for course info and personal notes )</Divider>
+            <Divider variant="middle" sx={{ marginTop: 3, fontSize: 18, color: "primary.dark" }} >Transcript</Divider>
+            <Divider variant="middle" sx={{ marginTop: 0, fontSize: 14, color: "primary.dark" }} >(Hover course codes and grades for course info and personal notes )</Divider>
+
             <SemesterTabs />
 
         </Paper>
@@ -313,8 +319,7 @@ function SemesterTabs() {
                 paddingBottom: 5,
                 justifyContent: "left",
                 width: "90%"
-            }}
-        >
+            }}>
             <Tabs
                 value={value}
                 onChange={handleChange}
@@ -323,11 +328,9 @@ function SemesterTabs() {
                     borderRight: 1,
                     borderColor: 'divider',
                     width: 100
-                }}
-            >
+                }} >
                 {semesters.map((semester, i) => {
                     return <Tab
-
                         sx={{
                             bgcolor: 'primary',
                             color: "primary.dark",
@@ -345,8 +348,7 @@ function SemesterTabs() {
                 return (
                     <TabPanel
                         value={value}
-                        index={i++}
-                    >
+                        index={i++} >
                         <GradeTable semester={currentSemester} />
                     </TabPanel>
                 )
@@ -364,10 +366,15 @@ function TabPanel(props) {
             hidden={value !== index}
             id={`simple-tabpanel-${index}`}
             style={{ width: "100%" }}
-            {...other}
-        >
+            {...other}>
+
             {value === index && (
-                <Box id="bruh" sx={{ p: 3, minWidth: 100 }}>
+                <Box
+                    id="bruh"
+                    sx={{
+                        p: 3,
+                        minWidth: 100
+                    }}>
                     {children}
                 </Box>
             )}
@@ -389,55 +396,36 @@ function GradeTable(props) {
     const { semesterName, courses } = props.semester;
     return (
         <TableContainer component={Paper} >
-            <Table >
+            <Table>
+
                 <TableHead>
                     <TableRow sx={{ "background-color": "#dddddd" }}>
+
                         <TableCell width={100}>
-                            <Typography children="Course Code" sx={{ color: "primary.dark" }} />
-
-
-
-
-
-
-
-                            {/* TODO::::   THAT SX FOR EACH ONE SHOULD BE A CSS CLASS*/}
-
-
-
-
-
-
-
-
-
-
-
-
+                            <TableColumnHeader title="Course Code" />
                         </TableCell>
                         <TableCell>
-                            <Typography children="Course Name" sx={{ color: "primary.dark" }} />
+                            <TableColumnHeader title="Course Name" />
                         </TableCell>
                         <TableCell align="right">
-                            <Typography children="Grade" sx={{ color: "primary.dark" }} />
+                            <TableColumnHeader title="Grade" />
                         </TableCell>
+
                     </TableRow>
                 </TableHead>
+
                 <TableBody>
                     {courses.map((course) => (
                         <TableRow
                             key={semesterName}
                             hover
-                            sx={{ "background-color": "#eeeeee" }}
-                        >
-                            <HtmlTooltip
-                                followCursor
+                            sx={{ "background-color": "#eeeeee" }} >
+                            <HtmlTooltip followCursor
                                 title={
                                     <HeaderDescriptionTooltip
                                         description={course.description}
                                         header="Course Description" />
-                                }
-                            >
+                                }>
                                 <TableCell
                                     sx={{ color: "primary.dark" }} >
                                     {course.courseCode}
@@ -449,8 +437,7 @@ function GradeTable(props) {
                                 {course.courseName}
                             </TableCell>
 
-                            <HtmlTooltip
-                                followCursor
+                            <HtmlTooltip followCursor
                                 title={
                                     <HeaderDescriptionTooltip
                                         description={course.personalNotes}
@@ -461,12 +448,17 @@ function GradeTable(props) {
                                     {course.grade}
                                 </TableCell>
                             </HtmlTooltip>
-                        </TableRow>
-                    ))}
+                        </TableRow>))}
+
                 </TableBody>
+
             </Table>
         </TableContainer>
     )
+}
+
+function TableColumnHeader(props) {
+    return <Typography children={props.title} sx={{ color: "primary.dark" }} />
 }
 
 function HeaderDescriptionTooltip(props) {

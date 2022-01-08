@@ -1,5 +1,28 @@
 TODO LIST
 
-Adress todos throughout code. Mostly related to css stuff at this time
-Update ReadMe and remove unused files
-Incorporate custom favicon
+-Address TODOs throughout code. Mostly related to css optimization and theming stuff at this time
+
+-HeaderBar
+    -Figure out why Navigation toolbar images popout of the toolbars when the window is resized.
+
+-Education page 
+    -Change whole thing to match the main color theme. Bright white is brutal on the eyes. 
+    -Extract the white background from the carleton image by making it transparent with rgba-alpha cause that's the own barrier right now. 
+    -Refer to the MaterialUI/Colors/BlueGray for hex codes if needed
+
+-Projects & Extracurriculars
+    -These pages are honestly pretty much the same thing with different input data.
+    -Should be able to make a general component that can be used for both
+
+-Find a better way to organize all of the input data. Probably better to be separated into different files and then imported
+
+-Better optimize the site for viewing on mobile and smaller screens. 
+    -Eg, do a vertical stack of cards instead of making them all skinny to fit.
+    -Nav bar needs a mobile specific implementation cause a vertical stack of buttons will be awkward. Maybe a sidebar?
+
+-Implement some unit and integration tests. 
+    -Not having an enforced "No test, no pull request" rule shouldn't be taken as an instruction to ignore testing
+
+-Implement another tab to show of skills with APIs and making requests. 
+    -What if employers don't trust the work experience I have with it and want to see it in action?
+    -Could be something like a dedicated contact page that APIs to an email sender or something like that.

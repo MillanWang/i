@@ -8,7 +8,6 @@ import ProjectsPage from './components/navigationPages/ProjectsPage';
 import EducationPage from './components/navigationPages/EducationPage';
 import ExtracurricularsPage from './components/navigationPages/ExtracurricularsPage';
 import { Container, createTheme, ThemeProvider } from '@mui/material';
-
 import { blueGrey } from '@mui/material/colors';
 
 const mainAppTheme = createTheme({
@@ -26,56 +25,66 @@ const mainAppTheme = createTheme({
     }
   },
   typography: {
+    //TODO : Consider using a more personalized font. Perhaps implement my own handwriting 
   }
 });
 
-const introductionNavSection = { title: "Introduction", url: "/" };
-const workExperienceNavSection = { title: "Experience", url: "/experience" };
-const projectsNavSection = { title: "Projects", url: "/projects" };
-const educationNavSection = { title: "Education", url: "/education" };
-const extracurricularsNavSection = { title: "Extracurriculars", url: "/extracurriculars" };
+const introductionNavSection = createTitleUrlPair("Introduction", "/");
+const workExperienceNavSection = createTitleUrlPair("Experience", "/experience");
+const projectsNavSection = createTitleUrlPair("Projects", "/projects");
+const educationNavSection = createTitleUrlPair("Education", "/education");
+const extracurricularsNavSection = createTitleUrlPair("Extracurriculars", "/extracurriculars");
 
-const navigationSections =
-  [introductionNavSection,
-    workExperienceNavSection,
-    projectsNavSection,
-    educationNavSection,
-    extracurricularsNavSection
-  ];
+const navigationSections = [
+  introductionNavSection,
+  workExperienceNavSection,
+  projectsNavSection,
+  educationNavSection,
+  extracurricularsNavSection
+];
+
+function createTitleUrlPair(title, url) {
+  return { title, url }
+}
 
 function App() {
   return (
-    <div className="Background">
-      <div className="App">
-        <ThemeProvider theme={mainAppTheme}>
+    <div className="App">
+      <ThemeProvider theme={mainAppTheme}>
 
-          <HeaderBar sections={navigationSections} />
+        <HeaderBar sections={navigationSections} />
 
-          <Container
-            id="PageContent"
-            maxWidth="false"
-            sx={{ backgroundColor: "primary.dark", margin: 0, paddingTop: 3, justifyContent: "center", minHeight: "100%" }}
-          >
-            <Switch>
-              <Route exact path={introductionNavSection.url}>
-                <IntroPage />
-              </Route>
-              <Route path={workExperienceNavSection.url}>
-                <ExperiencePage />
-              </Route>
-              <Route exact path={projectsNavSection.url}>
-                <ProjectsPage />
-              </Route>
-              <Route exact path={educationNavSection.url}>
-                <EducationPage />
-              </Route>
-              <Route exact path={extracurricularsNavSection.url}>
-                <ExtracurricularsPage />
-              </Route>
-            </Switch>
-          </Container>{/* End PageContent */}
-        </ThemeProvider>
-      </div>{/* End App */}
+        <Container
+          id="PageContent"
+          maxWidth="false"
+          sx={{
+            backgroundColor: "primary.dark",
+            margin: 0,
+            paddingTop: 3,
+            justifyContent: "center",
+            minHeight: "100%"
+          }} >
+
+          <Switch>
+            <Route exact path={introductionNavSection.url}>
+              <IntroPage />
+            </Route>
+            <Route path={workExperienceNavSection.url}>
+              <ExperiencePage />
+            </Route>
+            <Route exact path={projectsNavSection.url}>
+              <ProjectsPage />
+            </Route>
+            <Route exact path={educationNavSection.url}>
+              <EducationPage />
+            </Route>
+            <Route exact path={extracurricularsNavSection.url}>
+              <ExtracurricularsPage />
+            </Route>
+          </Switch>
+
+        </Container>{/* End PageContent */}
+      </ThemeProvider>
     </div>
   );
 }

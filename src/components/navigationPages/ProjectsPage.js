@@ -2,13 +2,14 @@ import * as React from 'react';
 import ImageLinkCard from './cards/ImageLinkCard';
 import { createImageLinkCardProps, createLink } from './cards/ImageLinkCard';
 
+//Images
 import letteredTabsGif from "../../images/LetteredTabs.gif";
 import mspBoardGif from "../../images/MSPBoard.gif";
 import riskGameImg from "../../images/risk.jpg"
 
 const letteredTabs = createImageLinkCardProps(
     "Lettered Tabs Web App",
-    "2019 Personal Project",
+    ["2019 Personal Project"],
     [
         "Designed & developed a web application that converts fret numbers in guitar tabs into their corresponding notes in any tuning to help musicians enhance their music theory knowledge through learning songs",
         "Developed the conversion algorithms using Python, and the webapp using HTML, CSS, & JavaScript to create an simple user experience"
@@ -23,9 +24,9 @@ const letteredTabs = createImageLinkCardProps(
 
 const mspPerformance = createImageLinkCardProps(
     "Circuitboard Buzzer Instrument",
-    "2020 Personal Project",
+    ["2020 Personal Project"],
     [
-        "Developed & deployed embedded code to circuitboard to map musical notes to joystick positions to create an instrument for performances",
+        "Developed & deployed embedded C code to circuitboard to map musical notes to joystick positions to create a musical instrument for performances",
         "This performance was then used as an example to demonstrate the hardware's capabilities to future classes "
     ],
     [
@@ -36,7 +37,7 @@ const mspPerformance = createImageLinkCardProps(
 
 const riskGame = createImageLinkCardProps(
     "RISK GUI Board Game",
-    "2020 Academic Group Project",
+    ["2020 Academic Group Project"],
     [
         "Designed and implemented MVC design pattern to build a GUI, ensuring code maintainability for the continuous integration of new features",
         "Developed and tested behavior for AI players to provide users with automated opponents",

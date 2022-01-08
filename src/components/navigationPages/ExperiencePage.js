@@ -1,10 +1,9 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import PureTextCard, { createPureTextCard } from './cards/PureTextCard';
+import ImageLinkCard, { createImageLinkCardProps } from './cards/ImageLinkCard';
 
-
-const kinaxisFall = createPureTextCard(
+const kinaxisFall = createImageLinkCardProps(
     "Kinaxis",
     [
         "Sep. - Dec. 2021 (4 Months)",
@@ -16,10 +15,12 @@ const kinaxisFall = createPureTextCard(
         "Conducted migrations and thorough refactoring of test environments to optimize the use of design patterns,accelerating future development and scope expansion",
         "Technologies: Java GUIs, C#/.NET APIs, Visual Studio, Eclipse, Postman, Git, Jenkins"
     ],
+    [],
+    null
 
 );
 
-const jsiSummer = createPureTextCard(
+const jsiSummer = createImageLinkCardProps(
     "JSI",
     [
         "May - Aug. 2021 (4 Months)",
@@ -30,12 +31,15 @@ const jsiSummer = createPureTextCard(
         "Upgraded C#/.NET backend API to accommodate the growing demands of the frontend",
         "Developed database procedures using MS SQL Server",
         "Wrote in-depth wiki guides detailing application design techniques, and working with Agile methodology",
-        "Technologies: Delphi, C#/.NET APIs, Visual Studio, MS SQL Server, Postman, Git, Jenkins"
+        "Received highest performing co-op award and $300 bonus",
+        "Technologies: Delphi, C#/.NET APIs, Visual Studio, MS SQL Server, Postman, Git, Jenkins",
     ],
+    [],
+    null
 
 );
 
-const jsiWinter = createPureTextCard(
+const jsiWinter = createImageLinkCardProps(
     "JSI",
     [
         "Jan. - Apr. 2021 (4 Months)",
@@ -44,12 +48,15 @@ const jsiWinter = createPureTextCard(
     [
         "Developed & delivered a web application feature using Type/JavaScript, HTML, & CSS in Angular, and enhanced backend API functionality using C#/.NET",
         "Developed thorough end-to-end & unit tests with complete code coverage using Protractor & Jasmine",
+        "Received highest performing Co-op award and $300 bonus",
         "Technologies: Angular, C#/.NET, Visual Studio, MS SQL Server, Postman, Git, Jenkins",
     ],
+    [],
+    null
 
 );
 
-const carletonResearch2019 = createPureTextCard(
+const carletonResearch2019 = createImageLinkCardProps(
     "Carleton University",
     [
         "Jun.-Aug. 2019 (3 Months)",
@@ -61,9 +68,11 @@ const carletonResearch2019 = createPureTextCard(
         "Wrote in-depth supporting documentation detailing the implementation of the data visualization software, as well as a framework on designing simulations",
         "Technologies: Python, MatPlotLib, NumPy, Pandas, Linux Bash, Eclipse",
     ],
+    [],
+    null
 )
 
-const carletonTA2022 = createPureTextCard(
+const carletonTA2022 = createImageLinkCardProps(
     "Carleton University",
     [
         "Jan. - Apr. 2022  (4 Months, Current)",
@@ -74,21 +83,25 @@ const carletonTA2022 = createPureTextCard(
         "Code review & mark programming assignments to provide detailed feedback to students",
         "Lead software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns",
     ],
+    [],
+    null
 )
 
-const oneclass = createPureTextCard(
+const oneclass = createImageLinkCardProps(
     "OneClass",
     [
         "Sep. 2020 - Jan. 2021 (5 Months)",
         "Educational Video Producer"
     ],
     [
-        "Produced 50+ hours of educational videos detailing solutions to calculus, mechanics, electrostatics, and circuit problems",
+        "Produced 50+ hours of educational videos detailing solutions to calculus, mechanics, electrostatics, and circuit questions",
         "Videos produced using OBS & DaVinci Resolve",
     ],
+    [],
+    null
 )
 
-const carletonTA2020 = createPureTextCard(
+const carletonTA2020 = createImageLinkCardProps(
     "Carleton University",
     [
         "Sep. - Dec. 2020 (4 Months)",
@@ -100,9 +113,11 @@ const carletonTA2020 = createPureTextCard(
         "Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns",
         "Nominated for teaching awards by 5 students"
     ],
+    [],
+    null
 )
 
-const carletonEMLC = createPureTextCard(
+const carletonEMLC = createImageLinkCardProps(
     "Carleton University",
     [
         "Sep. - Dec. 2020 (4 Months)",
@@ -112,6 +127,8 @@ const carletonEMLC = createPureTextCard(
         "Provide tutoring across 10 different first year courses including programming, calculus, mechanics, electricity, and chemistry",
         "Maintained the highest tutor ranking out of 20"
     ],
+    [],
+    null
 )
 
 const softwareExperiences = [kinaxisFall, jsiSummer, jsiWinter, carletonResearch2019];
@@ -119,40 +136,45 @@ const communicationsExperiences = [carletonTA2022, oneclass, carletonTA2020, car
 
 function ExperiencePage() {
     return (
-        <div style={{
-            display: "flex",
-            "justify-content": "center",
-            "padding-bottom": 40
-        }}>
+        <div
+            style={{
+                display: "flex",
+                "justify-content": "center",
+                "padding-bottom": 40
+            }}>
+
             <Stack spacing={2}>
-                {/* Move this title out to a higher level */}
-                <Typography variant="h6" sx={{ color: "text.primary", "text-decoration": "underline" }}>Software Engineering Experience</Typography>
+                <StackHeader title="Software Engineering Experience" />
 
                 {softwareExperiences.map((ex) => (
-                    <PureTextCard pureTextCardProps={ex} maxWidth={500} bodyTextAlignment="left" />
+                    <ImageLinkCard imageLinkCardProps={ex} maxWidth={500} bodyTextAlignment="left" />
                 ))}
             </Stack>
 
             {/* Middle column spacer */}
-            <div style={{ width: "2%" }} />
+            <div style={{ width: "1%" }} />
 
             <Stack spacing={2}>
-                {/* Move this title out to a higher level */}
-                <Typography
-                    variant="h6"
-                    sx={{
-                        color: "text.primary",
-                        "text-decoration": "underline"
-                    }}>
-                    Education Experience
-                </Typography>
+                <StackHeader title="Education Experience" />
 
                 {communicationsExperiences.map((ex) => (
-                    <PureTextCard pureTextCardProps={ex} maxWidth={500} bodyTextAlignment="left" />
+                    <ImageLinkCard imageLinkCardProps={ex} maxWidth={500} bodyTextAlignment="left" />
                 ))}
             </Stack>
         </div>
     )
+}
+
+function StackHeader(props) {
+    return (
+        <Typography
+            variant="h5"
+            sx={{
+                color: "text.primary",
+                "text-decoration": "underline"
+            }}>
+            {props.title}
+        </Typography>)
 }
 
 export default ExperiencePage;

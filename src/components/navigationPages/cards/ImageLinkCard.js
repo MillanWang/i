@@ -7,8 +7,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
-export function createImageLinkCardProps(title, timeframe, descriptionStrings, links, img) {
-    return { title, timeframe, descriptionStrings, links, img };
+export function createImageLinkCardProps(title, subtitles, descriptionStrings, links, img) {
+    return { title, subtitles, descriptionStrings, links, img };
 }
 
 export function createLink(linkText, url) {
@@ -27,16 +27,24 @@ export default function ImageLinkCard(props) {
         >
             {getImage(props.imageLinkCardProps.img)}
 
-            <CardContent sx={{ paddingBottom: 0 }}>
-                <Divider sx={{ marginBottom: 1, borderBottomWidth: 3, borderColor: "text.disabled" }} />
+
+            <CardContent
+                sx={{
+                    paddingBottom: 0,
+                    paddingTop: props.imageLinkCardProps.img ? 0 : 2, // 2 without image, 0 with image
+                }}>
                 <Typography variant="h5" >
                     {props.imageLinkCardProps.title}
                 </Typography>
 
-                <Typography variant="body2" color="text.secondary" gutterBottom>
-                    {props.imageLinkCardProps.timeframe}
-                </Typography>
+                {props.imageLinkCardProps.subtitles.map((subtitle) => (
+                    <Typography variant="body2" color="text.secondary" >
+                        {subtitle}
+                    </Typography>
+                ))}
+
                 <Divider sx={{ marginBottom: 1, borderBottomWidth: 3, borderColor: "text.disabled" }} />
+
                 <div style={{ textAlign: props.bodyTextAlignment }}>
                     {props.imageLinkCardProps.descriptionStrings.map((s) => (
                         <Typography
@@ -58,7 +66,7 @@ export default function ImageLinkCard(props) {
                     </a>
                 ))}
             </CardActions>
-        </Card>
+        </Card >
     )
 }
 
@@ -67,11 +75,22 @@ function getImage(img) {
         return <React.Fragment></React.Fragment>
     } else {
         return (
-            <CardMedia
-                component="img"
-                alt="Image Error"
-                height="200"
-                image={img}
-            />)
+            <React.Fragment>
+                <CardMedia
+                    component="img"
+                    alt="Image Error"
+                    height="200"
+                    image={img} />
+                <Divider
+                    sx={{
+                        width: "95%",
+                        marginTop: 2,
+                        marginBottom: 0,
+                        paddingBottom: 0,
+                        borderBottomWidth: 3,
+                        borderColor: "text.disabled"
+                    }} />
+            </React.Fragment>
+        )
     }
 }

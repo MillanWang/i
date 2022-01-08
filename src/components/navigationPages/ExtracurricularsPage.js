@@ -9,13 +9,13 @@ import zollySpin from "../../images/ZollySpin.gif";
 
 const martialArts = createImageLinkCardProps(
     "Martial Arts",
-    "2005-Present",
+    ["2005-Present"],
     [
         "World Champion from international competitions in Orlando FL, and London UK",
+        "(500 pushups + 150 pullups)/day to maintain conditioning",
         "Black belt in Karate",
         "Weekly training with occasional coaching of friends",
-        "(500 pushups + 150 pullups)/day to maintain conditioning",
-        "Can be very effective as physical security during emergency situations"
+        "Can be very effective as physical security during emergency situations",
     ],
     [
         createLink("2014 Worlds", "https://www.toronto.com/community-story/4881165-csma-academy-athletes-capture-33-medals/"),
@@ -26,9 +26,9 @@ const martialArts = createImageLinkCardProps(
 
 const audioProduction = createImageLinkCardProps(
     "Guitar & Audio Production",
-    "2009-Present",
+    ["2009-Present"],
     [
-        "Self taught in FL Studio, recording, & sound synthesis",
+        "Self taught in FL Studio for composing, sample recording, sound synthesis, FX chaining, and parameter automation",
         "5 Years of guitar teaching before self teaching"
     ],
     [createLink("1 min Guitar solo", "https://youtu.be/oVREEHV2s54")],
@@ -37,7 +37,7 @@ const audioProduction = createImageLinkCardProps(
 
 const videoProduction = createImageLinkCardProps(
     "Video Production",
-    "2009-Present",
+    ["2009-Present"],
     [
         "Self taught in DaVinci Resolve for compositing & grading",
         "Experienced with DSLRs, gimbals, lighting, & streaming"
