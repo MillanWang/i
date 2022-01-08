@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/i/static/css/main.062ee436.css",
-    "main.js": "/i/static/js/main.cdfc6688.js",
+    "main.css": "/i/static/css/main.364c207f.css",
+    "main.js": "/i/static/js/main.6cd7642b.js",
     "static/js/787.e8a613bc.chunk.js": "/i/static/js/787.e8a613bc.chunk.js",
     "static/media/tornadoKick.gif": "/i/static/media/tornadoKick.d9640150117fcc19c974.gif",
     "static/media/MSPBoard.gif": "/i/static/media/MSPBoard.4f0e816f64757b94febf.gif",
@@ -11,15 +11,16 @@
     "static/media/Looking4Work.gif": "/i/static/media/Looking4Work.027a59d97e95f6ab6116.gif",
     "static/media/MillNameGlow.gif": "/i/static/media/MillNameGlow.84761f328e963a8f7ff6.gif",
     "static/media/LetteredTabs.gif": "/i/static/media/LetteredTabs.a270cef8cd2418a8ceda.gif",
+    "static/media/ContactEmail.gif": "/i/static/media/ContactEmail.ab03f59f904fc172b336.gif",
     "static/media/risk.jpg": "/i/static/media/risk.57cbb533d79aa04a4489.jpg",
     "static/media/CarletonLogo.jpg": "/i/static/media/CarletonLogo.47e2b48106516d21d156.jpg",
     "index.html": "/i/index.html",
-    "main.062ee436.css.map": "/i/static/css/main.062ee436.css.map",
-    "main.cdfc6688.js.map": "/i/static/js/main.cdfc6688.js.map",
+    "main.364c207f.css.map": "/i/static/css/main.364c207f.css.map",
+    "main.6cd7642b.js.map": "/i/static/js/main.6cd7642b.js.map",
     "787.e8a613bc.chunk.js.map": "/i/static/js/787.e8a613bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.062ee436.css",
-    "static/js/main.cdfc6688.js"
+    "static/css/main.364c207f.css",
+    "static/js/main.6cd7642b.js"
   ]
 }
