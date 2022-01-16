@@ -26,3 +26,5 @@ TODO LIST
 -Implement another tab to show of skills with APIs and making requests. 
     -What if employers don't trust the work experience I have with it and want to see it in action?
     -Could be something like a dedicated contact page that APIs to an email sender or something like that.
+    
+- Investigate WebGL and OpenGL for some 3D graphics. This stuff is real cool
