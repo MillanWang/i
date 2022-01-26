@@ -14,7 +14,7 @@ const introCard = createImageLinkCardProps(
         "Welcome to my personal website!",
     ],
     [
-        "This site was developed using React, Material UI, and Github pages",
+        "The development of this site was a 1 week winter break challenge to introduce myself to React, Material UI, and Github pages",
     ],
     [
         createLink("Source Code", "https://github.com/MillanWang/i"),
@@ -51,7 +51,7 @@ const technologies = createImageLinkCardProps(
     [
         "Languages: Python, Java, C#/.NET, Type/JavaScript, HTML, CSS, Delphi, C, SQL, Scheme/Racket, Go, Verilog, VHDL, MATLAB",
         "Favourite Language: Python. It introduced me to programming and I like it's versatility in with lists and how concise it is. 2nd place is JavaScript cause WebDev is fun",
-        "Tools: Git, Linux/Bash, VirtualBox, Visual Studio, Eclipse, IntelliJ, React, Angular, Microsoft SQL Server, Postman, Jenkins, REST APIs, node.js, Kubernetes, PuTTY, WinSCP",
+        "Tools: Git, Linux/Bash, VirtualBox, Visual Studio, VSCode, Eclipse, IntelliJ, React, Angular, Microsoft SQL Server, Kafka, Jasmine, Protractor, Postman, Jenkins, REST APIs, node.js, Kubernetes, SSH",
         "Favourite IDEs: VSCode for WebDev, Visual Studio for C#/.NET, IntelliJ for Java",
     ],
     [],
@@ -102,7 +102,9 @@ function IntroPage() {
             {/* Right Column Stack */}
             < Stack spacing={2} width={"40%"} >
                 {imageLinkCards.map((card) => (
-                    <ImageLinkCard imageLinkCardProps={card} />
+                    <ImageLinkCard imageLinkCardProps={card}
+                    // maxWidth={500}
+                    />
                 ))}
             </Stack >
         </div >

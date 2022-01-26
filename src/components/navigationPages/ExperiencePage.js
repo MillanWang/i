@@ -12,7 +12,7 @@ const kinaxisFall = createImageLinkCardProps(
     [
         "Implemented user stories & resolved bugs to develop & maintain application platform features using Java GUIs & C#/.NET backend APIs",
         "Designed thorough integration & unit tests to validate functionality and increase code coverage during CI/CD",
-        "Conducted migrations and thorough refactoring of test environments to optimize the use of design patterns,accelerating future development and scope expansion",
+        "Conducted migrations and refactored the server & test environments to assist in removing subscription based dependencies, saving up to $250/developer/month",
         "Technologies: Java GUIs, C#/.NET APIs, Visual Studio, Eclipse, Postman, Git, Jenkins"
     ],
     [],
@@ -27,12 +27,12 @@ const jsiSummer = createImageLinkCardProps(
         "Software Developer, Backend"
     ],
     [
-        "Implemented application user stories and resolved bugs across the full stack using Delphi & C#/.NET",
+        "Implemented application user stories and resolved bugs across the full stack using Delphi, C#/.NET, & Kafka",
         "Upgraded C#/.NET backend API to accommodate the growing demands of the frontend",
         "Developed database procedures using MS SQL Server",
-        "Wrote in-depth wiki guides detailing application design techniques, and working with Agile methodology",
+        "Wrote in-depth wiki guides detailing internal application design techniques, and working with Agile methodology",
         "Received highest performing co-op award and $300 bonus",
-        "Technologies: Delphi, C#/.NET APIs, Visual Studio, MS SQL Server, Postman, Git, Jenkins",
+        "Technologies: Delphi, C#/.NET APIs, Kafka, Visual Studio, MS SQL Server, Postman, Git, Jenkins",
     ],
     [],
     null
@@ -49,7 +49,7 @@ const jsiWinter = createImageLinkCardProps(
         "Developed & delivered a web application feature using Type/JavaScript, HTML, & CSS in Angular, and enhanced backend API functionality using C#/.NET",
         "Developed thorough end-to-end & unit tests with complete code coverage using Protractor & Jasmine",
         "Received highest performing Co-op award and $300 bonus",
-        "Technologies: Angular, C#/.NET, Visual Studio, MS SQL Server, Postman, Git, Jenkins",
+        "Technologies: Angular, C#/.NET, Visual Studio, VSCode, MS SQL Server, Postman, Git, Jenkins",
     ],
     [],
     null
@@ -63,7 +63,7 @@ const carletonResearch2019 = createImageLinkCardProps(
         "Undergraduate Research Assistant"
     ],
     [
-        "Designed ad-hoc network simulations using OMNeT++ to test routing protocol hypotheses",
+        "Designed ad-hoc network simulations using Eclipse based OMNeT++ to test routing protocol hypotheses",
         "Matplotlib, NumPy, & Pandas libraries for graphical analysis of ad-hoc network simulation statistics",
         "Wrote in-depth supporting documentation detailing the implementation of the data visualization software, as well as a framework on designing simulations",
         "Technologies: Python, MatPlotLib, NumPy, Pandas, Linux Bash, Eclipse",

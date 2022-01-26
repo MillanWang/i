@@ -61,7 +61,7 @@ function ExtracurricularsPage() {
                 margin: 0
             }}>
             {extracurriculars.map((ec) => (
-                <ImageLinkCard imageLinkCardProps={ec} maxWidth={400} bodyTextAlignment="left" />
+                <ImageLinkCard imageLinkCardProps={ec} maxWidth={400} bodyTextAlignment="left" sideMargin={true} />
             ))}
         </div >
     )

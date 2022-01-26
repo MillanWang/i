@@ -19,7 +19,8 @@ export default function ImageLinkCard(props) {
     return (
         <Card sx={{
             maxWidth: props.maxWidth,
-            margin: 1,
+            marginTop: 1,
+            margin: props.sideMargin ? 1 : 0,
             height: "fit-content",
             bgcolor: "primary.main"
         }}

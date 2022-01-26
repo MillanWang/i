@@ -47,7 +47,7 @@ const fall2018Courses = [
         "Calculus for Engineering or Physics",
         "A+",
         "Limits. Differentiation of the elementary functions. Rules of differentiation. Inverse trigonometric functions. Applications of differentiation: max-min problems, curve sketching, approximations. Definite and indefinite integrals, techniques of integration. Applications to areas and volumes.",
-        "Unsatisfying for being too easy. We were told early on that the exam was multiple choice meaning that you didn't need to do any integrals if you can differentiate all the options. This removed the incentive to really lern integration which felt like a cheap A+."),
+        "Unsatisfying for being too easy. We were told early on that the exam was multiple choice meaning that you didn't need to do any integrals if you can differentiate all the options. This removed the incentive to really learn integration which felt like a cheap A+."),
     createCourse("MATH 1104",
         "Linear Algebra for Engineering or Science",
         "A+",
@@ -295,7 +295,7 @@ function EducationPage() {
             </div>
 
             <Divider variant="middle" sx={{ marginTop: 3, fontSize: 18, color: "primary.dark" }} >Transcript</Divider>
-            <Divider variant="middle" sx={{ marginTop: 0, fontSize: 14, color: "primary.dark" }} >(Hover course codes and grades for course info and personal notes )</Divider>
+            <Divider variant="middle" sx={{ marginTop: 0, fontSize: 14, color: "primary.dark" }} >Hover course codes for course info and Hover grades for personal notes </Divider>
 
             <SemesterTabs />
 

@@ -12,7 +12,7 @@ const letteredTabs = createImageLinkCardProps(
     ["2019 Personal Project"],
     [
         "Designed & developed a web application that converts fret numbers in guitar tabs into their corresponding notes in any tuning to help musicians enhance their music theory knowledge through learning songs",
-        "Developed the conversion algorithms using Python, and the webapp using HTML, CSS, & JavaScript to create an simple user experience"
+        "Developed the conversion algorithms using Python, and the webapp using HTML, CSS, & JavaScript to create a simple user experience"
     ],
     [
         createLink("Video Demo", "https://youtu.be/hG0Y2D5sdWU"),
@@ -60,7 +60,7 @@ function ProjectsPage() {
             "justify-content": "center"
         }}>
             {projects.map((currProject) => (
-                <ImageLinkCard imageLinkCardProps={currProject} maxWidth={400} bodyTextAlignment="left" />
+                <ImageLinkCard imageLinkCardProps={currProject} maxWidth={400} bodyTextAlignment="left" sideMargin={true} />
 
             ))}
         </div>
