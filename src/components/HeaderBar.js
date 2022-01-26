@@ -3,11 +3,15 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import { Box } from '@mui/system';
+/*
 import HtmlTooltip from '@mui/material/Tooltip';
 import { Typography } from '@mui/material';
-
+*/
 //images
 import titleGif from "../images/MillNameGlow.gif";
+
+/*NOT CURRENTLY LOOKING FOR WORK OR FOR PEOPLE TO CONTACT ME. MAYBE BRING THIS BACK IN THE FUTURE. Feature flag on this would be cool but FOCUS ON SCHOOL NOW        
+
 import looking4WorkGif from "../images/Looking4Work.gif";
 import contactEmail from "../images/ContactEmail.gif";
 
@@ -27,9 +31,11 @@ const looking4WorkNavGif = createNavGifTooltips(
     ]
 )
 
+
 function createNavGifTooltips(header, descriptions) {
     return { header, descriptions }
 }
+*/
 
 //TODO: Figure out why Navigation toolbar images popout of the toolbars when the window is resized.
 //TODO: Consolidate repetitive sx tags into css classes
@@ -81,10 +87,11 @@ Also should reconsider the use of contact&looking4work gifs in mobile. Screen re
                     resizeMode: 'contain'
                 }}>
 
-                <NavBarImage
+                {/* NOT CURRENTLY LOOKING FOR WORK OR FOR PEOPLE TO CONTACT ME. MAYBE BRING THIS BACK IN THE FUTURE. Feature flag on this would be cool but FOCUS ON SCHOOL NOW
+                 <NavBarImage
                     image={contactEmail}
                     alt="Contact: real.millan.wang@gmail.com"
-                    tooltip={<NavGifTooltip navGifTooltipProps={contactNavGif} />} />
+                    tooltip={<NavGifTooltip navGifTooltipProps={contactNavGif} />} /> */}
 
 
                 {props.sections.map((section) => (
@@ -95,16 +102,18 @@ Also should reconsider the use of contact&looking4work gifs in mobile. Screen re
                     </Link>
                 ))}
 
+                {/*  NOT CURRENTLY LOOKING FOR WORK OR FOR PEOPLE TO CONTACT ME. MAYBE BRING THIS BACK IN THE FUTURE. Feature flag on this would be cool but FOCUS ON SCHOOL NOW
                 <NavBarImage
                     image={looking4WorkGif}
                     alt="Looking for work: Summer 2022"
-                    tooltip={<NavGifTooltip navGifTooltipProps={looking4WorkNavGif} />} />
+                    tooltip={<NavGifTooltip navGifTooltipProps={looking4WorkNavGif} />} /> */}
 
             </Toolbar>
         </React.Fragment>
     );
 }
 
+/*NOT CURRENTLY LOOKING FOR WORK OR FOR PEOPLE TO CONTACT ME. MAYBE BRING THIS BACK IN THE FUTURE. Feature flag on this would be cool but FOCUS ON SCHOOL NOW
 function NavBarImage(props) {
     return (
         <HtmlTooltip title={props.tooltip}>
@@ -138,5 +147,5 @@ function NavGifTooltip(props) {
         </Box>
     )
 }
-
+*/
 export default HeaderBar;
