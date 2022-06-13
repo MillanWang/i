@@ -24,12 +24,12 @@ import carletonLogoImage from "../../images/CarletonLogo.jpg";
 
 const carletonInfoStrings = [
     "Bachelor of Engineering, Software Engineering",
+    "5th Year Standing, Co-Op Status",
+    "Cumulative Grade Point Average: 11.48/12.00 (A)",
+    "Number of Academic (4 Month) Terms Completed: 7",
+    "Co-op (4 Month) Work Terms Completed: 3 + 1(In Progress)",
+    "Courses Remaining Before Graduation: 2(Engineering Project) + 6",
     "Expected Graduation Date: April 2023",
-    "4th Year Standing, Co-Op Status",
-    "Cumulative Grade Point Average: 11.55/12.00 (A)",
-    "Number of Academic (4 Month) Terms Completed: 6",
-    "Co-op (4 Month) Work Terms Completed: 3",
-    "Courses Remaining Before Graduation: 4(In progress) + 2(Engineering Project) + 6"
 ];
 
 const fall2018Courses = [
@@ -228,26 +228,76 @@ const fall2021Courses = [
 const winter2022Courses = [
     createCourse("SYSC 3303",
         "Real-Time Concurrent Systems",
-        "Exams end Apr.28",
+        "A",
         "Principles and practice of a systems engineering approach to the development of software for real-time, concurrent, distributed systems. Designing to achieve concurrency, performance, and robustness, using visual notations. Converting designs into programs. Introduction to hard real-time systems. Team project.",
-        "In progress. I hope it's fun and I learn some useful stuff"),
+        "I loved learning about multithreading in Java. The project was TOUGH but it was really rewarding to exercise my project management skills to divide & assign labour, and it was also fun to learn how to do manual integration testing with multithreading. This is the most painful mark I've ever received because I saw multiple sunrises working on the project just to finish the course with an A."),
     createCourse("SYSC 4001",
         "Operating Systems",
-        "Exams end Apr.28",
+        "A- / SAT",
         "Introduction to operating system principles. Processes and threads. CPU scheduling. Managing concurrency: mutual exclusion and synchronization, deadlock and starvation. Managing memory and input/output. Concurrent programming, including interprocess communication in distributed systems.",
-        "In progress. I hope it's fun and I learn some useful stuff"),
+        "I really enjoyed learning about the technical details of how operating systems interact with computer hardware. The midterm was brutal with a class average around 50% and me barely being above it, but I came back by going hard in the paint on the final. I liked the professor a lot."),
     createCourse("SYSC 4005",
         "Discrete Simulation/Modelling",
-        "Exams end Apr.28",
+        "A",
         "Simulation as a problem solving tool. Random variable generation, general discrete simulation procedure: event table and statistical gathering. Analyses of simulation data: point and interval estimation. Confidence intervals. Overview of modeling, simulation, and problem solving using SIMSCRIPT, MODSIM, and other languages.",
-        "In progress. I hope it's fun and I learn some useful stuff"),
+        "Learning about statistical analysis & developing simulations was cool, and it was also a great test of my project management skills to lead my team by dividing & assigning labour, as well as manual integration testing. Administration of the course was questionable. TAs gave 100s on the project simply to avoid being confronted with marking disputes because their marking rubrics were the exact same as our instructions. The Professor's slides showed numerical end results with very little descriptions of what the results mean or how to get there, which might have been an unconventional approach to force students to learn how to self study."),
     createCourse("SYSC 4106",
         "The Software Economy and Project Management",
-        "Exams end Apr.28",
+        "A+",
         "Introduction to software project management and economics; Return on software investments; Software life cycle; Work breakdown structure, scheduling and planning; Risk analysis and management; Product size and cost estimation; Earn value management; Statistical process control; Managing project team and process improvement; Bidding and contract types.",
-        "In progress. I hope it's fun and I learn some useful stuff"),
+        "I loved this course! The professor was great at relating course material to real life situations and I learned a lot about different approaches to managing software development teams."),
 ];
-
+const summer2022Courses = [
+    createCourse("SYSC 3999",
+        "Co-op Work Term - Spiria",
+        "SAT",
+        "Position: Software Developer",
+        "Working with full stack application development is fun. J'aime aussi le défi de parler en français avec mes collègues francophones"),
+];
+const fall2022Courses = [
+    createCourse("ELEC 4705",
+        "Electronic Materials, Devices, and Transmission Media",
+        "Ends : 22/12/2022",
+        "Review of solid-state theory, conductors, semiconductors, superconductors, insulators, and optical and magnetic properties. Devices used in modern high speed electronic and communication systems: transistors, lasers, photodiodes, fiber optics, Josephson junctions. Implications of material properties on fabrication and operation of devices and circuits.",
+        "I hope that the course is fun and that the material is useful!"),
+    createCourse("SYSC 4101",
+        "Software Validation",
+        "Ends : 22/12/2022",
+        "Techniques for the systematic testing of software systems. Software validation and verification, software debugging, quality assurance, measurement and prediction of software reliability. Emphasis on the treatment of these topics in the context of real-time and distributed systems.",
+        "I hope that the course is fun and that the material is useful!"),
+    createCourse("SYSC 4810",
+        "Introduction to Network and Software Security",
+        "Ends : 22/12/2022",
+        "Fundamental concepts, terminologies, and theories of computer security; principles underlying common security controls; various types of threats and attacks on networks and software systems, how they work, and controls for dealing with them; security risk assessment and management; legal and ethical aspects of computer security.",
+        "I hope that the course is fun and that the material is useful!"),
+    createCourse("SYSC 4907",
+        "Engineering Project (1/2)",
+        "Ends : 22/12/2022",
+        "Student teams develop professional-level experience by applying previously acquired knowledge to a major design project. Lectures discuss project-related issues and student presentations. A project proposal, interim report, oral presentations, and a comprehensive final report are required.",
+        "Selected Project Title : Games for Teaching Cybersecurity: Network Defence for Technical Employees"),
+];
+const winter2023Courses = [
+    createCourse("ECOR 4995",
+        "Professional Practice",
+        "Ends : 27/04/2023",
+        "Presentations by faculty and external lecturers on the Professional Engineers Act, professional ethics and responsibilities, practice within the discipline and its relationship with other disciplines and to society, health and safety, environmental stewardship, principles and practice of sustainable development. Communication skills are emphasized.",
+        "I hope that the course is fun and that the material is useful!"),
+    createCourse("SYSC 4120",
+        "Software Architecture and Design",
+        "Ends : 27/04/2023",
+        "Introduction and importance of software architectures and software system design in software engineering. Current techniques, modeling notations, methods, processes and tools used in software architecture and system design. Software architectures, architectural patterns, design patterns, software qualities, software reuse.",
+        "I hope that the course is fun and that the material is useful!"),
+    createCourse("SYSC 4806",
+        "Software Engineering Lab",
+        "Ends : 27/04/2023",
+        "Applying the full spectrum of engineering and programming knowledge acquired in the program through team projects in the laboratory. Practice in doing presentations and reviews. Lectures will discuss software engineering issues as they relate to the projects, from a mature point of view.",
+        "I hope that the course is fun and that the material is useful!"),
+    createCourse("SYSC 4907",
+        "Engineering Project (2/2)",
+        "Ends : 27/04/2023",
+        "Student teams develop professional-level experience by applying previously acquired knowledge to a major design project. Lectures discuss project-related issues and student presentations. A project proposal, interim report, oral presentations, and a comprehensive final report are required.",
+        "Selected Project Title : Games for Teaching Cybersecurity: Network Defence for Technical Employees"),
+];
 const semesters = [
     createSemester("Fall 2018", fall2018Courses),
     createSemester("Winter 2019", winter2019Courses),
@@ -259,6 +309,9 @@ const semesters = [
     createSemester("Summer 2021", summer2021Courses),
     createSemester("Fall 2021", fall2021Courses),
     createSemester("Winter 2022", winter2022Courses),
+    createSemester("Summer 2022", summer2022Courses),
+    createSemester("Fall 2022", fall2022Courses),
+    createSemester("Winter 2023", winter2023Courses),
 ];
 
 function createCourse(courseCode, courseName, grade, description, personalNotes) {

@@ -3,6 +3,23 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import ImageLinkCard, { createImageLinkCardProps } from './cards/ImageLinkCard';
 
+const spiriaSummer = createImageLinkCardProps(
+    "Spiria",
+    [
+        "May - Aug. 2022 (4 Months, In Progress)",
+        "Software Developer, Full-Stack"]
+    ,
+    [
+        "Developed frontend React components for the company library using Material UI with thorough test coverage",
+        "Resolved backend API authentication bugs with PHP & asserted expected behavior through integration testing",
+        "Developed MariaDB SQL migration scripts",
+        "Technologies: React, TypeScript, PHP, MariaDB, SQL"
+    ],
+    [],
+    null
+
+);
+
 const kinaxisFall = createImageLinkCardProps(
     "Kinaxis",
     [
@@ -131,7 +148,7 @@ const carletonEMLC = createImageLinkCardProps(
     null
 )
 
-const softwareExperiences = [kinaxisFall, jsiSummer, jsiWinter, carletonResearch2019];
+const softwareExperiences = [spiriaSummer, kinaxisFall, jsiSummer, jsiWinter, carletonResearch2019];
 const communicationsExperiences = [carletonTA2022, oneclass, carletonTA2020, carletonEMLC];
 
 function ExperiencePage() {

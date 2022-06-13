@@ -5,7 +5,8 @@ import { createImageLinkCardProps, createLink } from './cards/ImageLinkCard';
 //Images
 import letteredTabsGif from "../../images/LetteredTabs.gif";
 import mspBoardGif from "../../images/MSPBoard.gif";
-import riskGameImg from "../../images/risk.jpg"
+import riskGameImg from "../../images/risk.jpg";
+import elevatorGif from "../../images/Elevator.gif";
 
 const letteredTabs = createImageLinkCardProps(
     "Lettered Tabs Web App",
@@ -50,8 +51,23 @@ const riskGame = createImageLinkCardProps(
     riskGameImg
 );
 
+const elevatorSim = createImageLinkCardProps(
+    "Elevator System Simulator",
+    ["2022 Academic Group Project"],
+    [
+        "Designed and implemented an elevator system simulation using multithreaded design patterns",
+        "Developed elevator scheduling algorithms with feature flag controls to quantify performance differences between algorithms",
+        "Developed UDP communication systems to facilitate communications between the different subsystems to distribute computation remotely over VPN",
+        "Conducted integration testing & debugging in multithreaded contexts to ensure all subsystems interacted as expected",
+        "Led and organized team meetings to assign tasks and to parallelize workflow resulting in a 97% on the project"
+    ],
+    [
+        createLink("Source Code", "https://github.com/MillanWang/3303ElevatorProject"),
+    ],
+    elevatorGif
+);
 
-const projects = [letteredTabs, mspPerformance, riskGame]
+const projects = [letteredTabs, mspPerformance, riskGame, elevatorSim]
 
 function ProjectsPage() {
     return (
