@@ -71,6 +71,7 @@ const projects = [letteredTabs, mspPerformance, riskGame, elevatorSim]
 
 function ProjectsPage() {
     return (
+        // Need some MUI stuff to make the cards reposition instead of flex
         <div style={{
             display: "flex",
             "justify-content": "center"
