@@ -7,113 +7,128 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
-export function createImageLinkCardProps(title: string, subtitles: string, descriptionStrings: string[], links: string[], img: string) {
+import './ImageLinkCard.css';
+
+export function createImageLinkCardProps(
+    title: string,
+    subtitles: string[],
+    descriptionStrings: string[],
+    links: LinkObject[],
+    img: string) {
+    //Do some sanitization here
     return { title, subtitles, descriptionStrings, links, img };
 };
 
-type ImageLinkCardProps = {
+export type ImageLinkCardProps = {
     title: string,
-    subtitles: string,
-    descriptionStrings:
-    string[],
-    links: string[],
+    subtitles: string[],
+    descriptionStrings: string[],
+    links: LinkObject[],
     img: string,
 
     maxWidth?: number,
-
 };
 
-export function createLink(linkText: string, url: string) {
+type LinkObject = {
+    linkText: string,
+    url: string
+}
+
+export function createLinkObject(linkText: string, url: string): LinkObject {
     return { linkText, url }
 }
 
-const ImageLinkCard = (props: ImageLinkCardProps) => {
+const ImageLinkCard = (
+    {
+        title,
+        subtitles,
+        descriptionStrings,
+        links,
+        img,
+        maxWidth
+    }: ImageLinkCardProps) => {
     return (
-        <Card sx={{
-            maxWidth: props.maxWidth,
-            marginTop: 1,
-            margin: props.sideMargin ? 1 : 0,
-            height: "fit-content",
-            bgcolor: "primary.main"
-        }
-        }
+        <Card
+            sx={
+                {
+                    maxWidth: maxWidth,
+                    marginTop: 1,
+                    // margin: props.sideMargin ? 1 : 0,
+                    height: "fit-content",
+                    bgcolor: "primary.main"
+                }}
             raised
         >
-            {getImage(props.imageLinkCardProps.img)}
+            {getImage(img)}
 
 
-            < CardContent
+            <CardContent
                 sx={{
                     paddingBottom: 0,
-                    paddingTop: props.imageLinkCardProps.img ? 0 : 2, // 2 without image, 0 with image
+                    paddingTop: img ? 0 : 2, // 2 without image, 0 with image
                 }}>
-                <Typography variant="h5" >
-                    {props.imageLinkCardProps.title}
-                    < /Typography>
+                <Typography variant="h5" >{title}</Typography>
 
-                    {
-                        props.imageLinkCardProps.subtitles.map((subtitle) => (
-                            <Typography variant="body2" color="text.secondary" >
-                                {subtitle}
-                                < /Typography>
-                                ))
-}
-
-                                <Divider sx={{ marginBottom: 1, borderBottomWidth: 3, borderColor: "text.disabled" }} />
-
-                                < div style={{ textAlign: props.bodyTextAlignment }}>
-                                    {
-                                        props.imageLinkCardProps.descriptionStrings.map((s) => (
-            <Typography
-                            variant= "body2"
-                            color = "text.secondary"
-                            sx = {{ marginBottom: 1.5 }}
-        >
-        { s }
-        < /Typography>
-                    ))}
-</div>
-    < /CardContent >
-
-                                        {/* Links */ }
-                                        < CardActions style = { { justifyContent: 'center' } }>
-                                    {
-                                        props.imageLinkCardProps.links.map((linkObj) => (
-                                            <a href={linkObj.url} target="_blank" rel="noreferrer noopener" >
-                                                <Button size="small" sx={{ color: "text.primary", bgcolor: "primary.light" }} > {linkObj.linkText} < /Button>
-                                                    < /a>
+                {subtitles?.map((subtitle: string) => (
+                    <Typography variant="body2" color="text.secondary" >
+                        {subtitle}
+                    </Typography>
                 ))}
-                                                </CardActions>
-                                                < /Card >
-                                                )
+
+                <Divider sx={{ marginBottom: 1, borderBottomWidth: 3, borderColor: "text.disabled" }} />
+
+                <div style={{ textAlign: "left" }}>
+                    {descriptionStrings.map((s: string) => (
+                        <Typography
+                            variant="body2"
+                            color="text.secondary"
+                            sx={{ marginBottom: 1.5 }}
+                        >
+                            {s}
+                        </Typography>
+                    ))}
+                </div>
+            </CardContent >
+
+            {/* Links */}
+            <CardActions style={{ justifyContent: 'center' }}>
+                {
+                    links?.map((linkObj) => (
+                        <a href={linkObj.url} target="_blank" rel="noreferrer noopener" >
+                            <Button size="small" sx={{ color: "text.primary", bgcolor: "primary.light" }} > {linkObj.linkText} </Button>
+                        </a>
+                    ))}
+            </CardActions>
+        </Card >
+    )
 }
 
 const getImage = (img: string) => {
-    if (img === null) {
+    if (img === '') {
         return <React.Fragment></React.Fragment>
     } else {
         return (
-                                                <React.Fragment>
-                                                    <CardMedia
-                                                        component="img"
-                                                        alt="Image Error"
-                                                        height="200"
-                                                        image={img} />
-                                                    <Divider
-                                                        sx={
-                                                            {
-                                                                width: "95%",
-                                                                marginTop: 2,
-                                                                marginBottom: 0,
-                                                                paddingBottom: 0,
-                                                                borderBottomWidth: 3,
-                                                                borderColor: "text.disabled"
-                                                            }
-                                                        } />
-                                                    < /React.Fragment>
-                                                    )
+            <React.Fragment>
+                <CardMedia
+                    component="img"
+                    alt="Image Error"
+                    height="200"
+                    image={img} />
+                <Divider
+                    sx={
+                        {
+                            width: "95%",
+                            marginTop: 2,
+                            marginBottom: 0,
+                            paddingBottom: 0,
+                            borderBottomWidth: 3,
+                            borderColor: "text.disabled"
+                        }
+                    } />
+            </React.Fragment>
+        )
     }
 };
 
 
-                                                    export default ImageLinkCard;
+export default ImageLinkCard;
