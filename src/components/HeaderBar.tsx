@@ -8,11 +8,14 @@ import HtmlTooltip from '@mui/material/Tooltip';
 import { Typography } from '@mui/material';
 
 //images
-import titleGif from "../images/MillNameGlow.gif";
+// import titleGif from "../images/MillNameGlow.gif";
+// import looking4WorkGif from "../images/Looking4Work.gif";
+// import contactEmail from "../images/ContactEmail.gif";
+import * as titleGif from "../images/MillNameGlow.gif";
+import * as looking4WorkGif from "../images/Looking4Work.gif";
+import * as contactEmail from "../images/ContactEmail.gif";
 
 
-import looking4WorkGif from "../images/Looking4Work.gif";
-import contactEmail from "../images/ContactEmail.gif";
 
 const contactNavGif = createNavGifTooltipProps(
     "Contact:",

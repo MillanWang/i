@@ -69,8 +69,12 @@ const ImageLinkCard = (
                 }}>
                 <Typography variant="h5" >{title}</Typography>
 
-                {subtitles?.map((subtitle: string) => (
-                    <Typography variant="body2" color="text.secondary" >
+                {subtitles?.map((subtitle: string, i: number) => (
+                    <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        key={subtitle + i++}
+                    >
                         {subtitle}
                     </Typography>
                 ))}
@@ -78,8 +82,9 @@ const ImageLinkCard = (
                 <Divider sx={{ marginBottom: 1, borderBottomWidth: 3, borderColor: "text.disabled" }} />
 
                 <div style={{ textAlign: "left" }}>
-                    {descriptionStrings.map((s: string) => (
+                    {descriptionStrings.map((s: string, i: number) => (
                         <Typography
+                            key={s + i++}
                             variant="body2"
                             color="text.secondary"
                             sx={{ marginBottom: 1.5 }}
@@ -93,9 +98,14 @@ const ImageLinkCard = (
             {/* Links */}
             <CardActions style={{ justifyContent: 'center' }}>
                 {
-                    links?.map((linkObj) => (
+                    links?.map((linkObj: LinkObject, i: number) => (
                         <a href={linkObj.url} target="_blank" rel="noreferrer noopener" >
-                            <Button size="small" sx={{ color: "text.primary", bgcolor: "primary.light" }} > {linkObj.linkText} </Button>
+                            <Button
+                                key={linkObj.linkText + i++}
+                                size="small"
+                                sx={{ color: "text.primary", bgcolor: "primary.light" }} >
+                                {linkObj.linkText}
+                            </Button>
                         </a>
                     ))}
             </CardActions>
