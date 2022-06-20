@@ -62,24 +62,25 @@ const HeaderBar = ({ sections }: HeaderBarProps) => {
         <React.Fragment>
             {/* Title toolbar */}
             <Toolbar
-                sx={{
-                    borderBottom: 2,
-                    borderColor: 'text.disabled',
-                    bgcolor: "primary.dark",
-                    "justify-content": "center"
-                }}>
+            // sx={{
+            //     borderBottom: 2,
+            //     borderColor: 'text.disabled',
+            //     bgcolor: "primary.dark",
+            //     "justify-content": "center"
+            // }}
+            >
 
                 <Link to="/">
                     <Box
                         component="img"
-                        sx={{
-                            maxHeight: 150,
-                            maxWidth: 950,
-                            flex: 1,
-                            width: "100%",
-                            height: "100%",
-                            resizeMode: 'contain'
-                        }}
+                        // sx={{
+                        //     maxHeight: 150,
+                        //     maxWidth: 950,
+                        //     flex: 1,
+                        //     width: "100%",
+                        //     height: "100%",
+                        //     resizeMode: 'contain'
+                        // }}
                         alt="Millan Wang"
                         src={titleGif}
                     />
@@ -95,14 +96,15 @@ Also should reconsider the use of contact&looking4work gifs in mobile. Screen re
             <Toolbar
                 component="nav"
                 variant="dense"
-                sx={{
-                    justifyContent: 'center',
-                    borderBottom: 2,
-                    borderColor: 'text.disabled',
-                    bgcolor: "primary.dark",
-                    flex: 1,
-                    resizeMode: 'contain'
-                }}>
+            // sx={{
+            //     justifyContent: 'center',
+            //     borderBottom: 2,
+            //     borderColor: 'text.disabled',
+            //     bgcolor: "primary.dark",
+            //     flex: 1,
+            //     resizeMode: 'contain'
+            // }}
+            >
 
                 <NavBarImage
                     image={contactEmail}
@@ -112,7 +114,12 @@ Also should reconsider the use of contact&looking4work gifs in mobile. Screen re
 
                 {sections.map((section) => (
                     <Link to={section.url}>
-                        <Button sx={{ color: "primary.contrastText", bgcolor: "primary.main", margin: 0.5, resizeMode: 'contain' }}>
+                        <Button
+                        // sx={
+                        //     {
+                        //         color: "primary.contrastText", bgcolor: "primary.main", margin: 0.5, resizeMode: 'contain'
+                        //     }}
+                        >
                             {section.title}
                         </Button>
                     </Link>

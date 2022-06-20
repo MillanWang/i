@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
-import ImageLinkCard, { createImageLinkCardProps, createLinkObject, ImageLinkCardProps } from './cards/ImageLinkCard';
+import ImageLinkCard, { createImageLinkCardProps, createLinkObject, ImageLinkCardProps } from '../cards/ImageLinkCard';
 
 //Images
 import portraitImage from "../../images/MillPortrait.jpg";
@@ -81,8 +81,9 @@ function IntroPage() {
             < Stack spacing={2} width={"40%"} >
                 {images.map((currentImage) => (
                     <Paper
-                        width={"100%"}
-                        maxHeight={"20%"}>
+                    // width={"100%"}
+                    // maxHeight={"20%"}
+                    >
                         <img
                             src={currentImage}
                             alt="Logo"
@@ -90,7 +91,7 @@ function IntroPage() {
                                 flex: 1,
                                 width: "100%",
                                 height: "100%",
-                                resizeMode: 'contain'
+                                // resizeMode: 'contain'
                             }} />
                     </Paper>
                 ))}

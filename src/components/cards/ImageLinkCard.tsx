@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
-import './ImageLinkCard.css';
+// import './ImageLinkCard.css';
 
 export function createImageLinkCardProps(
     title: string,

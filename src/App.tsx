@@ -3,14 +3,14 @@ import { Route, Switch } from "react-router-dom";
 import * as React from 'react';
 import HeaderBar, { createTitleUrlPair } from './components/HeaderBar';
 import IntroPage from './components/navigationPages/IntroPage';
-// import ExperiencePage from './components/navigationPages/ExperiencePage';
-// import ProjectsPage from './components/navigationPages/ProjectsPage';
-// import EducationPage from './components/navigationPages/EducationPage';
-// import ExtracurricularsPage from './components/navigationPages/ExtracurricularsPage';
+import ExperiencePage from './components/navigationPages/ExperiencePage';
+import ProjectsPage from './components/navigationPages/ProjectsPage';
+import EducationPage from './components/navigationPages/EducationPage';
+import ExtracurricularsPage from './components/navigationPages/ExtracurricularsPage';
 import { Container, createTheme, ThemeProvider } from '@mui/material';
 import { blueGrey } from '@mui/material/colors';
 
-import ImageLinkCard, { createLinkObject } from './components/navigationPages/cards/ImageLinkCard';
+import ImageLinkCard, { createLinkObject } from './components/cards/ImageLinkCard';
 
 const mainAppTheme = createTheme({
   palette: {
@@ -50,10 +50,8 @@ const navigationSections = [
 function App() {
   return (
     <div className="App">
-      <p>BRUH</p>
       <ThemeProvider theme={mainAppTheme}>
 
-        <ImageLinkCard title="oi" subtitles={["ok"]} descriptionStrings={["ok"]} links={[createLinkObject("linky", "https://www.google.com")]} img={''}></ImageLinkCard>
         <HeaderBar sections={navigationSections} />
 
 
@@ -68,11 +66,11 @@ function App() {
             minHeight: "100%"
           }} >
 
-          {/* <Switch>
-            <Route exact path={introductionNavSection.url}> */}
-          <IntroPage />
-          {/* </Route> */}
-          {/* <Route path={workExperienceNavSection.url}>
+          <Switch>
+            <Route exact path={introductionNavSection.url}>
+              <IntroPage />
+            </Route>
+            <Route path={workExperienceNavSection.url}>
               <ExperiencePage />
             </Route>
             <Route exact path={projectsNavSection.url}>
@@ -83,8 +81,8 @@ function App() {
             </Route>
             <Route exact path={extracurricularsNavSection.url}>
               <ExtracurricularsPage />
-            </Route> */}
-          {/* </Switch> */}
+            </Route>
+          </Switch>
 
         </Container>
       </ThemeProvider>
