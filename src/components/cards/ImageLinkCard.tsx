@@ -59,17 +59,19 @@ const ImageLinkCard = (
                 }}
             raised
         >
-            {getImage(img)}
 
+            <Image img={img} />
 
             <CardContent
                 sx={{
                     paddingBottom: 0,
                     paddingTop: img ? 0 : 2, // 2 without image, 0 with image
                 }}>
-                <Typography variant="h5" >{title}</Typography>
+                <Typography variant="h5" id={title}>
+                    {title}
+                </Typography>
 
-                {subtitles?.map((subtitle: string, i: number) => (
+                {subtitles.map((subtitle: string, i: number) => (
                     <Typography
                         variant="body2"
                         color="text.secondary"
@@ -98,7 +100,7 @@ const ImageLinkCard = (
             {/* Links */}
             <CardActions style={{ justifyContent: 'center' }}>
                 {
-                    links?.map((linkObj: LinkObject, i: number) => (
+                    links.map((linkObj: LinkObject, i: number) => (
                         <a href={linkObj.url} target="_blank" rel="noreferrer noopener" >
                             <Button
                                 key={linkObj.linkText + i++}
@@ -113,7 +115,11 @@ const ImageLinkCard = (
     )
 }
 
-const getImage = (img: string) => {
+type ImageProps = {
+    img: string,
+}
+
+const Image = ({ img }: ImageProps) => {
     if (img === '') {
         return <React.Fragment></React.Fragment>
     } else {

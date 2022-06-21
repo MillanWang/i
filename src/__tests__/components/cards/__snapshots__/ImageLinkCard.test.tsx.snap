@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageLinkCard /> should render to snapshot with only props 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-c9zslg-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        id=""
+      />
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+      />
+      <div
+        style="text-align: left;"
+      />
+    </div>
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+      style="justify-content: center;"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ImageLinkCard /> should show the title 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-c9zslg-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        id="This is the Title"
+      >
+        This is the Title
+      </h5>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+      />
+      <div
+        style="text-align: left;"
+      />
+    </div>
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+      style="justify-content: center;"
+    />
+  </div>
+</div>
+`;
