@@ -19,6 +19,7 @@ describe("<ImageLinkCard />", () => {
         />
         );
         expect(container).toMatchSnapshot();
+        expect(true).toBe(true);
     });
 
     it('should show the title', () => {

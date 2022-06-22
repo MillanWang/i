@@ -8,13 +8,9 @@ import HtmlTooltip from '@mui/material/Tooltip';
 import { Typography } from '@mui/material';
 
 //images
-// import titleGif from "../images/MillNameGlow.gif";
-// import looking4WorkGif from "../images/Looking4Work.gif";
-// import contactEmail from "../images/ContactEmail.gif";
-import * as titleGif from "../images/MillNameGlow.gif";
-import * as looking4WorkGif from "../images/Looking4Work.gif";
-import * as contactEmail from "../images/ContactEmail.gif";
-
+import titleGif from "../images/MillNameGlow.gif";
+import looking4WorkGif from "../images/Looking4Work.gif";
+import contactEmail from "../images/ContactEmail.gif";
 
 
 const contactNavGif = createNavGifTooltipProps(
@@ -28,7 +24,7 @@ const contactNavGif = createNavGifTooltipProps(
 const looking4WorkNavGif = createNavGifTooltipProps(
     "Availability:",
     [
-        "Full-time : Summer 2023",
+        "Full-time : 2023",
         "Canadian Citizen & Willing to Relocate!"
     ]
 )

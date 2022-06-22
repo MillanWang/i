@@ -33,6 +33,7 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test_OLDBEFOREJEST": "react-scripts test",
     "eject": "react-scripts eject"
   },

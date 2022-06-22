@@ -11,6 +11,7 @@ import { Container, createTheme, ThemeProvider } from '@mui/material';
 import { blueGrey } from '@mui/material/colors';
 
 import ImageLinkCard, { createLinkObject } from './components/cards/ImageLinkCard';
+import CardGrid from './components/cards/CardGrid';
 
 const mainAppTheme = createTheme({
   palette: {
@@ -51,6 +52,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={mainAppTheme}>
+        <CardGrid />
 
         <HeaderBar sections={navigationSections} />
 

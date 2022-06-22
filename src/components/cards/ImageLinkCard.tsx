@@ -51,7 +51,9 @@ const ImageLinkCard = (
         <Card
             sx={
                 {
-                    maxWidth: maxWidth,
+                    // minWidth: "30%",
+                    // maxWidth: 400,
+                    width: 400,
                     marginTop: 1,
                     // margin: props.sideMargin ? 1 : 0,
                     height: "fit-content",
@@ -101,9 +103,9 @@ const ImageLinkCard = (
             <CardActions style={{ justifyContent: 'center' }}>
                 {
                     links.map((linkObj: LinkObject, i: number) => (
-                        <a href={linkObj.url} target="_blank" rel="noreferrer noopener" >
+                        <a href={linkObj.url} target="_blank" rel="noreferrer noopener" key={linkObj.linkText + i++}>
                             <Button
-                                key={linkObj.linkText + i++}
+
                                 size="small"
                                 sx={{ color: "text.primary", bgcolor: "primary.light" }} >
                                 {linkObj.linkText}
