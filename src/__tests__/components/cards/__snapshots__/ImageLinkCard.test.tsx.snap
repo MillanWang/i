@@ -10,18 +10,14 @@ exports[`<ImageLinkCard /> should render to snapshot with only props 1`] = `
     >
       <h5
         class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
-        id=""
+        id="Card_"
       />
       <hr
         class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
       />
-      <div
-        style="text-align: left;"
-      />
     </div>
     <div
-      class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-      style="justify-content: center;"
+      class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
     />
   </div>
 </div>
@@ -37,20 +33,16 @@ exports[`<ImageLinkCard /> should show the title 1`] = `
     >
       <h5
         class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
-        id="This is the Title"
+        id="Card_This is the Title"
       >
         This is the Title
       </h5>
       <hr
         class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
       />
-      <div
-        style="text-align: left;"
-      />
     </div>
     <div
-      class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-      style="justify-content: center;"
+      class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
     />
   </div>
 </div>

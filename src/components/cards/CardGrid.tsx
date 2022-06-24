@@ -29,7 +29,7 @@ const spiriaSummer: ImageLinkCardProps = createImageLinkCardProps(
         "Technologies: React, TypeScript, PHP, MariaDB, SQL"
     ],
     [],
-    ''// No Image
+    require("../../images/ZollySpin.gif")//''// No Image
 
 );
 
@@ -270,15 +270,10 @@ const allCardsEverForTesting: ImageLinkCardProps[] = [letteredTabs, mspPerforman
 
 type CardGridProps = {
     // Need to make this non-optional once done
-    cardProps?: ImageLinkCardProps[]
+    cardArray?: ImageLinkCardProps[]
 }
 
-
-
-
-
-
-const CardGrid = ({ cardProps }: CardGridProps) => {
+const CardGrid = ({ cardArray }: CardGridProps) => {
     return (
         <Box sx={{ flexGrow: 1, width: "80%" }}>
             <Grid
