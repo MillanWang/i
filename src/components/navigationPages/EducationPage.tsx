@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
@@ -14,10 +13,10 @@ import Paper from '@mui/material/Paper';
 import HtmlTooltip from '@mui/material/Tooltip';
 import Divider from '@mui/material/Divider';
 
-import carletonLogoImage from "../../images/CarletonLogo.jpg";
+// Images
+import carletonLogoImage from "../../images/CarletonLogo.jpg"; //Switch to require???
 
 
-//TODO: Consolidate repetitive sx tags into css classes
 //TODO:  Change whole thing to match color theme. Bright white is brutal on the eyes.
 // Extract the white background from the carleton image by making it transparent with rgba-alpha cause that's the only barrier 
 
@@ -322,49 +321,44 @@ type CourseObject = {
     personalNotes: string
 };
 
+function createCourse(courseCode: string, courseName: string, grade: string, description: string, personalNotes: string): CourseObject {
+    return { courseCode, courseName, grade, description, personalNotes }
+}
+
 type SemesterObject = {
     semesterName: string,
     courses: CourseObject[]
-}
-
-function createCourse(courseCode: string, courseName: string, grade: string, description: string, personalNotes: string): CourseObject {
-    return { courseCode, courseName, grade, description, personalNotes }
 }
 
 function createSemester(semesterName: string, courses: CourseObject[]): SemesterObject {
     return { semesterName, courses }
 }
 
-
-
 function EducationPage() {
     return (
-        <Paper
-            sx={{
-                width: "70%",
-                paddingTop: 2,
-            }}
-        >
-            <img src={carletonLogoImage}
-                alt="Carleton University"
-                style={{
-                    flex: 1,
-                    width: "70%",
-                    // resizeMode: 'contain'
-                }} />
-
+        <Paper sx={educationOuterPaperTheme}>
             {/* Carleton logo image */}
-            <div style={{ textAlign: "left", width: "70%" }}>
-                {carletonInfoStrings.map((s) => (
-                    <Typography sx={{ color: "primary.dark" }}>{s}</Typography>
+            <Box
+                component="img"
+                src={carletonLogoImage}
+                alt="Carleton University"
+                sx={carletonLogoTheme}
+            />
+
+            {/* Info Strings */}
+            <Box sx={carletonInfoStringsBoxTheme}>
+                {carletonInfoStrings.map((infoString: string, i: number) => (
+                    <Typography sx={primaryDarkTextTheme} align="left" key={"EducationDescriptionString_" + i++}>
+                        {infoString}
+                    </Typography>
                 ))}
-            </div>
+            </Box>
 
-            <Divider variant="middle" sx={{ marginTop: 3, fontSize: 18, color: "primary.dark" }} >Transcript</Divider>
-            <Divider variant="middle" sx={{ marginTop: 0, fontSize: 14, color: "primary.dark" }} >Hover course codes for course info and Hover grades for personal notes </Divider>
+            <Divider variant="middle" sx={transcriptDividerTheme} children="Transcript" />
+            <Divider variant="middle" sx={hoverNoteDividerTheme} children="Hover course codes for course info and Hover grades for personal notes" />
 
+            {/* Main grades table */}
             <SemesterTabs />
-
         </Paper>
     )
 }
@@ -377,52 +371,31 @@ function SemesterTabs() {
     };
 
     return (
-        <Box
-        // sx={{
-        //     flexGrow: 1,
-        //     display: 'flex',
-        //     "margin-top": 21,
-        //     paddingBottom: 5,
-        //     justifyContent: "left",
-        //     width: "90%"
-        // }}
-        >
-            <Tabs
-                value={value}
-                onChange={handleChange}
-                orientation="vertical"
-                sx={{
-                    borderRight: 1,
-                    borderColor: 'divider',
-                    width: 100
-                }} >
+        <Box sx={semesterTabsOuterBoxTheme}>
+            <Tabs value={value} onChange={handleChange} orientation="vertical" sx={semesterTabSelectorTheme}>
                 {semesters.map((semester: SemesterObject, i: number) => {
-                    return <Tab
-                        sx={{
-                            bgcolor: 'primary',
-                            color: "primary.dark",
-                            background: "#dddddd",
-                            margin: 0.3,
-                            borderRadius: 5
-                        }}
-                        label={semester.semesterName}
-                        {...a11yProps(i++)} />
+                    return (
+                        <Tab
+                            sx={semesterTabTheme}
+                            label={semester.semesterName}
+                            key={"SemesterTab_" + semester.semesterName + i}
+                            {...a11yProps(i++)}
+                        />
+                    )
                 })}
             </Tabs>
 
             {/* Tab content */}
-            {semesters.map((currentSemester, i) => {
+            {semesters.map((currentSemester: SemesterObject, i: number) => {
                 return (
-                    <TabPanel
-                        value={value}
-                        index={i++} >
+                    <TabPanel value={value} index={i++} key={"TabContent_" + currentSemester.semesterName}>
                         <GradeTable semester={currentSemester} />
                     </TabPanel>
                 )
             })}
         </Box>
     );
-}
+};
 
 type TabPanelProps = {
     children?: React.ReactNode;
@@ -430,116 +403,87 @@ type TabPanelProps = {
     value: number;
 };
 
+
 function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
 
     return (
-        <div
+        <Box
             role="tabpanel"
             hidden={value !== index}
+            sx={tabPanelOuterBoxTheme}
             id={`simple-tabpanel-${index}`}
-            style={{ width: "100%" }}
-            {...other}>
-
-            {value === index && (
-                <Box
-                    id="bruh"
-                    sx={{
-                        p: 3,
-                        minWidth: 100
-                    }}>
-                    {children}
-                </Box>
-            )}
-        </div>
+            {...other}
+        >
+            {value === index && (<Box sx={tabPanelInnerBoxTheme} children={children} />)}
+        </Box>
     );
 }
 
-//Appears to be just a JS thing??
-// TabPanel.propTypes = {
-//     children: PropTypes.node,
-//     index: PropTypes.number.isRequired,
-//     value: PropTypes.number.isRequired,
-// };
-
 function a11yProps(index: number) {
     return { id: `simple-tab-${index}` };
-}
+};
 
 type GradeTableProps = {
     semester: SemesterObject
-}
+};
+
 function GradeTable({ semester }: GradeTableProps) {
     const { semesterName, courses } = semester;
     return (
         <TableContainer component={Paper} >
             <Table>
 
-                <TableHead>
-                    <TableRow
-                    // sx={{ "background-color": "#dddddd" }}
-                    >
-
-                        <TableCell width={100}>
-                            <Typography children={"Course Code"} sx={{ color: "primary.dark" }} />
-                            {/* <TableColumnHeader title="Course Code" /> */}
-                        </TableCell>
-                        <TableCell>
-                            <Typography children={"Course Name"} sx={{ color: "primary.dark" }} />
-                            {/* <TableColumnHeader title="Course Name" /> */}
-                        </TableCell>
-                        <TableCell align="right">
-                            <Typography children={"Grade"} sx={{ color: "primary.dark" }} />
-                            {/* <TableColumnHeader title="Grade" /> */}
-                        </TableCell>
-
-                    </TableRow>
-                </TableHead>
+                <CourseTableHeader />
 
                 <TableBody>
-                    {courses.map((course: CourseObject) => (
-                        <TableRow
-                            key={semesterName}
-                            hover
-                        // sx={{ "background-color": "#eeeeee" }} 
-                        >
-                            <HtmlTooltip followCursor
-                                title={
-                                    <HeaderDescriptionTooltip
-                                        description={course.description}
-                                        header="Course Description" />
-                                }>
-                                <TableCell
-                                    sx={{ color: "primary.dark" }} >
-                                    {course.courseCode}
+                    {
+                        courses.map((course: CourseObject) => (
+                            <TableRow key={semesterName + "_Row_" + course.courseCode} hover sx={tableRowCourseTheme}>
+                                {/* Course code and description */}
+                                <HtmlTooltip followCursor title={<HeaderDescriptionTooltip description={course.description} header="Course Description" />}>
+                                    <TableCell sx={primaryDarkTextTheme} >
+                                        {course.courseCode}
+                                    </TableCell>
+                                </HtmlTooltip>
+
+                                {/* Course Name */}
+                                <TableCell sx={primaryDarkTextTheme}>
+                                    {course.courseName}
                                 </TableCell>
-                            </HtmlTooltip>
 
-                            <TableCell
-                                sx={{ color: "primary.dark" }}>
-                                {course.courseName}
-                            </TableCell>
-
-                            <HtmlTooltip followCursor
-                                title={
-                                    <HeaderDescriptionTooltip
-                                        description={course.personalNotes}
-                                        header="Personal Course Experience" />}>
-                                <TableCell
-                                    sx={{ maxWidth: 90, color: "primary.dark" }}
-                                    align="right">
-                                    {course.grade}
-                                </TableCell>
-                            </HtmlTooltip>
-                        </TableRow>))}
-
+                                {/* Course grade */}
+                                <HtmlTooltip followCursor title={<HeaderDescriptionTooltip description={course.personalNotes} header="Personal Course Experience" />}>
+                                    <TableCell sx={tableGradeCellTheme} align="right">
+                                        {course.grade}
+                                    </TableCell>
+                                </HtmlTooltip>
+                            </TableRow>
+                        ))
+                    }
                 </TableBody>
-
             </Table>
         </TableContainer>
     )
 }
 
+function CourseTableHeader() {
+    return (
+        <TableHead>
+            <TableRow sx={tableRowHeaderTheme}>
+                <TableCell width={100}>
+                    <Typography children={"Course Code"} sx={primaryDarkTextTheme} />
+                </TableCell>
+                <TableCell>
+                    <Typography children={"Course Name"} sx={primaryDarkTextTheme} />
+                </TableCell>
+                <TableCell align="right">
+                    <Typography children={"Grade"} sx={primaryDarkTextTheme} />
+                </TableCell>
+            </TableRow>
+        </TableHead>
+    )
+}
 
 type HeaderDescriptionTooltipProps = {
     header: string,
@@ -548,11 +492,93 @@ type HeaderDescriptionTooltipProps = {
 
 function HeaderDescriptionTooltip({ header, description }: HeaderDescriptionTooltipProps) {
     return (
-        <Box >
+        <Box>
             <Typography align="center" variant="h6">{header}</Typography>
             <Typography>{description}</Typography>
         </Box>
     )
 }
+
+/******************************
+ * THEMES
+ *****************************/
+
+const educationOuterPaperTheme = {
+    width: "70%",
+    paddingTop: 2,
+    marginBottom: 12
+};
+
+const carletonLogoTheme = {
+    flex: 1,
+    width: "70%",
+    resizeMode: 'contain'
+};
+
+const carletonInfoStringsBoxTheme = {
+    width: "70%"
+};
+
+const primaryDarkTextTheme = {
+    color: "primary.dark"
+};
+
+const transcriptDividerTheme = {
+    marginTop: 3,
+    fontSize: 18,
+    color: "primary.dark"
+};
+
+const hoverNoteDividerTheme = {
+    marginTop: 0,
+    fontSize: 14,
+    color: "primary.dark"
+};
+
+const tabPanelOuterBoxTheme = {
+    width: "100%"
+};
+
+const tabPanelInnerBoxTheme = {
+    p: 3,
+    minWidth: 100
+};
+
+const semesterTabsOuterBoxTheme = {
+    flexGrow: 1,
+    display: 'flex',
+    marginTop: 3,
+    paddingBottom: 5,
+    justifyContent: "left",
+    width: "90%"
+};
+
+const semesterTabSelectorTheme = {
+    borderRight: 1,
+    borderColor: 'divider',
+    width: 100
+};
+
+const semesterTabTheme = {
+    bgcolor: 'primary',
+    color: "primary.dark",
+    background: "#dddddd",
+    margin: 0.3,
+    borderRadius: 5
+};
+
+const tableRowHeaderTheme = {
+    backgroundColor: "#dddddd"
+};
+
+const tableRowCourseTheme = {
+    backgroundColor: "#eeeeee"
+};
+
+const tableGradeCellTheme = {
+    maxWidth: 90,
+    color: "primary.dark",
+};
+
 
 export default EducationPage;

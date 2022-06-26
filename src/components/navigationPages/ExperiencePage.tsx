@@ -1,7 +1,13 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
-import ImageLinkCard, { createImageLinkCardProps, ImageLinkCardProps } from '../cards/ImageLinkCard';
+import {
+    Box,
+    Stack,
+    Typography
+} from '@mui/material';
+import ImageLinkCard, {
+    createImageLinkCardProps,
+    ImageLinkCardProps
+} from '../cards/ImageLinkCard';
 
 const spiriaSummer: ImageLinkCardProps = createImageLinkCardProps(
     "Spiria",
@@ -13,7 +19,7 @@ const spiriaSummer: ImageLinkCardProps = createImageLinkCardProps(
         "Developed frontend React components for the company library using Material UI with thorough test coverage",
         "Resolved backend API authentication bugs with PHP & asserted expected behavior through integration testing",
         "Developed MariaDB SQL migration scripts",
-        "Technologies: React, TypeScript, PHP, MariaDB, SQL"
+        "Technologies: React, TypeScript, PHP, jQuery, MariaDB, SQL"
     ],
     [],
     ''// No Image
@@ -150,60 +156,64 @@ const communicationsExperiences: ImageLinkCardProps[] = [carletonTA2022, oneclas
 
 function ExperiencePage() {
     return (
-        <div
-            style={{
-                display: "flex",
-                // "justify-content": "center",
-                // "padding-bottom": 40
-            }}>
+        // <div
+        <Box sx={experiencePageOuterBoxTheme}>
 
-            <Stack spacing={2}>
-                {StackHeader("Education Experience")}
-                {/* <StackHeader title="Software Engineering Experience" /> */}
-
-                {softwareExperiences.map((ex: ImageLinkCardProps) => (
-                    <ImageLinkCard
-                        title={ex.title}
-                        subtitles={ex.subtitles}
-                        descriptionStrings={ex.descriptionStrings}
-                        links={ex.links}
-                        img={ex.img}
-                        maxWidth={500} />
-                ))}
-            </Stack>
+            <CardStack stackHeader="Software Engineering Experience" cardPropsArray={softwareExperiences} />
 
             {/* Middle column spacer */}
-            <div style={{ width: "1%" }} />
+            <Box sx={middleColumnSpaceTheme} />
 
-            <Stack spacing={2}>
-                {StackHeader("Education Experience")}
-                {/* <StackHeader title="Education Experience" /> */}
-
-                {communicationsExperiences.map((ex: ImageLinkCardProps) => (
-                    <ImageLinkCard
-                        title={ex.title}
-                        subtitles={ex.subtitles}
-                        descriptionStrings={ex.descriptionStrings}
-                        links={ex.links}
-                        img={ex.img}
-                        maxWidth={500} />
-                ))}
-            </Stack>
-        </div>
+            <CardStack stackHeader="Education Experience" cardPropsArray={communicationsExperiences} />
+        </Box>
     )
 }
 
-function StackHeader(title: string) {
+type CardStackProps = {
+    stackHeader: string,
+    cardPropsArray: ImageLinkCardProps[]
+}
+
+function CardStack({ stackHeader, cardPropsArray }: CardStackProps) {
     return (
-        <Typography
-            variant="h5"
-        // sx={{
-        //     color: "text.primary",
-        //     "text-decoration": "underline"
-        // }}
-        >
+        <Stack spacing={2}>
+            <StackHeader title={stackHeader} />
+
+            {cardPropsArray.map((cardProps: ImageLinkCardProps, i: number) => (
+                <ImageLinkCard {...cardProps} width={500} key={"ExperienceCard_" + cardProps.title + i++} />
+            ))}
+        </Stack>
+    );
+};
+
+type StackHeaderProps = {
+    title: string,
+};
+
+function StackHeader({ title }: StackHeaderProps) {
+    return (
+        <Typography variant="h5" sx={stackHeaderTheme}>
             {title}
         </Typography>)
+};
+
+/******************************
+ * THEMES
+ *****************************/
+
+const experiencePageOuterBoxTheme = {
+    display: "flex",
+    justifyContent: "center",
+    paddingBottom: 4,
 }
+
+const middleColumnSpaceTheme = {
+    minWidth: 16
+};
+
+const stackHeaderTheme = {
+    color: "text.primary",
+    textDecoration: "underline"
+};
 
 export default ExperiencePage;

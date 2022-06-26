@@ -1,7 +1,14 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Paper from '@mui/material/Paper';
-import ImageLinkCard, { createImageLinkCardProps, createLinkObject, ImageLinkCardProps } from '../cards/ImageLinkCard';
+import {
+    Box,
+    Stack
+} from '@mui/material';
+
+import ImageLinkCard, {
+    createImageLinkCardProps,
+    createLinkObject,
+    ImageLinkCardProps
+} from '../cards/ImageLinkCard';
 
 //Images
 import portraitImage from "../../images/MillPortrait.jpg";
@@ -69,56 +76,52 @@ const imageLinkCards = [
 
 function IntroPage() {
     return (
+        <Box sx={introPageTheme}>
 
-        <div
-            style={{
-                display: "flex",
-                // "justify-content": "center",
-                paddingBottom: 34
-            }}>
-
-            {/* Left Column Stack */}
+            {/* Left Column - Image Stack */}
             < Stack spacing={2} width={"40%"} >
                 {images.map((currentImage) => (
-                    <Paper
-                    // width={"100%"}
-                    // maxHeight={"20%"}
-                    >
-                        <img
-                            src={currentImage}
-                            alt="Logo"
-                            style={{
-                                flex: 1,
-                                width: "100%",
-                                height: "100%",
-                                // resizeMode: 'contain'
-                            }} />
-                    </Paper>
-                ))}
-            </Stack >
-
-
-            {/* Middle column spacer */}
-            <div style={{ width: "1%" }} />
-
-
-            {/* Right Column Stack */}
-            < Stack spacing={2} width={"40%"} >
-                {imageLinkCards.map((card: ImageLinkCardProps) => (
-                    <ImageLinkCard
-                        title={card.title}
-                        subtitles={card.subtitles}
-                        descriptionStrings={card.descriptionStrings}
-                        links={card.links}
-                        img={card.img}
-                    // imageLinkCardProps={card}
-                    // maxWidth={500}
+                    <Box
+                        component="img"
+                        src={currentImage}
+                        alt="Logo"
+                        sx={imageStackTheme}
                     />
                 ))}
             </Stack >
-        </div >
 
+            {/* Middle column spacer */}
+            <Box style={middleDividerTheme} />
+
+            {/* Right Column - Card Stack */}
+            <Stack spacing={2} width={"40%"} >
+                {imageLinkCards.map((card: ImageLinkCardProps) => (
+                    <ImageLinkCard {...card} key={"IntroPageCard_" + card.title} />
+                ))}
+            </Stack >
+        </Box>
     )
+}
+
+/******************************
+ * THEMES
+ *****************************/
+
+const introPageTheme = {
+    display: "flex",
+    justifyContent: "center",
+    paddingBottom: 34
+};
+
+const middleDividerTheme = {
+    width: 16
+}
+
+const imageStackTheme = {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    marginTop: 1
 }
 
 export default IntroPage;

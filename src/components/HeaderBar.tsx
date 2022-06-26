@@ -1,17 +1,17 @@
 import * as React from 'react';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import { Link } from "react-router-dom";
-import { Box } from '@mui/system';
-
+import {
+    Box,
+    Button,
+    Link,
+    Toolbar,
+    Typography
+} from '@mui/material';
 import HtmlTooltip from '@mui/material/Tooltip';
-import { Typography } from '@mui/material';
 
 //images
 import titleGif from "../images/MillNameGlow.gif";
 import looking4WorkGif from "../images/Looking4Work.gif";
 import contactEmail from "../images/ContactEmail.gif";
-
 
 const contactNavGif = createNavGifTooltipProps(
     "Contact:",
@@ -29,60 +29,28 @@ const looking4WorkNavGif = createNavGifTooltipProps(
     ]
 )
 
-function createNavGifTooltipProps(header: string, descriptions: string[]): NavGifTooltipProps {
-    return { header, descriptions }
-}
-
-export function createTitleUrlPair(title: string, url: string): TitleUrlPair {
-    return { title, url }
-}
-
-
 //TODO: Figure out why Navigation toolbar images popout of the toolbars when the window is resized.
-//TODO: Consolidate repetitive sx tags into css classes
-
-type NavGifTooltipProps = {
-    header: string,
-    descriptions: string[]
-}
 
 export type TitleUrlPair = {
     title: string,
     url: string
 }
 
+export function createTitleUrlPair(title: string, url: string): TitleUrlPair {
+    return { title, url }
+}
+
 type HeaderBarProps = {
     sections: TitleUrlPair[],
 }
-
 
 const HeaderBar = ({ sections }: HeaderBarProps) => {
     return (
         <React.Fragment>
             {/* Title toolbar */}
-            <Toolbar
-            // sx={{
-            //     borderBottom: 2,
-            //     borderColor: 'text.disabled',
-            //     bgcolor: "primary.dark",
-            //     "justify-content": "center"
-            // }}
-            >
-
-                <Link to="/">
-                    <Box
-                        component="img"
-                        // sx={{
-                        //     maxHeight: 150,
-                        //     maxWidth: 950,
-                        //     flex: 1,
-                        //     width: "100%",
-                        //     height: "100%",
-                        //     resizeMode: 'contain'
-                        // }}
-                        alt="Millan Wang"
-                        src={titleGif}
-                    />
+            <Toolbar sx={titleToolbarTheme}>
+                <Link href="#/">
+                    <Box component="img" src={titleGif} alt="Millan Wang" sx={titleImageTheme} />
                 </Link>
             </Toolbar>
 
@@ -91,34 +59,20 @@ const HeaderBar = ({ sections }: HeaderBarProps) => {
 TODO: For smaller screens, this isn't gonna work out.
 Should implement a drop down menu or sidebar type thing to navigate on mobile.
 Also should reconsider the use of contact&looking4work gifs in mobile. Screen real estate will be limited
-*/}
-            <Toolbar
-                component="nav"
-                variant="dense"
-            // sx={{
-            //     justifyContent: 'center',
-            //     borderBottom: 2,
-            //     borderColor: 'text.disabled',
-            //     bgcolor: "primary.dark",
-            //     flex: 1,
-            //     resizeMode: 'contain'
-            // }}
-            >
 
+Maybe a grid for the buttons?
+*/}
+            <Toolbar component="nav" variant="dense" sx={navToolbarTheme}>
                 <NavBarImage
                     image={contactEmail}
                     alt="Contact: real.millan.wang@gmail.com"
-                    tooltip={<NavGifTooltip navGifTooltipProps={contactNavGif} />} />
+                    tooltip={<NavGifTooltip {...contactNavGif} />}
+                />
 
-
+                {/* Navigation buttons */}
                 {sections.map((section) => (
-                    <Link to={section.url}>
-                        <Button
-                        // sx={
-                        //     {
-                        //         color: "primary.contrastText", bgcolor: "primary.main", margin: 0.5, resizeMode: 'contain'
-                        //     }}
-                        >
+                    <Link href={"#" + section.url} key={"NavLinkButton_" + section.title} >
+                        <Button sx={navButtonTheme}>
                             {section.title}
                         </Button>
                     </Link>
@@ -126,44 +80,100 @@ Also should reconsider the use of contact&looking4work gifs in mobile. Screen re
 
                 <NavBarImage
                     image={looking4WorkGif}
-                    alt="Looking for work: Summer 2022"
-                    tooltip={<NavGifTooltip navGifTooltipProps={looking4WorkNavGif} />} />
-
+                    alt="Looking for work: Full Time 2023"
+                    tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
+                />
             </Toolbar>
         </React.Fragment>
     );
 }
 
-const NavBarImage = (props: any) => {
+type NavGifTooltipProps = {
+    header: string,
+    descriptions: string[]
+}
+
+function createNavGifTooltipProps(header: string, descriptions: string[]): NavGifTooltipProps {
+    return { header, descriptions }
+}
+
+const NavGifTooltip = ({ header, descriptions }: NavGifTooltipProps) => {
     return (
-        <HtmlTooltip title={props.tooltip}>
+        <Box>
+            <Typography variant="h5">
+                {header}
+            </Typography>
+
+            {descriptions.map((text: string, i: number) => (
+                <Typography key={"NavGifToolTipDescription_" + header + i++}>
+                    {text}
+                </Typography>
+            ))}
+        </Box>
+    )
+}
+
+type NavBarImageProps = {
+    tooltip: JSX.Element,
+    image: string,
+    alt: string,
+};
+
+const NavBarImage = ({ tooltip, image, alt }: NavBarImageProps) => {
+    return (
+        <HtmlTooltip title={tooltip}>
             <Box
                 component="img"
-                sx={{
-                    height: 50,
-                    width: 250,
-                    // maxHeight: { xs: 233, md: 167 },
-                    // maxWidth: { xs: 350, md: 250 },
-                }}
-                alt={props.alt}
-                src={props.image}
+                src={image}
+                alt={alt}
+                sx={navBarImageTheme}
             />
         </HtmlTooltip>
     )
 }
 
-const NavGifTooltip = (props: any) => {
-    return (
-        <Box>
-            <Typography variant="h5">
-                {props.navGifTooltipProps.header}
-            </Typography>
+/******************************
+ * THEMES
+ *****************************/
 
-            {props.navGifTooltipProps.descriptions.map((text: string) => (
-                <Typography>{text}</Typography>
-            ))}
-        </Box>
-    )
+const titleToolbarTheme = {
+    borderBottom: 2,
+    borderColor: 'text.disabled',
+    bgcolor: "primary.dark",
+    justifyContent: "center"
+}
+
+const titleImageTheme = {
+    maxHeight: 150,
+    maxWidth: 950,
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    resizeMode: 'contain'
+}
+
+const navToolbarTheme = {
+    justifyContent: 'center',
+    borderBottom: 2,
+    borderColor: 'text.disabled',
+    bgcolor: "primary.dark",
+    flex: 1,
+    resizeMode: 'contain'
+}
+
+const navButtonTheme = {
+    color: "primary.contrastText",
+    bgcolor: "primary.main",
+    margin: 0.5,
+    resizeMode: 'contain',
+    '&:hover': {
+        backgroundColor: 'primary.light',
+    },
+}
+
+const navBarImageTheme = {
+    height: 50,
+    width: 250,
 }
 
 export default HeaderBar;

@@ -1,11 +1,13 @@
 import * as React from 'react';
 import {
+    Accordion, AccordionDetails, AccordionSummary,
     Button,
     Card, CardActions, CardContent, CardMedia,
     Divider,
     Link,
     Typography
 } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export type LinkObject = {
     linkText: string,
@@ -21,9 +23,10 @@ export type ImageLinkCardProps = {
     subtitles: string[],
     descriptionStrings: string[],
     links: LinkObject[],
-    img: string,//Change this to card path and do the require here so that it is the card's responsibility to resolve the img link to img
+    img: string,
 
-    maxWidth?: number, //Eventually remove cause the widths will be fixed
+    width?: number,
+    useAccordionDescription?: boolean,
 };
 
 export function createImageLinkCardProps(
@@ -42,10 +45,11 @@ const ImageLinkCard = (
         descriptionStrings,
         links,
         img,
-        maxWidth//Eventually remove
+        width,
+        useAccordionDescription
     }: ImageLinkCardProps) => {
     return (
-        <Card sx={outerCardTheme} raised>
+        <Card sx={outerCardTheme(width)} raised>
 
             {/* Optional top image. Only shows if non empty is given */}
             <CardImage img={img} />
@@ -53,23 +57,26 @@ const ImageLinkCard = (
             {/* Text Content */}
             <CardContent sx={img ? hasImageCardContentTheme : noImageCardContentTheme}>
 
-                <Typography variant="h5" id={'Card_' + title}>
-                    {title}
-                </Typography>
+                <Typography
+                    variant="h5"
+                    id={'Card_' + title}
+                    children={title}
+                />
 
-                {subtitles.map((subtitle: string, i: number) => (
-                    <Typography key={'Card_' + title + '_subtitle' + i++} variant="body2" color="text.secondary">
-                        {subtitle}
-                    </Typography>
-                ))}
+                <SubtitlesArea title={title} subtitles={subtitles} />
 
                 <Divider sx={headerBodyDividerTheme} />
 
-                {descriptionStrings.map((description: string, i: number) => (
-                    <Typography key={'Card_' + title + '_description' + i++} variant="body2" sx={descriptionStringTheme}>
-                        {description}
-                    </Typography>
-                ))}
+                <DescriptionStringsArea
+                    cardTitle={title}
+                    accordionWrap={useAccordionDescription}
+                    descriptionStrings={descriptionStrings}
+                />
+
+                {/* Add bottom divider if there are non-empty links and non-empty descriptions*/}
+                {links.length > 0 && descriptionStrings.length > 0 &&
+                    <Divider sx={bodyLinksDividerTheme} />
+                }
 
             </CardContent >
             {/* End Text Content */}
@@ -77,7 +84,7 @@ const ImageLinkCard = (
             {/* Links */}
             <CardActions sx={cardActionLinksTheme}>
                 {links.map((linkObj: LinkObject, i: number) => (
-                    <Link underline="always" href={linkObj.url} target="_blank" rel="noreferrer noopener" key={'Card_' + title + '_link' + i++}>
+                    <Link href={linkObj.url} target="_blank" rel="noreferrer noopener" key={'Card_' + title + '_link' + i++}>
                         <Button size="small" sx={linkButtonTheme} >
                             {linkObj.linkText}
                         </Button>
@@ -105,15 +112,81 @@ const CardImage = ({ img }: CardImageProps) => {
     }
 };
 
-/**
- * THEMES
- */
+type SubtitlesAreaProps = {
+    title: string,
+    subtitles: string[],
+}
 
-const outerCardTheme = {
-    width: 400,
-    marginTop: 1,
-    height: "fit-content",// Revisit when looking a constant row sizing in the cardGrid
-    bgcolor: "primary.main"
+const SubtitlesArea = ({ title, subtitles }: SubtitlesAreaProps) => {
+    return (
+        <React.Fragment>
+            {subtitles.map((subtitle: string, i: number) => (
+                <Typography key={'Card_' + title + '_subtitle' + i++} variant="body2" color="text.secondary">
+                    {subtitle}
+                </Typography>
+            ))}
+        </React.Fragment>
+    )
+};
+
+//TODO : There should be a separation between the desc strings alone as a bunch of typographies and then them inside an accordion. Too much for one component
+
+type DescriptionStringsAreaProps = {
+    cardTitle: string,
+    accordionWrap?: boolean,
+    descriptionStrings: string[]
+}
+
+const DescriptionStringsArea = ({ cardTitle, accordionWrap, descriptionStrings }: DescriptionStringsAreaProps) => {
+    const descriptionStringsElement: JSX.Element = (
+        <React.Fragment>
+            {descriptionStrings.map((description: string, i: number) => (
+                <Typography key={'Card_' + cardTitle + '_description' + i++} variant="body2" sx={descriptionStringTheme} align="left">
+                    {description}
+                </Typography>
+            ))}
+        </React.Fragment>
+    );
+
+
+    // If no accordion wrap, return the Typographies directly
+    if (accordionWrap === undefined || !accordionWrap) { return descriptionStringsElement; }
+
+    // Only make a state hook if accordion is used cause state is not relevant otherwise
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [accordionText, setAccordionText] = React.useState("Show Details");
+
+    const swapString = (event: React.SyntheticEvent, expanded: boolean) => {
+        expanded ? setAccordionText("Hide Details") : setAccordionText("Show Details")
+    };
+
+    return (
+        <Accordion sx={accordionTheme} onChange={swapString}>
+            <AccordionSummary
+                sx={accordionTitleTheme}
+                expandIcon={<ExpandMoreIcon htmlColor='white' />}
+                children={accordionText}
+            />
+            <AccordionDetails
+                sx={accordionDetailsTheme}
+                children={descriptionStringsElement}
+            />
+        </Accordion>
+    );
+}
+
+/******************************
+ * THEMES
+ *****************************/
+
+const outerCardTheme = (width?: number,) => {
+    return {
+        width: width ? width : "auto",
+        minWidth: 400,
+        marginTop: 1,
+        height: "fit-content",
+        bgcolor: "primary.main",
+    }
 };
 
 const hasImageCardContentTheme = {
@@ -122,12 +195,17 @@ const hasImageCardContentTheme = {
 };
 
 const noImageCardContentTheme = {
-    paddingBottom: 0,
+    ...hasImageCardContentTheme,
     paddingTop: 2,
 }
 
 const headerBodyDividerTheme = {
     marginBottom: 1,
+    borderBottomWidth: 3,
+    borderColor: "text.disabled"
+};
+
+const bodyLinksDividerTheme = {
     borderBottomWidth: 3,
     borderColor: "text.disabled"
 };
@@ -144,7 +222,6 @@ const imageDividerTheme = {
 const descriptionStringTheme = {
     marginBottom: 1.5,
     color: "text.secondary",
-    "text-align": "left",
 }
 
 const cardActionLinksTheme = {
@@ -153,7 +230,29 @@ const cardActionLinksTheme = {
 
 const linkButtonTheme = {
     color: "text.primary",
-    bgcolor: "primary.light"
+    bgcolor: "primary.light",
+
+    '&:hover': {
+        backgroundColor: 'primary.dark',
+    },
+}
+
+const accordionTheme = {
+    backgroundColor: "primary.light",
+    marginBottom: 0.75,
+};
+
+const accordionTitleTheme = {
+    '&:hover': {
+        backgroundColor: 'primary.dark',
+    },
+}
+
+const accordionDetailsTheme = {
+    backgroundColor: "primary.main",
+    border: 8,
+    borderColor: "primary.dark",
+    marginBottom: 1,
 }
 
 export default ImageLinkCard;

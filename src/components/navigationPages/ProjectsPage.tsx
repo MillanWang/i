@@ -1,12 +1,12 @@
 import * as React from 'react';
-import ImageLinkCard from '../cards/ImageLinkCard';
-import { createImageLinkCardProps, createLinkObject, ImageLinkCardProps } from '../cards/ImageLinkCard';
+import {
+    createImageLinkCardProps,
+    createLinkObject,
+    ImageLinkCardProps
+} from '../cards/ImageLinkCard';
 
-//Images
-import letteredTabsGif from "../../images/LetteredTabs.gif";
-import mspBoardGif from "../../images/MSPBoard.gif";
-import riskGameImg from "../../images/risk.jpg";
-import elevatorGif from "../../images/Elevator.gif";
+import CardGrid from '../cards/CardGrid';
+
 
 const letteredTabs: ImageLinkCardProps = createImageLinkCardProps(
     "Lettered Tabs Web App",
@@ -20,7 +20,8 @@ const letteredTabs: ImageLinkCardProps = createImageLinkCardProps(
         createLinkObject("Tool", "https://lettered-tabs.herokuapp.com/"),
         createLinkObject("Source Code", "https://gitlab.com/MillanWang/lettered-tabs"),
     ],
-    letteredTabsGif
+    // letteredTabsGif
+    require("../../images/LetteredTabs.gif")
 );
 
 const mspPerformance: ImageLinkCardProps = createImageLinkCardProps(
@@ -33,7 +34,8 @@ const mspPerformance: ImageLinkCardProps = createImageLinkCardProps(
     [
         createLinkObject("Video Demo", "https://youtu.be/FasY_z7dEuU"),
     ],
-    mspBoardGif
+    // mspBoardGif
+    require("../../images/MSPBoard.gif")
 );
 
 const riskGame: ImageLinkCardProps = createImageLinkCardProps(
@@ -48,7 +50,8 @@ const riskGame: ImageLinkCardProps = createImageLinkCardProps(
     [
         createLinkObject("Source Code", "https://github.com/MillanWang/3110Project"),
     ],
-    riskGameImg
+    // riskGameImg
+    require("../../images/risk.jpg")
 );
 
 const elevatorSim: ImageLinkCardProps = createImageLinkCardProps(
@@ -64,33 +67,19 @@ const elevatorSim: ImageLinkCardProps = createImageLinkCardProps(
     [
         createLinkObject("Source Code", "https://github.com/MillanWang/3303ElevatorProject"),
     ],
-    elevatorGif
+    // elevatorGif
+    require("../../images/Elevator.gif")
 );
 
-const projects: ImageLinkCardProps[] = [letteredTabs, mspPerformance, riskGame, elevatorSim]
+const projects: ImageLinkCardProps[] = [
+    elevatorSim,
+    letteredTabs,
+    mspPerformance,
+    riskGame,
+];
 
 function ProjectsPage() {
-    return (
-        // Need some MUI stuff to make the cards reposition instead of flex
-        <div style={{
-            display: "flex",
-            // "justify-content": "center"
-        }}>
-            {projects.map((currProject: ImageLinkCardProps) => (
-                <ImageLinkCard
-
-                    title={currProject.title}
-                    subtitles={currProject.subtitles}
-                    descriptionStrings={currProject.descriptionStrings}
-                    links={currProject.links}
-                    img={currProject.img}
-                    maxWidth={400}
-                // sideMargin={true}
-                />
-
-            ))}
-        </div>
-    )
+    return <CardGrid cardArray={projects} />
 }
 
 export default ProjectsPage;
