@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
     Box,
     Button,
+    Grid,
     Link,
     Toolbar,
     Typography
@@ -19,7 +20,7 @@ const contactNavGif = createNavGifTooltipProps(
         "Email: real.millan.wang@gmail.com",
         "Phone: (613) 600-8604"
     ]
-)
+);
 
 const looking4WorkNavGif = createNavGifTooltipProps(
     "Availability:",
@@ -27,9 +28,7 @@ const looking4WorkNavGif = createNavGifTooltipProps(
         "Full-time : 2023",
         "Canadian Citizen & Willing to Relocate!"
     ]
-)
-
-//TODO: Figure out why Navigation toolbar images popout of the toolbars when the window is resized.
+);
 
 export type TitleUrlPair = {
     title: string,
@@ -47,44 +46,52 @@ type HeaderBarProps = {
 const HeaderBar = ({ sections }: HeaderBarProps) => {
     return (
         <React.Fragment>
-            {/* Title toolbar */}
-            <Toolbar sx={titleToolbarTheme}>
-                <Link href="#/">
-                    <Box component="img" src={titleGif} alt="Millan Wang" sx={titleImageTheme} />
-                </Link>
-            </Toolbar>
+
+            <TitleHeaderSection />
 
             {/* Navigation toolbar */}
-            {/* 
-TODO: For smaller screens, this isn't gonna work out.
-Should implement a drop down menu or sidebar type thing to navigate on mobile.
-Also should reconsider the use of contact&looking4work gifs in mobile. Screen real estate will be limited
+            <Toolbar component="nav" variant="dense" sx={navToolbarTheme} >
 
-Maybe a grid for the buttons?
-*/}
-            <Toolbar component="nav" variant="dense" sx={navToolbarTheme}>
                 <NavBarImage
                     image={contactEmail}
                     alt="Contact: real.millan.wang@gmail.com"
                     tooltip={<NavGifTooltip {...contactNavGif} />}
-                />
+                />{/* This NavBarImage only appears on large screens. Replaced by button on small screens */}
 
                 {/* Navigation buttons */}
-                {sections.map((section) => (
-                    <Link href={"#" + section.url} key={"NavLinkButton_" + section.title} >
-                        <Button sx={navButtonTheme}>
-                            {section.title}
-                        </Button>
-                    </Link>
-                ))}
+                <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center" maxWidth={1120}>
+
+                    {sections.map((section) => (
+                        <Grid item xs="auto" key={"NavLinkButton_" + section.title}>
+                            <Link href={"#" + section.url}>
+                                <Button children={section.title} sx={navButtonTheme} />
+                            </Link>
+                        </Grid>
+                    ))}
+
+                    <SmallScreenContactButton />{/* Only appears when on small screens where the nav bar images disapear */}
+                </Grid>
+                {/* End of Navigation buttons */}
+
 
                 <NavBarImage
                     image={looking4WorkGif}
                     alt="Looking for work: Full Time 2023"
                     tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
-                />
-            </Toolbar>
+                /> {/* This NavBarImage only appears on large screens. Replaced by button on small screens */}
+
+            </Toolbar>{/* End of Navigation toolbar */}
         </React.Fragment>
+    );
+}
+
+function TitleHeaderSection() {
+    return (
+        <Toolbar sx={titleToolbarTheme}>
+            <Link href="#/">
+                <Box component="img" src={titleGif} alt="Millan Wang" sx={titleImageTheme} />
+            </Link>
+        </Toolbar>
     );
 }
 
@@ -109,6 +116,8 @@ const NavGifTooltip = ({ header, descriptions }: NavGifTooltipProps) => {
                     {text}
                 </Typography>
             ))}
+
+            {/* TODO : Add something to pop a modal dialog that has a form to API to an email sender to me. Bigger goal that might take some bigger time */}
         </Box>
     )
 }
@@ -130,6 +139,25 @@ const NavBarImage = ({ tooltip, image, alt }: NavBarImageProps) => {
             />
         </HtmlTooltip>
     )
+}
+
+const SmallScreenContactButton = () => {
+    const TooltipInfo = (
+        <React.Fragment>
+            <NavGifTooltip {...contactNavGif} />
+            <NavGifTooltip {...looking4WorkNavGif} />
+        </React.Fragment>
+    );
+    return (
+        <Grid item xs="auto" key={"NavLinkButton_SmallScreenContactInfo"} >
+            <HtmlTooltip title={TooltipInfo}>
+                <Button sx={contactNavButtonTheme}>
+                    Contact
+                </Button>
+            </HtmlTooltip>
+        </Grid>
+    )
+
 }
 
 /******************************
@@ -165,15 +193,22 @@ const navButtonTheme = {
     color: "primary.contrastText",
     bgcolor: "primary.main",
     margin: 0.5,
+    width: 170,
     resizeMode: 'contain',
     '&:hover': {
         backgroundColor: 'primary.light',
     },
 }
 
+const contactNavButtonTheme = {
+    ...navButtonTheme,
+    display: { xs: 'block', xl: 'none' } //Hide on big screen. Only show on small
+}
+
 const navBarImageTheme = {
     height: 50,
     width: 250,
+    display: { xs: 'none', xl: 'block' } //Hide on small screen. Only show on big
 }
 
 export default HeaderBar;

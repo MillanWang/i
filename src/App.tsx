@@ -27,7 +27,16 @@ const mainAppTheme = createTheme({
   },
   typography: {
     //TODO : Consider using a more personalized font. Perhaps implement my own handwriting 
-  }
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1050,
+      lg: 1200,
+      xl: 1425,
+    },
+  },
 });
 
 const introductionNavSection = createTitleUrlPair("Introduction", "/");

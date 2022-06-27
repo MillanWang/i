@@ -5,7 +5,6 @@ import ImageLinkCard, {
     ImageLinkCardProps
 } from './ImageLinkCard';
 
-
 type CardGridProps = {
     cardArray: ImageLinkCardProps[]
 }
@@ -18,7 +17,6 @@ const CardGrid = ({ cardArray }: CardGridProps) => {
                 container
                 direction="row"
                 justifyContent="flex-start"
-                // alignItems="stretch"
                 alignItems="baseline"
             >
                 {cardArray.map((currentCardProps: ImageLinkCardProps, i: number) => {
@@ -30,9 +28,10 @@ const CardGrid = ({ cardArray }: CardGridProps) => {
                                 useAccordionDescription
                                 // In the grid, it feels wierd if the cards resize when the window does. Keep a constant width
                                 width={400}
+                                imageHeightLimit={200}
                             />
                         </Grid>
-                    )
+                    );
                 })}
             </Grid>
         </Box>

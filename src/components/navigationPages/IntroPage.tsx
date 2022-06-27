@@ -1,21 +1,12 @@
 import * as React from 'react';
 import {
-    Box,
-    Stack
-} from '@mui/material';
-
-import ImageLinkCard, {
     createImageLinkCardProps,
     createLinkObject,
     ImageLinkCardProps
 } from '../cards/ImageLinkCard';
+import TwoColumnCardGrid from '../cards/TwoColumnCardGrid';
 
-//Images
-import portraitImage from "../../images/MillPortrait.jpg";
-
-//TODO: Consolidate repetitive sx tags into css classes
-
-const introCard = createImageLinkCardProps(
+const introCard: ImageLinkCardProps = createImageLinkCardProps(
     "Hello!!!",
     [
         "Welcome to my personal website!",
@@ -29,7 +20,7 @@ const introCard = createImageLinkCardProps(
     '' //No image
 )
 
-const aboutMeCard = createImageLinkCardProps(
+const aboutMeCard: ImageLinkCardProps = createImageLinkCardProps(
     "About Me",
     [],
     [
@@ -40,7 +31,7 @@ const aboutMeCard = createImageLinkCardProps(
     '' //No image
 )
 
-const linksList = createImageLinkCardProps(
+const linksList: ImageLinkCardProps = createImageLinkCardProps(
     "Links",
     [],
     [],
@@ -52,7 +43,7 @@ const linksList = createImageLinkCardProps(
     '' //No image
 )
 
-const technologies = createImageLinkCardProps(
+const technologies: ImageLinkCardProps = createImageLinkCardProps(
     "Technologies",
     [],
     [
@@ -65,10 +56,23 @@ const technologies = createImageLinkCardProps(
     ''//No image
 );
 
-const images = [portraitImage];
+const millyByTheMap: ImageLinkCardProps = createImageLinkCardProps(
+    "",
+    [
+        "Big fan of maps! Both in Type/JavaScript & geography!"
+    ],
+    [],
+    [],
+    // portraitImage
+    require("../../images/MillPortrait.jpg")
+);
 
-const imageLinkCards = [
+const leftColumnCards: ImageLinkCardProps[] = [
     introCard,
+    millyByTheMap,
+];
+
+const rightColumnCards: ImageLinkCardProps[] = [
     aboutMeCard,
     linksList,
     technologies
@@ -76,52 +80,13 @@ const imageLinkCards = [
 
 function IntroPage() {
     return (
-        <Box sx={introPageTheme}>
-
-            {/* Left Column - Image Stack */}
-            < Stack spacing={2} width={"40%"} >
-                {images.map((currentImage) => (
-                    <Box
-                        component="img"
-                        src={currentImage}
-                        alt="Logo"
-                        sx={imageStackTheme}
-                    />
-                ))}
-            </Stack >
-
-            {/* Middle column spacer */}
-            <Box style={middleDividerTheme} />
-
-            {/* Right Column - Card Stack */}
-            <Stack spacing={2} width={"40%"} >
-                {imageLinkCards.map((card: ImageLinkCardProps) => (
-                    <ImageLinkCard {...card} key={"IntroPageCard_" + card.title} />
-                ))}
-            </Stack >
-        </Box>
+        <TwoColumnCardGrid
+            leftColumnStackHeader=""
+            leftColumnCardProps={leftColumnCards}
+            rightColumnStackHeader=""
+            rightColumnCardProps={rightColumnCards}
+        />
     )
-}
-
-/******************************
- * THEMES
- *****************************/
-
-const introPageTheme = {
-    display: "flex",
-    justifyContent: "center",
-    paddingBottom: 34
 };
-
-const middleDividerTheme = {
-    width: 16
-}
-
-const imageStackTheme = {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-    marginTop: 1
-}
 
 export default IntroPage;

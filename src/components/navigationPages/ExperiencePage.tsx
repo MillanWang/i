@@ -1,13 +1,9 @@
 import * as React from 'react';
 import {
-    Box,
-    Stack,
-    Typography
-} from '@mui/material';
-import ImageLinkCard, {
     createImageLinkCardProps,
     ImageLinkCardProps
 } from '../cards/ImageLinkCard';
+import TwoColumnCardGrid from '../cards/TwoColumnCardGrid';
 
 const spiriaSummer: ImageLinkCardProps = createImageLinkCardProps(
     "Spiria",
@@ -23,7 +19,6 @@ const spiriaSummer: ImageLinkCardProps = createImageLinkCardProps(
     ],
     [],
     ''// No Image
-
 );
 
 const kinaxisFall: ImageLinkCardProps = createImageLinkCardProps(
@@ -95,7 +90,7 @@ const carletonResearch2019: ImageLinkCardProps = createImageLinkCardProps(
 const carletonTA2022: ImageLinkCardProps = createImageLinkCardProps(
     "Carleton University",
     [
-        "Jan. - Apr. 2022  (4 Months, Current)",
+        "Jan. - Apr. 2022  (4 Months)",
         "Teaching Assistant"
     ],
     [
@@ -151,69 +146,30 @@ const carletonEMLC: ImageLinkCardProps = createImageLinkCardProps(
     ''// No Image
 )
 
-const softwareExperiences: ImageLinkCardProps[] = [spiriaSummer, kinaxisFall, jsiSummer, jsiWinter, carletonResearch2019];
-const communicationsExperiences: ImageLinkCardProps[] = [carletonTA2022, oneclass, carletonTA2020, carletonEMLC];
+const softwareExperiences: ImageLinkCardProps[] = [
+    spiriaSummer,
+    kinaxisFall,
+    jsiSummer,
+    jsiWinter,
+    carletonResearch2019,
+];
+
+const educationExperiences: ImageLinkCardProps[] = [
+    carletonTA2022,
+    oneclass,
+    carletonTA2020,
+    carletonEMLC,
+];
 
 function ExperiencePage() {
     return (
-        // <div
-        <Box sx={experiencePageOuterBoxTheme}>
-
-            <CardStack stackHeader="Software Engineering Experience" cardPropsArray={softwareExperiences} />
-
-            {/* Middle column spacer */}
-            <Box sx={middleColumnSpaceTheme} />
-
-            <CardStack stackHeader="Education Experience" cardPropsArray={communicationsExperiences} />
-        </Box>
-    )
-}
-
-type CardStackProps = {
-    stackHeader: string,
-    cardPropsArray: ImageLinkCardProps[]
-}
-
-function CardStack({ stackHeader, cardPropsArray }: CardStackProps) {
-    return (
-        <Stack spacing={2}>
-            <StackHeader title={stackHeader} />
-
-            {cardPropsArray.map((cardProps: ImageLinkCardProps, i: number) => (
-                <ImageLinkCard {...cardProps} width={500} key={"ExperienceCard_" + cardProps.title + i++} />
-            ))}
-        </Stack>
+        <TwoColumnCardGrid
+            leftColumnStackHeader="Software Engineering Experience"
+            leftColumnCardProps={softwareExperiences}
+            rightColumnStackHeader="Education Experience"
+            rightColumnCardProps={educationExperiences}
+        />
     );
-};
-
-type StackHeaderProps = {
-    title: string,
-};
-
-function StackHeader({ title }: StackHeaderProps) {
-    return (
-        <Typography variant="h5" sx={stackHeaderTheme}>
-            {title}
-        </Typography>)
-};
-
-/******************************
- * THEMES
- *****************************/
-
-const experiencePageOuterBoxTheme = {
-    display: "flex",
-    justifyContent: "center",
-    paddingBottom: 4,
-}
-
-const middleColumnSpaceTheme = {
-    minWidth: 16
-};
-
-const stackHeaderTheme = {
-    color: "text.primary",
-    textDecoration: "underline"
 };
 
 export default ExperiencePage;

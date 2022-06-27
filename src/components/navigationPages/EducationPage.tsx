@@ -1,17 +1,14 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import HtmlTooltip from '@mui/material/Tooltip';
-import Divider from '@mui/material/Divider';
+import {
+    Box,
+    Divider,
+    Paper,
+    Slider,
+    Tab, Tabs, //Remove cause a slider is cooler. Keeping until the slider is GOOD GOOD
+    Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
+    Typography,
+} from '@mui/material';
 
 // Images
 import carletonLogoImage from "../../images/CarletonLogo.jpg"; //Switch to require???
@@ -363,37 +360,136 @@ function EducationPage() {
     )
 }
 
-function SemesterTabs() {
-    const [value, setValue] = React.useState(0);
 
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-        setValue(newValue);
-    };
+
+
+
+
+
+
+// TODO
+//This prolly won't be needed. Prolly some API stuff to automatically do increments by 1 and then names of the semesters can be referenced from the existing constants
+const semesterSelectorSliderMarks = [
+    {
+        value: 1,
+        label: '2018',
+    },
+    {
+        value: 2,
+        label: '2019',
+    },
+    // {
+    //     value: 3,
+    // },
+    {
+        value: 4,
+        label: '2020',
+    },
+    // {
+    //     value: 5,
+    // },
+    // {
+    //     value: 6,
+    // },
+    {
+        value: 7,
+        label: '2021',
+    },
+    // {
+    //     value: 8,
+    // },
+    // {
+    //     value: 9,
+    // },
+    {
+        value: 10,
+        label: '2022',
+    },
+    // {
+    //     value: 11,
+    // },
+    // {
+    //     value: 12,
+    // },
+    {
+        value: 13,
+        label: '2023',
+    },
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+function SemesterTabs() {
+    const [semesterNumber, setSemesterNumber] = React.useState(1);
+    const [semesterName, setSemesterName] = React.useState(semesterSelectorSliderMarks[0].label);
+
+    // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    //     setValue(newValue);
+    // };
+
+    const handleSliderChange = (event: Event, value: number | Array<number>, activeThumb: number) => {
+        if (value instanceof Array<number>) {
+            //Should never get here but the callback demands the possibility of an array. Idk how that would ever happen
+            value = value[0];
+        }
+        setSemesterNumber(value);
+        setSemesterName(semesterSelectorSliderMarks[value - 1].label)
+        console.log(event);
+
+    }
+
 
     return (
-        <Box sx={semesterTabsOuterBoxTheme}>
-            <Tabs value={value} onChange={handleChange} orientation="vertical" sx={semesterTabSelectorTheme}>
-                {semesters.map((semester: SemesterObject, i: number) => {
+        <React.Fragment>
+            <Box sx={{ width: "88%" }}>
+                <Slider
+                    defaultValue={1}
+                    step={1}
+                    valueLabelDisplay="auto"
+                    marks={semesterSelectorSliderMarks}
+                    max={13} min={1}
+                    onChange={handleSliderChange}
+                    sx={primaryDarkTextTheme}
+                />
+                <Typography sx={primaryDarkTextTheme}> {semesterName}</Typography>
+            </Box>
+            <Box sx={semesterTabsOuterBoxTheme}>
+
+
+                {/* 
+                <Tabs value={value} onChange={handleChange} orientation="vertical" sx={semesterTabSelectorTheme}>
+                    {semesters.map((semester: SemesterObject, i: number) => {
+                        return (
+                            <Tab
+                                sx={semesterTabTheme}
+                                label={semester.semesterName}
+                                key={"SemesterTab_" + semester.semesterName + i}
+                                {...a11yProps(i++)}
+                            />
+                        )
+                    })}
+                </Tabs> */}
+                {/* TODO : Put these into a fixed height box so that switching between the different semesters doesn't jump the page up and down. 6+1 rows is maximum  */}
+                {/* Tab content */}
+                {semesters.map((currentSemester: SemesterObject, i: number) => {
                     return (
-                        <Tab
-                            sx={semesterTabTheme}
-                            label={semester.semesterName}
-                            key={"SemesterTab_" + semester.semesterName + i}
-                            {...a11yProps(i++)}
-                        />
+                        <TabPanel value={semesterNumber} index={++i} key={"TabContent_" + currentSemester.semesterName}>
+                            <GradeTable semester={currentSemester} />
+                        </TabPanel>
                     )
                 })}
-            </Tabs>
-
-            {/* Tab content */}
-            {semesters.map((currentSemester: SemesterObject, i: number) => {
-                return (
-                    <TabPanel value={value} index={i++} key={"TabContent_" + currentSemester.semesterName}>
-                        <GradeTable semester={currentSemester} />
-                    </TabPanel>
-                )
-            })}
-        </Box>
+            </Box>
+        </React.Fragment>
     );
 };
 
@@ -420,9 +516,6 @@ function TabPanel(props: TabPanelProps) {
     );
 }
 
-function a11yProps(index: number) {
-    return { id: `simple-tab-${index}` };
-};
 
 type GradeTableProps = {
     semester: SemesterObject

@@ -27,6 +27,7 @@ export type ImageLinkCardProps = {
 
     width?: number,
     useAccordionDescription?: boolean,
+    imageHeightLimit?: number,
 };
 
 export function createImageLinkCardProps(
@@ -38,30 +39,31 @@ export function createImageLinkCardProps(
     return { title, subtitles, descriptionStrings, links, img };
 };
 
+
 const ImageLinkCard = (
     {
+        // Required but can be empty. Force developer to think abouty this
         title,
         subtitles,
         descriptionStrings,
         links,
         img,
+        // Optional
         width,
-        useAccordionDescription
+        useAccordionDescription,
+        imageHeightLimit,
     }: ImageLinkCardProps) => {
+
     return (
         <Card sx={outerCardTheme(width)} raised>
 
             {/* Optional top image. Only shows if non empty is given */}
-            <CardImage img={img} />
+            <CardImage img={img} imageHeightLimit={imageHeightLimit} />
 
             {/* Text Content */}
             <CardContent sx={img ? hasImageCardContentTheme : noImageCardContentTheme}>
 
-                <Typography
-                    variant="h5"
-                    id={'Card_' + title}
-                    children={title}
-                />
+                <Typography children={title} variant="h5" id={'Card_' + title} />
 
                 <SubtitlesArea title={title} subtitles={subtitles} />
 
@@ -97,15 +99,21 @@ const ImageLinkCard = (
 
 type CardImageProps = {
     img: string,
+    imageHeightLimit?: number,
 }
 
-const CardImage = ({ img }: CardImageProps) => {
+const CardImage = ({ img, imageHeightLimit }: CardImageProps) => {
     if (img === '') {
         return <React.Fragment></React.Fragment>
     } else {
         return (
             <React.Fragment>
-                <CardMedia image={img} component="img" alt="Image Error" height="200" />
+                <CardMedia
+                    image={img}
+                    component="img"
+                    alt="Image Error"
+                    height={imageHeightLimit}
+                />
                 <Divider sx={imageDividerTheme} />
             </React.Fragment>
         )
