@@ -1,13 +1,18 @@
 import * as React from 'react';
 import HtmlTooltip from '@mui/material/Tooltip';
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import {
     Box,
     Divider,
+    Icon,
     Paper,
+    Popover,
     Slider,
     Tab, Tabs, //Remove cause a slider is cooler. Keeping until the slider is GOOD GOOD
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
     Typography,
+    Button,
 } from '@mui/material';
 
 // Images
@@ -352,7 +357,9 @@ function EducationPage() {
             </Box>
 
             <Divider variant="middle" sx={transcriptDividerTheme} children="Transcript" />
-            <Divider variant="middle" sx={hoverNoteDividerTheme} children="Hover course codes for course info and Hover grades for personal notes" />
+
+            {/* Below divider should be made redundant by the popover replacement. Make it mobile friendly and all that */}
+            {/* <Divider variant="middle" sx={hoverNoteDividerTheme} children="Hover course codes for course info and Hover grades for personal notes" /> */}
 
             {/* Main grades table */}
             <SemesterTabs />
@@ -367,50 +374,23 @@ function EducationPage() {
 
 
 
-// TODO
-//This prolly won't be needed. Prolly some API stuff to automatically do increments by 1 and then names of the semesters can be referenced from the existing constants
 const semesterSelectorSliderMarks = [
     {
         value: 1,
         label: '2018',
     },
     {
-        value: 2,
-        label: '2019',
-    },
-    // {
-    //     value: 3,
-    // },
-    {
         value: 4,
         label: '2020',
     },
-    // {
-    //     value: 5,
-    // },
-    // {
-    //     value: 6,
-    // },
     {
         value: 7,
         label: '2021',
     },
-    // {
-    //     value: 8,
-    // },
-    // {
-    //     value: 9,
-    // },
     {
         value: 10,
         label: '2022',
     },
-    // {
-    //     value: 11,
-    // },
-    // {
-    //     value: 12,
-    // },
     {
         value: 13,
         label: '2023',
@@ -431,11 +411,9 @@ const semesterSelectorSliderMarks = [
 
 function SemesterTabs() {
     const [semesterNumber, setSemesterNumber] = React.useState(1);
-    const [semesterName, setSemesterName] = React.useState(semesterSelectorSliderMarks[0].label);
 
-    // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    //     setValue(newValue);
-    // };
+
+
 
     const handleSliderChange = (event: Event, value: number | Array<number>, activeThumb: number) => {
         if (value instanceof Array<number>) {
@@ -443,53 +421,48 @@ function SemesterTabs() {
             value = value[0];
         }
         setSemesterNumber(value);
-        setSemesterName(semesterSelectorSliderMarks[value - 1].label)
-        console.log(event);
-
     }
 
 
     return (
-        <React.Fragment>
-            <Box sx={{ width: "88%" }}>
-                <Slider
+        <Box>
+            <Box sx={{ 
+                // width: "85%",
+                     display: "flex" , backgroundColor:"#bbbbbb", justifyContent: "center",}}>
+                 <Slider
                     defaultValue={1}
                     step={1}
-                    valueLabelDisplay="auto"
+                    max={13} 
+                    min={1}
+                    valueLabelDisplay="off"
                     marks={semesterSelectorSliderMarks}
-                    max={13} min={1}
                     onChange={handleSliderChange}
-                    sx={primaryDarkTextTheme}
+                    sx={
+                        {
+                            marginTop:2,
+                            ...primaryDarkTextTheme,
+                             width:"60%"
+                            }}
                 />
-                <Typography sx={primaryDarkTextTheme}> {semesterName}</Typography>
+                
             </Box>
+
+
             <Box sx={semesterTabsOuterBoxTheme}>
 
+           
 
-                {/* 
-                <Tabs value={value} onChange={handleChange} orientation="vertical" sx={semesterTabSelectorTheme}>
-                    {semesters.map((semester: SemesterObject, i: number) => {
-                        return (
-                            <Tab
-                                sx={semesterTabTheme}
-                                label={semester.semesterName}
-                                key={"SemesterTab_" + semester.semesterName + i}
-                                {...a11yProps(i++)}
-                            />
-                        )
-                    })}
-                </Tabs> */}
-                {/* TODO : Put these into a fixed height box so that switching between the different semesters doesn't jump the page up and down. 6+1 rows is maximum  */}
+
                 {/* Tab content */}
                 {semesters.map((currentSemester: SemesterObject, i: number) => {
                     return (
-                        <TabPanel value={semesterNumber} index={++i} key={"TabContent_" + currentSemester.semesterName}>
+                        <TabPanel value={semesterNumber} index={++i} key={"TabContent_" + currentSemester.semesterName} >
                             <GradeTable semester={currentSemester} />
                         </TabPanel>
                     )
                 })}
             </Box>
-        </React.Fragment>
+        </Box>
     );
 };
 
@@ -524,21 +497,24 @@ type GradeTableProps = {
 function GradeTable({ semester }: GradeTableProps) {
     const { semesterName, courses } = semester;
     return (
-        <TableContainer component={Paper} >
+        <TableContainer component={Paper}>
+            <Box sx={tableSemesterHeaderTheme}>
+                    <Typography children={semesterName} sx={primaryDarkTextTheme} variant="h6"/>
+            </Box>
             <Table>
-
-                <CourseTableHeader />
-
+            <CourseTableHeader />
                 <TableBody>
                     {
                         courses.map((course: CourseObject) => (
                             <TableRow key={semesterName + "_Row_" + course.courseCode} hover sx={tableRowCourseTheme}>
                                 {/* Course code and description */}
-                                <HtmlTooltip followCursor title={<HeaderDescriptionTooltip description={course.description} header="Course Description" />}>
-                                    <TableCell sx={primaryDarkTextTheme} >
+                                {/* <HtmlTooltip followCursor title={<HeaderDescriptionTooltip description={course.description} header="Course Description" />}> */}
+                                <CourseCodeTableCell courseCode={course.courseCode}/>
+                                    {/* <TableCell sx={primaryDarkTextTheme} >
                                         {course.courseCode}
-                                    </TableCell>
-                                </HtmlTooltip>
+                                        <InfoOutlinedIcon/>
+                                    </TableCell> */}
+                                {/* </HtmlTooltip> */}
 
                                 {/* Course Name */}
                                 <TableCell sx={primaryDarkTextTheme}>
@@ -546,11 +522,13 @@ function GradeTable({ semester }: GradeTableProps) {
                                 </TableCell>
 
                                 {/* Course grade */}
-                                <HtmlTooltip followCursor title={<HeaderDescriptionTooltip description={course.personalNotes} header="Personal Course Experience" />}>
-                                    <TableCell sx={tableGradeCellTheme} align="right">
+                                <CourseGradeTableCell grade={course.grade}/>
+                                {/* <HtmlTooltip followCursor title={<HeaderDescriptionTooltip description={course.personalNotes} header="Personal Course Experience" />}> */}
+                                    {/* <TableCell sx={tableGradeCellTheme} align="right"> 
+                                        <CommentOutlinedIcon/>
                                         {course.grade}
-                                    </TableCell>
-                                </HtmlTooltip>
+                                    </TableCell> */}
+                                {/* </HtmlTooltip> */}
                             </TableRow>
                         ))
                     }
@@ -559,6 +537,76 @@ function GradeTable({ semester }: GradeTableProps) {
         </TableContainer>
     )
 }
+
+type CourseCodeTableCellProps = {
+    courseCode: string
+}
+
+function CourseCodeTableCell({courseCode}:CourseCodeTableCellProps){
+    const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(event.currentTarget);
+    };
+  
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+    const open = Boolean(anchorEl);
+    return (
+        <TableCell sx={primaryDarkTextTheme} >
+            {courseCode}
+            <Button onClick={handleClick}>
+                <InfoOutlinedIcon/>
+            </Button>
+            <Popover
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{vertical: 'center',horizontal: 'right',}}
+                transformOrigin={{vertical: 'center',horizontal: 'left',}}
+            >
+                <Typography sx={{ p: 2, color:"red"}}>The content of the Popover.</Typography>
+            </Popover>
+        </TableCell>
+    );
+}
+
+type CourseGradeTableCellProps = {
+    grade: string
+}
+
+function CourseGradeTableCell({grade}:CourseGradeTableCellProps){
+    const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const open = Boolean(anchorEl);
+//   const id = open ? 'simple-popover' : undefined;
+    return (
+        <TableCell sx={tableGradeCellTheme} align="right" >
+            {grade}
+            <Button onClick={handleClick}>
+                <CommentOutlinedIcon/>
+            </Button>
+            <Popover
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{vertical: 'center',horizontal: 'left',}}
+                transformOrigin={{vertical: 'center',horizontal: 'right',}}
+            >
+                <Typography sx={{ p: 2, color:"red"}}>The content of the Popover.</Typography>
+            </Popover>
+        </TableCell>
+    );
+}
+
 
 function CourseTableHeader() {
     return (
@@ -629,21 +677,24 @@ const hoverNoteDividerTheme = {
 };
 
 const tabPanelOuterBoxTheme = {
-    width: "100%"
+    width: "100%",
 };
 
 const tabPanelInnerBoxTheme = {
     p: 3,
+    paddingTop:0,
     minWidth: 100
 };
 
 const semesterTabsOuterBoxTheme = {
     flexGrow: 1,
     display: 'flex',
-    marginTop: 3,
+    marginTop: 0,
+    paddingTop:0,
     paddingBottom: 5,
     justifyContent: "left",
-    width: "90%"
+    width: "90%",
+    minHeight: 700,
 };
 
 const semesterTabSelectorTheme = {
@@ -658,6 +709,10 @@ const semesterTabTheme = {
     background: "#dddddd",
     margin: 0.3,
     borderRadius: 5
+};
+
+const tableSemesterHeaderTheme = {
+    backgroundColor: "#cccccc"
 };
 
 const tableRowHeaderTheme = {
