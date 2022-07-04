@@ -1,5 +1,5 @@
 import * as React from 'react';
-import HtmlTooltip from '@mui/material/Tooltip';
+// import HtmlTooltip from '@mui/material/Tooltip';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import {
@@ -11,6 +11,7 @@ import {
     Slider,
     Tab, Tabs, //Remove cause a slider is cooler. Keeping until the slider is GOOD GOOD
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
+    Tooltip,
     Typography,
     Button,
 } from '@mui/material';
@@ -423,34 +424,42 @@ function SemesterTabs() {
         setSemesterNumber(value);
     }
 
+    const SLIDER_TOOLTIP_TEXT: string = "Use slider to select semester";
 
     return (
         <Box>
-            <Box sx={{ 
+            <Box sx={{
                 // width: "85%",
-                     display: "flex" , backgroundColor:"#bbbbbb", justifyContent: "center",}}>
-                 <Slider
+                display: "flex",
+                backgroundColor: "#bbbbbb",
+                justifyContent: "center",
+                alignItems: "center",
+            }}>
+                <Slider
                     defaultValue={1}
                     step={1}
-                    max={13} 
+                    max={13}
                     min={1}
                     valueLabelDisplay="off"
                     marks={semesterSelectorSliderMarks}
                     onChange={handleSliderChange}
                     sx={
                         {
-                            marginTop:2,
+                            marginTop: 2,
                             ...primaryDarkTextTheme,
-                             width:"60%"
-                            }}
+                            width: "60%"
+                        }}
                 />
-                
+
+                <Tooltip title={SLIDER_TOOLTIP_TEXT}>
+                    <InfoOutlinedIcon sx={{ paddingLeft: 3 }} />
+                </Tooltip>
             </Box>
 
 
             <Box sx={semesterTabsOuterBoxTheme}>
 
-           
+
 
 
                 {/* Tab content */}
@@ -499,36 +508,27 @@ function GradeTable({ semester }: GradeTableProps) {
     return (
         <TableContainer component={Paper}>
             <Box sx={tableSemesterHeaderTheme}>
-                    <Typography children={semesterName} sx={primaryDarkTextTheme} variant="h6"/>
+                <Typography children={semesterName} sx={primaryDarkTextTheme} variant="h6" />
             </Box>
             <Table>
-            <CourseTableHeader />
+                <CourseTableHeader />
                 <TableBody>
                     {
                         courses.map((course: CourseObject) => (
                             <TableRow key={semesterName + "_Row_" + course.courseCode} hover sx={tableRowCourseTheme}>
-                                {/* Course code and description */}
-                                {/* <HtmlTooltip followCursor title={<HeaderDescriptionTooltip description={course.description} header="Course Description" />}> */}
-                                <CourseCodeTableCell courseCode={course.courseCode}/>
-                                    {/* <TableCell sx={primaryDarkTextTheme} >
-                                        {course.courseCode}
-                                        <InfoOutlinedIcon/>
-                                    </TableCell> */}
-                                {/* </HtmlTooltip> */}
 
-                                {/* Course Name */}
-                                <TableCell sx={primaryDarkTextTheme}>
-                                    {course.courseName}
+                                {/* Course code */}
+                                <TableCell sx={primaryDarkTextTheme} >
+                                    {course.courseCode}
                                 </TableCell>
 
+                                {/* Course Name with description and experience popovers */}
+                                <CourseNameTableCell {...course} />
+
                                 {/* Course grade */}
-                                <CourseGradeTableCell grade={course.grade}/>
-                                {/* <HtmlTooltip followCursor title={<HeaderDescriptionTooltip description={course.personalNotes} header="Personal Course Experience" />}> */}
-                                    {/* <TableCell sx={tableGradeCellTheme} align="right"> 
-                                        <CommentOutlinedIcon/>
-                                        {course.grade}
-                                    </TableCell> */}
-                                {/* </HtmlTooltip> */}
+                                <TableCell sx={tableGradeCellTheme} align="right">
+                                    {course.grade}
+                                </TableCell>
                             </TableRow>
                         ))
                     }
@@ -538,75 +538,81 @@ function GradeTable({ semester }: GradeTableProps) {
     )
 }
 
-type CourseCodeTableCellProps = {
-    courseCode: string
+type CourseNameTableCellProps = {
+    courseCode: string,
+    courseName: string,
+    description: string,
+    personalNotes: string,
 }
 
-function CourseCodeTableCell({courseCode}:CourseCodeTableCellProps){
-    const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+function CourseNameTableCell({ courseCode, courseName, description, personalNotes }: CourseNameTableCellProps) {
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      setAnchorEl(event.currentTarget);
+    // Course information and description popover
+    const [anchorEl_description, setAnchorEl_description] = React.useState<HTMLButtonElement | null>(null);
+    const handleClick_description = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl_description(event.currentTarget);
     };
-  
-    const handleClose = () => {
-      setAnchorEl(null);
+    const handleClose_description = () => { setAnchorEl_description(null); };
+    const open_description = Boolean(anchorEl_description);
+
+    // Personal comments popover 
+    const [anchorEl_comments, setAnchorEl_comments] = React.useState<HTMLButtonElement | null>(null);
+    const handleClick_comments = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl_comments(event.currentTarget);
     };
-    const open = Boolean(anchorEl);
+    const handleClose = () => { setAnchorEl_comments(null); };
+    const open_comments = Boolean(anchorEl_comments);
+
+    const COURSE_DESCRIPTION_TEXT: string = courseCode + " - Course Description";
+    const PERSONAL_EXPEREIENCE_TEXT: string = courseCode + " - Personal Experience";
+
     return (
-        <TableCell sx={primaryDarkTextTheme} >
-            {courseCode}
-            <Button onClick={handleClick}>
-                <InfoOutlinedIcon/>
-            </Button>
+        <TableCell sx={{ ...primaryDarkTextTheme, }} >
+
+
+            <Tooltip title={COURSE_DESCRIPTION_TEXT}>
+                <Button onClick={handleClick_description} sx={{ padding: 0, minWidth: 0, }}>
+                    <InfoOutlinedIcon />
+                </Button>
+            </Tooltip>
             <Popover
-                open={open}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{vertical: 'center',horizontal: 'right',}}
-                transformOrigin={{vertical: 'center',horizontal: 'left',}}
+                open={open_description}
+                anchorEl={anchorEl_description}
+                onClose={handleClose_description}
+                anchorOrigin={{ vertical: 'center', horizontal: 'right', }}
+                transformOrigin={{ vertical: 'center', horizontal: 'left', }}
             >
-                <Typography sx={{ p: 2, color:"red"}}>The content of the Popover.</Typography>
+                <FormattedPopoverChild
+                    header={COURSE_DESCRIPTION_TEXT}
+                    bodyText={description}
+                />
             </Popover>
+
+            <Tooltip title={PERSONAL_EXPEREIENCE_TEXT}>
+                <Button onClick={handleClick_comments} sx={{ paddingLeft: 1, paddingRight: 2, minWidth: 0, }}>
+                    <CommentOutlinedIcon />
+                </Button>
+            </Tooltip>
+
+            <Popover
+                open={open_comments}
+                anchorEl={anchorEl_comments}
+                onClose={handleClose}
+                anchorOrigin={{ vertical: 'center', horizontal: 'left', }}
+                transformOrigin={{ vertical: 'center', horizontal: 'right', }}
+            >
+                <FormattedPopoverChild
+                    header={PERSONAL_EXPEREIENCE_TEXT}
+                    bodyText={personalNotes}
+                />
+            </Popover>
+
+            {courseName}
+
         </TableCell>
     );
+
 }
-
-type CourseGradeTableCellProps = {
-    grade: string
-}
-
-function CourseGradeTableCell({grade}:CourseGradeTableCellProps){
-    const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
-
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  const open = Boolean(anchorEl);
-//   const id = open ? 'simple-popover' : undefined;
-    return (
-        <TableCell sx={tableGradeCellTheme} align="right" >
-            {grade}
-            <Button onClick={handleClick}>
-                <CommentOutlinedIcon/>
-            </Button>
-            <Popover
-                open={open}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{vertical: 'center',horizontal: 'left',}}
-                transformOrigin={{vertical: 'center',horizontal: 'right',}}
-            >
-                <Typography sx={{ p: 2, color:"red"}}>The content of the Popover.</Typography>
-            </Popover>
-        </TableCell>
-    );
-}
-
 
 function CourseTableHeader() {
     return (
@@ -628,14 +634,14 @@ function CourseTableHeader() {
 
 type HeaderDescriptionTooltipProps = {
     header: string,
-    description: string
+    bodyText: string
 }
 
-function HeaderDescriptionTooltip({ header, description }: HeaderDescriptionTooltipProps) {
+function FormattedPopoverChild({ header, bodyText }: HeaderDescriptionTooltipProps) {
     return (
-        <Box>
-            <Typography align="center" variant="h6">{header}</Typography>
-            <Typography>{description}</Typography>
+        <Box sx={{ p: 2, color: "primary.main", width: "fit-content" }}>
+            <Typography align="center" variant="h5">{header}</Typography>
+            <Typography maxWidth={350}>{bodyText}</Typography>
         </Box>
     )
 }
@@ -646,6 +652,7 @@ function HeaderDescriptionTooltip({ header, description }: HeaderDescriptionTool
 
 const educationOuterPaperTheme = {
     width: "70%",
+    // TODO : Find a min width to set this to or figure out how to better handle small screens
     paddingTop: 2,
     marginBottom: 12
 };
@@ -682,7 +689,7 @@ const tabPanelOuterBoxTheme = {
 
 const tabPanelInnerBoxTheme = {
     p: 3,
-    paddingTop:0,
+    paddingTop: 0,
     minWidth: 100
 };
 
@@ -690,7 +697,7 @@ const semesterTabsOuterBoxTheme = {
     flexGrow: 1,
     display: 'flex',
     marginTop: 0,
-    paddingTop:0,
+    paddingTop: 0,
     paddingBottom: 5,
     justifyContent: "left",
     width: "90%",
