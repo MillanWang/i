@@ -1,9 +1,11 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
-import ImageLinkCard, { createImageLinkCardProps } from './cards/ImageLinkCard';
+import {
+    createImageLinkCardProps,
+    ImageLinkCardProps
+} from '../cards/ImageLinkCard';
+import TwoColumnCardGrid from '../cards/TwoColumnCardGrid';
 
-const spiriaSummer = createImageLinkCardProps(
+const spiriaSummer: ImageLinkCardProps = createImageLinkCardProps(
     "Spiria",
     [
         "May - Aug. 2022 (4 Months, In Progress)",
@@ -13,14 +15,13 @@ const spiriaSummer = createImageLinkCardProps(
         "Developed frontend React components for the company library using Material UI with thorough test coverage",
         "Resolved backend API authentication bugs with PHP & asserted expected behavior through integration testing",
         "Developed MariaDB SQL migration scripts",
-        "Technologies: React, TypeScript, PHP, MariaDB, SQL"
+        "Technologies: React, TypeScript, PHP, jQuery, MariaDB, SQL"
     ],
     [],
-    null
-
+    ''// No Image
 );
 
-const kinaxisFall = createImageLinkCardProps(
+const kinaxisFall: ImageLinkCardProps = createImageLinkCardProps(
     "Kinaxis",
     [
         "Sep. - Dec. 2021 (4 Months)",
@@ -33,11 +34,10 @@ const kinaxisFall = createImageLinkCardProps(
         "Technologies: Java GUIs, C#/.NET APIs, Visual Studio, Eclipse, Postman, Git, Jenkins"
     ],
     [],
-    null
-
+    ''// No Image
 );
 
-const jsiSummer = createImageLinkCardProps(
+const jsiSummer: ImageLinkCardProps = createImageLinkCardProps(
     "JSI",
     [
         "May - Aug. 2021 (4 Months)",
@@ -52,11 +52,10 @@ const jsiSummer = createImageLinkCardProps(
         "Technologies: Delphi, C#/.NET APIs, Kafka, Visual Studio, MS SQL Server, Postman, Git, Jenkins",
     ],
     [],
-    null
-
+    ''// No Image
 );
 
-const jsiWinter = createImageLinkCardProps(
+const jsiWinter: ImageLinkCardProps = createImageLinkCardProps(
     "JSI",
     [
         "Jan. - Apr. 2021 (4 Months)",
@@ -69,11 +68,10 @@ const jsiWinter = createImageLinkCardProps(
         "Technologies: Angular, C#/.NET, Visual Studio, VSCode, MS SQL Server, Postman, Git, Jenkins",
     ],
     [],
-    null
-
+    ''// No Image
 );
 
-const carletonResearch2019 = createImageLinkCardProps(
+const carletonResearch2019: ImageLinkCardProps = createImageLinkCardProps(
     "Carleton University",
     [
         "Jun.-Aug. 2019 (3 Months)",
@@ -86,13 +84,13 @@ const carletonResearch2019 = createImageLinkCardProps(
         "Technologies: Python, MatPlotLib, NumPy, Pandas, Linux Bash, Eclipse",
     ],
     [],
-    null
+    ''// No Image
 )
 
-const carletonTA2022 = createImageLinkCardProps(
+const carletonTA2022: ImageLinkCardProps = createImageLinkCardProps(
     "Carleton University",
     [
-        "Jan. - Apr. 2022  (4 Months, Current)",
+        "Jan. - Apr. 2022  (4 Months)",
         "Teaching Assistant"
     ],
     [
@@ -101,10 +99,10 @@ const carletonTA2022 = createImageLinkCardProps(
         "Lead software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns",
     ],
     [],
-    null
+    ''// No Image
 )
 
-const oneclass = createImageLinkCardProps(
+const oneclass: ImageLinkCardProps = createImageLinkCardProps(
     "OneClass",
     [
         "Sep. 2020 - Jan. 2021 (5 Months)",
@@ -115,10 +113,10 @@ const oneclass = createImageLinkCardProps(
         "Videos produced using OBS & DaVinci Resolve",
     ],
     [],
-    null
+    ''// No Image
 )
 
-const carletonTA2020 = createImageLinkCardProps(
+const carletonTA2020: ImageLinkCardProps = createImageLinkCardProps(
     "Carleton University",
     [
         "Sep. - Dec. 2020 (4 Months)",
@@ -131,10 +129,10 @@ const carletonTA2020 = createImageLinkCardProps(
         "Nominated for teaching awards by 5 students"
     ],
     [],
-    null
+    ''// No Image
 )
 
-const carletonEMLC = createImageLinkCardProps(
+const carletonEMLC: ImageLinkCardProps = createImageLinkCardProps(
     "Carleton University",
     [
         "Sep. - Dec. 2020 (4 Months)",
@@ -145,53 +143,33 @@ const carletonEMLC = createImageLinkCardProps(
         "Maintained the highest tutor ranking out of 20"
     ],
     [],
-    null
+    ''// No Image
 )
 
-const softwareExperiences = [spiriaSummer, kinaxisFall, jsiSummer, jsiWinter, carletonResearch2019];
-const communicationsExperiences = [carletonTA2022, oneclass, carletonTA2020, carletonEMLC];
+const softwareExperiences: ImageLinkCardProps[] = [
+    spiriaSummer,
+    kinaxisFall,
+    jsiSummer,
+    jsiWinter,
+    carletonResearch2019,
+];
+
+const educationExperiences: ImageLinkCardProps[] = [
+    carletonTA2022,
+    oneclass,
+    carletonTA2020,
+    carletonEMLC,
+];
 
 function ExperiencePage() {
     return (
-        <div
-            style={{
-                display: "flex",
-                "justify-content": "center",
-                "padding-bottom": 40
-            }}>
-
-            <Stack spacing={2}>
-                <StackHeader title="Software Engineering Experience" />
-
-                {softwareExperiences.map((ex) => (
-                    <ImageLinkCard imageLinkCardProps={ex} maxWidth={500} bodyTextAlignment="left" />
-                ))}
-            </Stack>
-
-            {/* Middle column spacer */}
-            <div style={{ width: "1%" }} />
-
-            <Stack spacing={2}>
-                <StackHeader title="Education Experience" />
-
-                {communicationsExperiences.map((ex) => (
-                    <ImageLinkCard imageLinkCardProps={ex} maxWidth={500} bodyTextAlignment="left" />
-                ))}
-            </Stack>
-        </div>
-    )
-}
-
-function StackHeader(props) {
-    return (
-        <Typography
-            variant="h5"
-            sx={{
-                color: "text.primary",
-                "text-decoration": "underline"
-            }}>
-            {props.title}
-        </Typography>)
-}
+        <TwoColumnCardGrid
+            leftColumnStackHeader="Software Engineering Experience"
+            leftColumnCardProps={softwareExperiences}
+            rightColumnStackHeader="Education Experience"
+            rightColumnCardProps={educationExperiences}
+        />
+    );
+};
 
 export default ExperiencePage;

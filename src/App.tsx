@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Switch } from "react-router-dom";
 import * as React from 'react';
-import HeaderBar from './components/HeaderBar';
+import HeaderBar, { createTitleUrlPair } from './components/HeaderBar';
 import IntroPage from './components/navigationPages/IntroPage';
 import ExperiencePage from './components/navigationPages/ExperiencePage';
 import ProjectsPage from './components/navigationPages/ProjectsPage';
@@ -10,13 +10,14 @@ import ExtracurricularsPage from './components/navigationPages/ExtracurricularsP
 import { Container, createTheme, ThemeProvider } from '@mui/material';
 import { blueGrey } from '@mui/material/colors';
 
+
 const mainAppTheme = createTheme({
   palette: {
     primary: {
       main: blueGrey[700],
       light: blueGrey[600],
       dark: blueGrey[800],
-      constrastText: '#ffffff',
+      // constrastText: '#ffffff',
     },
     text: {
       primary: '#ffffff',
@@ -26,7 +27,16 @@ const mainAppTheme = createTheme({
   },
   typography: {
     //TODO : Consider using a more personalized font. Perhaps implement my own handwriting 
-  }
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1050,
+      lg: 1200,
+      xl: 1425,
+    },
+  },
 });
 
 const introductionNavSection = createTitleUrlPair("Introduction", "/");
@@ -43,41 +53,31 @@ const navigationSections = [
   extracurricularsNavSection
 ];
 
-function createTitleUrlPair(title, url) {
-  return { title, url }
-}
-
 function App() {
   return (
     <div className="App">
       <ThemeProvider theme={mainAppTheme}>
-
         <HeaderBar sections={navigationSections} />
 
-        <Container
-          id="PageContent"
-          maxWidth="false"
-          sx={{
-            backgroundColor: "primary.dark",
-            margin: 0,
-            paddingTop: 3,
-            justifyContent: "center",
-            minHeight: "100%"
-          }} >
+        <Container id="PageContent" maxWidth={false} sx={pageContentTheme}>
 
           <Switch>
             <Route exact path={introductionNavSection.url}>
               <IntroPage />
             </Route>
+
             <Route path={workExperienceNavSection.url}>
               <ExperiencePage />
             </Route>
+
             <Route exact path={projectsNavSection.url}>
               <ProjectsPage />
             </Route>
+
             <Route exact path={educationNavSection.url}>
               <EducationPage />
             </Route>
+
             <Route exact path={extracurricularsNavSection.url}>
               <ExtracurricularsPage />
             </Route>
@@ -88,5 +88,18 @@ function App() {
     </div>
   );
 }
+
+/******************************
+ * THEMES
+ *****************************/
+
+const pageContentTheme = {
+  backgroundColor: "primary.dark",
+  margin: 0,
+  paddingTop: 3,
+  justifyContent: "center",
+  minHeight: "100%",
+  paddingBottom: 5,
+};
 
 export default App;

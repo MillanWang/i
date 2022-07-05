@@ -1,14 +1,14 @@
 import * as React from 'react';
-import ImageLinkCard from './cards/ImageLinkCard';
-import { createImageLinkCardProps, createLink } from './cards/ImageLinkCard';
+import {
+    createImageLinkCardProps,
+    createLinkObject,
+    ImageLinkCardProps
+} from '../cards/ImageLinkCard';
 
-//Images
-import letteredTabsGif from "../../images/LetteredTabs.gif";
-import mspBoardGif from "../../images/MSPBoard.gif";
-import riskGameImg from "../../images/risk.jpg";
-import elevatorGif from "../../images/Elevator.gif";
+import CardGrid from '../cards/CardGrid';
 
-const letteredTabs = createImageLinkCardProps(
+
+const letteredTabs: ImageLinkCardProps = createImageLinkCardProps(
     "Lettered Tabs Web App",
     ["2019 Personal Project"],
     [
@@ -16,14 +16,15 @@ const letteredTabs = createImageLinkCardProps(
         "Developed the conversion algorithms using Python, and the webapp using HTML, CSS, & JavaScript to create a simple user experience"
     ],
     [
-        createLink("Video Demo", "https://youtu.be/hG0Y2D5sdWU"),
-        createLink("Tool", "https://lettered-tabs.herokuapp.com/"),
-        createLink("Source Code", "https://gitlab.com/MillanWang/lettered-tabs"),
+        createLinkObject("Video Demo", "https://youtu.be/hG0Y2D5sdWU"),
+        createLinkObject("Tool", "https://lettered-tabs.herokuapp.com/"),
+        createLinkObject("Source Code", "https://gitlab.com/MillanWang/lettered-tabs"),
     ],
-    letteredTabsGif
+    // letteredTabsGif
+    require("../../images/LetteredTabs.gif")
 );
 
-const mspPerformance = createImageLinkCardProps(
+const mspPerformance: ImageLinkCardProps = createImageLinkCardProps(
     "Circuitboard Buzzer Instrument",
     ["2020 Personal Project"],
     [
@@ -31,12 +32,13 @@ const mspPerformance = createImageLinkCardProps(
         "This performance was then used as an example to demonstrate the hardware's capabilities to future classes "
     ],
     [
-        createLink("Video Demo", "https://youtu.be/FasY_z7dEuU"),
+        createLinkObject("Video Demo", "https://youtu.be/FasY_z7dEuU"),
     ],
-    mspBoardGif
+    // mspBoardGif
+    require("../../images/MSPBoard.gif")
 );
 
-const riskGame = createImageLinkCardProps(
+const riskGame: ImageLinkCardProps = createImageLinkCardProps(
     "RISK GUI Board Game",
     ["2020 Academic Group Project"],
     [
@@ -46,12 +48,13 @@ const riskGame = createImageLinkCardProps(
         "Led and organized team meetings to assign tasks and to parallelize workflow resulting in an A+ on the project"
     ],
     [
-        createLink("Source Code", "https://github.com/MillanWang/3110Project"),
+        createLinkObject("Source Code", "https://github.com/MillanWang/3110Project"),
     ],
-    riskGameImg
+    // riskGameImg
+    require("../../images/risk.jpg")
 );
 
-const elevatorSim = createImageLinkCardProps(
+const elevatorSim: ImageLinkCardProps = createImageLinkCardProps(
     "Elevator System Simulator",
     ["2022 Academic Group Project"],
     [
@@ -62,25 +65,21 @@ const elevatorSim = createImageLinkCardProps(
         "Led and organized team meetings to assign tasks and to parallelize workflow resulting in a 97% on the project"
     ],
     [
-        createLink("Source Code", "https://github.com/MillanWang/3303ElevatorProject"),
+        createLinkObject("Source Code", "https://github.com/MillanWang/3303ElevatorProject"),
     ],
-    elevatorGif
+    // elevatorGif
+    require("../../images/Elevator.gif")
 );
 
-const projects = [letteredTabs, mspPerformance, riskGame, elevatorSim]
+const projects: ImageLinkCardProps[] = [
+    elevatorSim,
+    letteredTabs,
+    mspPerformance,
+    riskGame,
+];
 
 function ProjectsPage() {
-    return (
-        <div style={{
-            display: "flex",
-            "justify-content": "center"
-        }}>
-            {projects.map((currProject) => (
-                <ImageLinkCard imageLinkCardProps={currProject} maxWidth={400} bodyTextAlignment="left" sideMargin={true} />
-
-            ))}
-        </div>
-    )
+    return <CardGrid cardArray={projects} />
 }
 
 export default ProjectsPage;

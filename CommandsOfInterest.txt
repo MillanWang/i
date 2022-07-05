@@ -3,3 +3,9 @@ npm start
 
 Deploying the app
 npm run deploy 
+
+Running tests once
+npm run test 
+
+Running tests with watcher
+npm run test -- --watch
