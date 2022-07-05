@@ -13,6 +13,7 @@ const introCard: ImageLinkCardProps = createImageLinkCardProps(
     ],
     [
         "The development of this site was a fun lil challenge to introduce myself to React, Material UI, and Github pages",
+        "Try resizing the page! Variable screen size is a fun design challenge. I based most of this site on Material UI cards to make content easier to divide and better on mobile"
     ],
     [
         createLinkObject("Source Code", "https://github.com/MillanWang/i"),

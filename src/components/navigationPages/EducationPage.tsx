@@ -1,15 +1,12 @@
 import * as React from 'react';
-// import HtmlTooltip from '@mui/material/Tooltip';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import {
     Box,
     Divider,
-    Icon,
     Paper,
     Popover,
     Slider,
-    Tab, Tabs, //Remove cause a slider is cooler. Keeping until the slider is GOOD GOOD
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
     Tooltip,
     Typography,
@@ -17,24 +14,24 @@ import {
 } from '@mui/material';
 
 // Images
-import carletonLogoImage from "../../images/CarletonLogo.jpg"; //Switch to require???
+import carletonLogoImage from "../../images/CarletonLogo.jpg";
 
 
 //TODO:  Change whole thing to match color theme. Bright white is brutal on the eyes.
 // Extract the white background from the carleton image by making it transparent with rgba-alpha cause that's the only barrier 
 
 
-const carletonInfoStrings: string[] = [
+const CARLETON_INFO_STRINGS: string[] = [
     "Bachelor of Engineering, Software Engineering",
     "5th Year Standing, Co-Op Status",
     "Cumulative Grade Point Average: 11.48/12.00 (A)",
     "Number of Academic (4 Month) Terms Completed: 7",
     "Co-op (4 Month) Work Terms Completed: 3 + 1(In Progress)",
-    "Courses Remaining Before Graduation: 2(Engineering Project) + 6",
+    "Remaining Courses: 6 + 2(Engineering Project)",
     "Expected Graduation Date: April 2023",
 ];
 
-const fall2018Courses: CourseObject[] = [
+const FALL_2018_COURSES: CourseObject[] = [
     createCourse("ECOR 1010",
         "Introduction to Engineering",
         "A ",
@@ -61,7 +58,7 @@ const fall2018Courses: CourseObject[] = [
         "Software development as an engineering discipline, using a modern programming language, Language syntax. Algorithm design. Tracing and visualizing program execution. Testing and debugging. Program style, documentation, reliability. Lab projects are drawn from a variety of application domains: digital image manipulation, computer games, robotics.",
         "Crazy me decided to choose to go into software engineering despite never programming before. Learned how program in this course and found it super fun. Now I TA the new equivalent of this course"),
 ];
-const winter2019Courses: CourseObject[] = [
+const WINTER_2019_COURSES: CourseObject[] = [
     createCourse("CHEM 1101",
         "Chemistry for Engineering Students",
         "A+",
@@ -88,7 +85,7 @@ const winter2019Courses: CourseObject[] = [
         "The imperative programming paradigm: assignment and state, types and variables, static and dynamic typing. Memory management and object lifetimes: static allocation, automatic allocation in activation frames, dynamic allocation. Function argument passing. Recursion. Data structures: dynamic arrays, linked lists. Encapsulation and information hiding.",
         "Pointing out pointers I see in C. Very fun course. I redid all 12 labs in 1 day as exam prep"),
 ];
-const fall2019Courses: CourseObject[] = [
+const FALL_2019_COURSES: CourseObject[] = [
     createCourse("CCDP 2100",
         "Communication for Engineers",
         "A+",
@@ -115,7 +112,7 @@ const fall2019Courses: CourseObject[] = [
         "Number systems: binary, decimal, hexadecimal. Digital representation of information. Computer arithmetic: integer, floating point, fixed point. Boolean logic, realization as basic digital circuits. Applications: simple memory circuits, synchronous sequential circuits for computer systems. Finite state machines, state graphs, counters, adders. Asynchronous sequential circuits. Races.",
         "Super interesting learning about how to construct computer elements with basic logical circuits"),
 ];
-const winter2020Courses: CourseObject[] = [
+const WINTER_2020_COURSES: CourseObject[] = [
     createCourse("COMP 1805",
         "Discrete Structures I",
         "A+",
@@ -147,7 +144,7 @@ const winter2020Courses: CourseObject[] = [
         "Principles underlying different kinds of programming languages (procedural, functional, logic programming) and their semantics. Overview of machinery needed for language support (compilers, interpreters and run-time systems).",
         "Racket/Scheme definitely isn't my favourite language, but it certainly is an interesting development system."),
 ];
-const summer2020Courses: CourseObject[] = [
+const SUMMER_2020_COURSES: CourseObject[] = [
     createCourse("SYSC 3999",
         "Co-op Work Term (Cancelled)",
         "N/A",
@@ -179,7 +176,7 @@ const summer2020Courses: CourseObject[] = [
         "System on Chip (SoC)-based computer system design. SoC internal organization. Cache memory. Interfacing: external memory, hardware subsystems. Direct memory access. Floating point units. Introduction to field programmable gate arrays.",
         "Pretty interesting learning about SoC's and the engineering tradeoffs to implement such systems. Prof was very interesting as well"),
 ];
-const fall2020Courses: CourseObject[] = [
+const FALL_2020_COURSES: CourseObject[] = [
     createCourse("COMP 3005",
         "Database Management Systems",
         "B+ / SAT",
@@ -201,7 +198,7 @@ const fall2020Courses: CourseObject[] = [
         "Layered network architectures, TCP/IP suite, circuit switching, packet switching. Physical media, data transmission, multiplexing. Data link controls, MAC protocols, random access, polling, IEEE 802 standards. Bridges, switched Ethernet, VLANs. Routing algorithms, Internet routing protocols, datagram networks, virtual circuit networks. Transport protocols.",
         "I really liked learning about internet networking systems and protocols. Learning to use wireshark was fun as well."),
 ];
-const winter2021Courses: CourseObject[] = [
+const WINTER_2021_COURSES: CourseObject[] = [
     createCourse("SYSC 3999",
         "Co-op Work Term - JSI",
         "SAT",
@@ -213,21 +210,21 @@ const winter2021Courses: CourseObject[] = [
         "Current techniques, notations, methods, processes and tools used in Requirements Engineering. Requirements elicitation, negotiation, modeling requirements, management, validation. Skills needed for Requirements Engineering and the many disciplines on which it draws. Requirements analysis: domain modeling, modeling object interactions; UML modeling. Introduction to software development processes.",
         "School in parallel with work is tough. But it was fun learning about how software requirements and projects are planned out."),
 ];
-const summer2021Courses: CourseObject[] = [
+const SUMMER_2021_COURSES: CourseObject[] = [
     createCourse("SYSC 3999",
         "Co-op Work Term - JSI",
         "SAT",
         "Position: Software Developer - Backend",
         "This term was really fun thanks to my team. It was an interesting challenge learning Delphi"),
 ];
-const fall2021Courses: CourseObject[] = [
+const FALL_2021_COURSES: CourseObject[] = [
     createCourse("SYSC 3999",
         "Co-op Work Term - Kinaxis",
         "SAT",
         "Position: Software Developer, Application Server, Platform",
         "This term was fun. I really enjoyed learning about supply chain planning and sharpening my Java skills"),
 ];
-const winter2022Courses: CourseObject[] = [
+const WINTER_2022_COURSES: CourseObject[] = [
     createCourse("SYSC 3303",
         "Real-Time Concurrent Systems",
         "A",
@@ -249,14 +246,14 @@ const winter2022Courses: CourseObject[] = [
         "Introduction to software project management and economics; Return on software investments; Software life cycle; Work breakdown structure, scheduling and planning; Risk analysis and management; Product size and cost estimation; Earn value management; Statistical process control; Managing project team and process improvement; Bidding and contract types.",
         "I loved this course! The professor was great at relating course material to real life situations and I learned a lot about different approaches to managing software development teams."),
 ];
-const summer2022Courses: CourseObject[] = [
+const SUMMER_2022_COURSES: CourseObject[] = [
     createCourse("SYSC 3999",
         "Co-op Work Term - Spiria",
         "SAT",
         "Position: Software Developer",
         "Working with full stack application development is fun. J'aime aussi le défi de parler en français avec mes collègues francophones"),
 ];
-const fall2022Courses: CourseObject[] = [
+const FALL_2022_COURSES: CourseObject[] = [
     createCourse("ELEC 4705",
         "Electronic Materials, Devices, and Transmission Media",
         "Ends : 22/12/2022",
@@ -278,7 +275,7 @@ const fall2022Courses: CourseObject[] = [
         "Student teams develop professional-level experience by applying previously acquired knowledge to a major design project. Lectures discuss project-related issues and student presentations. A project proposal, interim report, oral presentations, and a comprehensive final report are required.",
         "Selected Project Title : Games for Teaching Cybersecurity: Network Defence for Technical Employees"),
 ];
-const winter2023Courses: CourseObject[] = [
+const WINTER_2023_COURSES: CourseObject[] = [
     createCourse("ECOR 4995",
         "Professional Practice",
         "Ends : 27/04/2023",
@@ -300,20 +297,20 @@ const winter2023Courses: CourseObject[] = [
         "Student teams develop professional-level experience by applying previously acquired knowledge to a major design project. Lectures discuss project-related issues and student presentations. A project proposal, interim report, oral presentations, and a comprehensive final report are required.",
         "Selected Project Title : Games for Teaching Cybersecurity: Network Defence for Technical Employees"),
 ];
-const semesters: SemesterObject[] = [
-    createSemester("Fall 2018", fall2018Courses),
-    createSemester("Winter 2019", winter2019Courses),
-    createSemester("Fall 2019", fall2019Courses),
-    createSemester("Winter 2020", winter2020Courses),
-    createSemester("Summer 2020", summer2020Courses),
-    createSemester("Fall 2020", fall2020Courses),
-    createSemester("Winter 2021", winter2021Courses),
-    createSemester("Summer 2021", summer2021Courses),
-    createSemester("Fall 2021", fall2021Courses),
-    createSemester("Winter 2022", winter2022Courses),
-    createSemester("Summer 2022", summer2022Courses),
-    createSemester("Fall 2022", fall2022Courses),
-    createSemester("Winter 2023", winter2023Courses),
+const SEMESTERS: SemesterObject[] = [
+    createSemester("Fall 2018", FALL_2018_COURSES),
+    createSemester("Winter 2019", WINTER_2019_COURSES),
+    createSemester("Fall 2019", FALL_2019_COURSES),
+    createSemester("Winter 2020", WINTER_2020_COURSES),
+    createSemester("Summer 2020", SUMMER_2020_COURSES),
+    createSemester("Fall 2020", FALL_2020_COURSES),
+    createSemester("Winter 2021", WINTER_2021_COURSES),
+    createSemester("Summer 2021", SUMMER_2021_COURSES),
+    createSemester("Fall 2021", FALL_2021_COURSES),
+    createSemester("Winter 2022", WINTER_2022_COURSES),
+    createSemester("Summer 2022", SUMMER_2022_COURSES),
+    createSemester("Fall 2022", FALL_2022_COURSES),
+    createSemester("Winter 2023", WINTER_2023_COURSES),
 ];
 
 type CourseObject = {
@@ -349,155 +346,80 @@ function EducationPage() {
             />
 
             {/* Info Strings */}
+            {/* TODO : Make this more small screen friendly. Better not to wrap the text */}
             <Box sx={carletonInfoStringsBoxTheme}>
-                {carletonInfoStrings.map((infoString: string, i: number) => (
+                {CARLETON_INFO_STRINGS.map((infoString: string, i: number) => (
                     <Typography sx={primaryDarkTextTheme} align="left" key={"EducationDescriptionString_" + i++}>
                         {infoString}
                     </Typography>
                 ))}
             </Box>
 
-            <Divider variant="middle" sx={transcriptDividerTheme} children="Transcript" />
-
-            {/* Below divider should be made redundant by the popover replacement. Make it mobile friendly and all that */}
-            {/* <Divider variant="middle" sx={hoverNoteDividerTheme} children="Hover course codes for course info and Hover grades for personal notes" /> */}
+            <Divider variant="middle" sx={transcriptDividerTheme} children="Custom Transcript Browser" />
 
             {/* Main grades table */}
-            <SemesterTabs />
+            <SemesterSliderTable />
         </Paper>
     )
 }
 
+function SemesterSliderTable() {
+    const SLIDER_TOOLTIP_TEXT: string = "Use slider to select semester";
+    const SEMESTER_SELECTOR_SLIDER_MARKS = [
+        { value: 1, label: '2018', },
+        { value: 4, label: '2020', },
+        { value: 7, label: '2021', },
+        { value: 10, label: '2022', },
+        { value: 13, label: '2023', },
+    ];
 
-
-
-
-
-
-
-const semesterSelectorSliderMarks = [
-    {
-        value: 1,
-        label: '2018',
-    },
-    {
-        value: 4,
-        label: '2020',
-    },
-    {
-        value: 7,
-        label: '2021',
-    },
-    {
-        value: 10,
-        label: '2022',
-    },
-    {
-        value: 13,
-        label: '2023',
-    },
-];
-
-
-
-
-
-
-
-
-
-
-
-
-
-function SemesterTabs() {
     const [semesterNumber, setSemesterNumber] = React.useState(1);
 
-
-
-
     const handleSliderChange = (event: Event, value: number | Array<number>, activeThumb: number) => {
-        if (value instanceof Array<number>) {
-            //Should never get here but the callback demands the possibility of an array. Idk how that would ever happen
-            value = value[0];
-        }
-        setSemesterNumber(value);
+        // Should never be an array but required to avoid error. I suspect it's for the multislider option from MUI
+        setSemesterNumber(value instanceof Array<number> ? value[0] : value);
     }
 
-    const SLIDER_TOOLTIP_TEXT: string = "Use slider to select semester";
-
     return (
-        <Box>
-            <Box sx={{
-                // width: "85%",
-                display: "flex",
-                backgroundColor: "#bbbbbb",
-                justifyContent: "center",
-                alignItems: "center",
-            }}>
+        <Paper elevation={24} sx={semesterSliderPaperTheme}>
+            <Box sx={sliderBoxTheme}>
                 <Slider
-                    defaultValue={1}
-                    step={1}
-                    max={13}
-                    min={1}
-                    valueLabelDisplay="off"
-                    marks={semesterSelectorSliderMarks}
+                    defaultValue={1} step={1} max={13} min={1}
+                    marks={SEMESTER_SELECTOR_SLIDER_MARKS}
                     onChange={handleSliderChange}
-                    sx={
-                        {
-                            marginTop: 2,
-                            ...primaryDarkTextTheme,
-                            width: "60%"
-                        }}
+                    sx={sliderTheme}
                 />
 
-                <Tooltip title={SLIDER_TOOLTIP_TEXT}>
-                    <InfoOutlinedIcon sx={{ paddingLeft: 3 }} />
-                </Tooltip>
+                <Tooltip title={SLIDER_TOOLTIP_TEXT} children={<InfoOutlinedIcon sx={sliderInfoIconTheme} />} />
             </Box>
 
-
             <Box sx={semesterTabsOuterBoxTheme}>
-
-
-
-
-                {/* Tab content */}
-                {semesters.map((currentSemester: SemesterObject, i: number) => {
+                {/* Individual semester grade tables */}
+                {SEMESTERS.map((currentSemester: SemesterObject, i: number) => {
                     return (
-                        <TabPanel value={semesterNumber} index={++i} key={"TabContent_" + currentSemester.semesterName} >
+                        <SingleSemesterPanel value={semesterNumber} index={++i} key={"TabContent_" + currentSemester.semesterName} >
                             <GradeTable semester={currentSemester} />
-                        </TabPanel>
+                        </SingleSemesterPanel>
                     )
                 })}
             </Box>
-        </Box>
+        </Paper>
     );
 };
 
-type TabPanelProps = {
+type SingleSemesterPanelProps = {
     children?: React.ReactNode;
     index: number;
     value: number;
 };
 
-
-function TabPanel(props: TabPanelProps) {
-    const { children, value, index, ...other } = props;
-
+function SingleSemesterPanel({ children, value, index, }: SingleSemesterPanelProps) {
     return (
-        <Box
-            role="tabpanel"
-            hidden={value !== index}
-            sx={tabPanelOuterBoxTheme}
-            id={`simple-tabpanel-${index}`}
-            {...other}
-        >
+        <Box hidden={value !== index} sx={tabPanelOuterBoxTheme}>
             {value === index && (<Box sx={tabPanelInnerBoxTheme} children={children} />)}
         </Box>
     );
 }
-
 
 type GradeTableProps = {
     semester: SemesterObject
@@ -506,7 +428,7 @@ type GradeTableProps = {
 function GradeTable({ semester }: GradeTableProps) {
     const { semesterName, courses } = semester;
     return (
-        <TableContainer component={Paper}>
+        <TableContainer>
             <Box sx={tableSemesterHeaderTheme}>
                 <Typography children={semesterName} sx={primaryDarkTextTheme} variant="h6" />
             </Box>
@@ -546,67 +468,54 @@ type CourseNameTableCellProps = {
 }
 
 function CourseNameTableCell({ courseCode, courseName, description, personalNotes }: CourseNameTableCellProps) {
+    // Popover positioning props. Reused in both popovers
+    type AnchorOrigin = { vertical: 'bottom' | 'top', horizontal: 'center' };
+    const POPOVER_ANCHOR_ORIGIN_POSITION: AnchorOrigin = { vertical: 'bottom', horizontal: 'center', };
+    const POPOVER_TRANSFORM_ORIGIN_POSITION: AnchorOrigin = { vertical: 'top', horizontal: 'center', };
 
     // Course information and description popover
+    const COURSE_DESCRIPTION_TEXT: string = courseCode + " - Course Description";
     const [anchorEl_description, setAnchorEl_description] = React.useState<HTMLButtonElement | null>(null);
-    const handleClick_description = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setAnchorEl_description(event.currentTarget);
-    };
+    const handleClick_description = (event: React.MouseEvent<HTMLButtonElement>) => { setAnchorEl_description(event.currentTarget); };
     const handleClose_description = () => { setAnchorEl_description(null); };
     const open_description = Boolean(anchorEl_description);
 
     // Personal comments popover 
+    const PERSONAL_EXPEREIENCE_TEXT: string = courseCode + " - Personal Experience";
     const [anchorEl_comments, setAnchorEl_comments] = React.useState<HTMLButtonElement | null>(null);
-    const handleClick_comments = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setAnchorEl_comments(event.currentTarget);
-    };
+    const handleClick_comments = (event: React.MouseEvent<HTMLButtonElement>) => { setAnchorEl_comments(event.currentTarget); };
     const handleClose = () => { setAnchorEl_comments(null); };
     const open_comments = Boolean(anchorEl_comments);
 
-    const COURSE_DESCRIPTION_TEXT: string = courseCode + " - Course Description";
-    const PERSONAL_EXPEREIENCE_TEXT: string = courseCode + " - Personal Experience";
-
     return (
-        <TableCell sx={{ ...primaryDarkTextTheme, }} >
-
-
+        <TableCell sx={primaryDarkTextTheme}>
+            {/* Course description button and popover */}
             <Tooltip title={COURSE_DESCRIPTION_TEXT}>
-                <Button onClick={handleClick_description} sx={{ padding: 0, minWidth: 0, }}>
-                    <InfoOutlinedIcon />
-                </Button>
+                <Button onClick={handleClick_description} sx={courseInfoIconButtonTheme} children={<InfoOutlinedIcon />} />
             </Tooltip>
             <Popover
-                open={open_description}
+                open={open_description} onClose={handleClose_description}
                 anchorEl={anchorEl_description}
-                onClose={handleClose_description}
-                anchorOrigin={{ vertical: 'center', horizontal: 'right', }}
-                transformOrigin={{ vertical: 'center', horizontal: 'left', }}
+                anchorOrigin={POPOVER_ANCHOR_ORIGIN_POSITION}
+                transformOrigin={POPOVER_TRANSFORM_ORIGIN_POSITION}
             >
-                <FormattedPopoverChild
-                    header={COURSE_DESCRIPTION_TEXT}
-                    bodyText={description}
-                />
+                <FormattedPopoverChild header={COURSE_DESCRIPTION_TEXT} bodyText={description} />
             </Popover>
 
+            {/* Personal notes button and popover */}
             <Tooltip title={PERSONAL_EXPEREIENCE_TEXT}>
-                <Button onClick={handleClick_comments} sx={{ paddingLeft: 1, paddingRight: 2, minWidth: 0, }}>
-                    <CommentOutlinedIcon />
-                </Button>
+                <Button onClick={handleClick_comments} sx={courseNotesIconButtonTheme} children={<CommentOutlinedIcon />} />
             </Tooltip>
-
             <Popover
-                open={open_comments}
+                open={open_comments} onClose={handleClose}
                 anchorEl={anchorEl_comments}
-                onClose={handleClose}
-                anchorOrigin={{ vertical: 'center', horizontal: 'left', }}
-                transformOrigin={{ vertical: 'center', horizontal: 'right', }}
+                anchorOrigin={POPOVER_ANCHOR_ORIGIN_POSITION}
+                transformOrigin={POPOVER_TRANSFORM_ORIGIN_POSITION}
             >
-                <FormattedPopoverChild
-                    header={PERSONAL_EXPEREIENCE_TEXT}
-                    bodyText={personalNotes}
-                />
+                <FormattedPopoverChild header={PERSONAL_EXPEREIENCE_TEXT} bodyText={personalNotes} />
             </Popover>
 
+            {/* Course name text */}
             {courseName}
 
         </TableCell>
@@ -639,7 +548,7 @@ type HeaderDescriptionTooltipProps = {
 
 function FormattedPopoverChild({ header, bodyText }: HeaderDescriptionTooltipProps) {
     return (
-        <Box sx={{ p: 2, color: "primary.main", width: "fit-content" }}>
+        <Box sx={popoverContentsBoxTheme}>
             <Typography align="center" variant="h5">{header}</Typography>
             <Typography maxWidth={350}>{bodyText}</Typography>
         </Box>
@@ -652,9 +561,11 @@ function FormattedPopoverChild({ header, bodyText }: HeaderDescriptionTooltipPro
 
 const educationOuterPaperTheme = {
     width: "70%",
-    // TODO : Find a min width to set this to or figure out how to better handle small screens
+    minWidth: 500,
     paddingTop: 2,
-    marginBottom: 12
+    marginBottom: 12,
+    minHeight: 1600,
+
 };
 
 const carletonLogoTheme = {
@@ -677,10 +588,30 @@ const transcriptDividerTheme = {
     color: "primary.dark"
 };
 
-const hoverNoteDividerTheme = {
-    marginTop: 0,
-    fontSize: 14,
-    color: "primary.dark"
+const semesterSliderPaperTheme = {
+    marginTop: 3,
+    width: "85%",
+};
+
+const sliderBoxTheme = {
+    display: "flex",
+    backgroundColor: "#bbbbbb",
+    justifyContent: "center",
+    alignItems: "center",
+};
+
+const sliderTheme = {
+    ...primaryDarkTextTheme,
+    marginTop: 2,
+    width: "60%"
+};
+
+const sliderInfoIconTheme = {
+    marginLeft: 3,
+    color: "primary.dark",
+    '&:hover': {
+        color: "text.disabled",
+    }
 };
 
 const tabPanelOuterBoxTheme = {
@@ -688,8 +619,6 @@ const tabPanelOuterBoxTheme = {
 };
 
 const tabPanelInnerBoxTheme = {
-    p: 3,
-    paddingTop: 0,
     minWidth: 100
 };
 
@@ -697,25 +626,8 @@ const semesterTabsOuterBoxTheme = {
     flexGrow: 1,
     display: 'flex',
     marginTop: 0,
-    paddingTop: 0,
-    paddingBottom: 5,
+    padding: 0,
     justifyContent: "left",
-    width: "90%",
-    minHeight: 700,
-};
-
-const semesterTabSelectorTheme = {
-    borderRight: 1,
-    borderColor: 'divider',
-    width: 100
-};
-
-const semesterTabTheme = {
-    bgcolor: 'primary',
-    color: "primary.dark",
-    background: "#dddddd",
-    margin: 0.3,
-    borderRadius: 5
 };
 
 const tableSemesterHeaderTheme = {
@@ -734,6 +646,26 @@ const tableGradeCellTheme = {
     maxWidth: 90,
     color: "primary.dark",
 };
+
+const courseInfoIconButtonTheme = {
+    padding: 0,
+    minWidth: 0,
+    '&:hover': {
+        color: "text.disabled",
+    }
+};
+
+const courseNotesIconButtonTheme = {
+    ...courseInfoIconButtonTheme,
+    paddingLeft: 1,
+    paddingRight: 2,
+};
+
+const popoverContentsBoxTheme = {
+    p: 2,
+    color: "primary.main",
+    width: "fit-content",
+}
 
 
 export default EducationPage;
