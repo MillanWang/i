@@ -15,6 +15,7 @@ export type LinkObject = {
 }
 
 export function createLinkObject(linkText: string, url: string): LinkObject {
+    //TODO To be deprecated in favour of just using JSON files directly for file access
     return { linkText, url }
 }
 
@@ -30,7 +31,7 @@ export type ImageLinkCardProps = {
     imageHeightLimit?: number,
 };
 
-export function createImageLinkCardProps(
+export function createImageLinkCardProps( //TODO To be deprecated in favour of just using JSON files directly for file access
     title: string,
     subtitles: string[],
     descriptionStrings: string[],
@@ -42,7 +43,7 @@ export function createImageLinkCardProps(
 
 const ImageLinkCard = (
     {
-        // Required but can be empty. Force developer to think abouty this
+        // Required but can be empty. Force developer to think about this
         title,
         subtitles,
         descriptionStrings,
@@ -86,7 +87,7 @@ const ImageLinkCard = (
             {/* Links */}
             <CardActions sx={cardActionLinksTheme}>
                 {links.map((linkObj: LinkObject, i: number) => (
-                    <Link href={linkObj.url} target="_blank" rel="noreferrer noopener" key={'Card_' + title + '_link' + i++}>
+                    <Link href={linkObj.url} target="_blank" rel="noreferrer noopener" key={`Card_${title}_link_${i}`} data-testid={`Card_${title}_link_${i++}`}>
                         <Button size="small" sx={linkButtonTheme} >
                             {linkObj.linkText}
                         </Button>
@@ -169,7 +170,7 @@ const DescriptionStringsArea = ({ cardTitle, accordionWrap, descriptionStrings }
     };
 
     return (
-        <Accordion sx={accordionTheme} onChange={swapString}>
+        <Accordion sx={accordionTheme} onChange={swapString} data-testid={`Card_${cardTitle}_accordion`}>
             <AccordionSummary
                 sx={accordionTitleTheme}
                 expandIcon={<ExpandMoreIcon htmlColor='white' />}

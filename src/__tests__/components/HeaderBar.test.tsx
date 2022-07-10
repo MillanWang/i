@@ -20,7 +20,6 @@ const navigationSections = [
 
 
 it('renders', () => {
-    // render(<HeaderBar sections={navigationSections} />);
-    // const linkElement = screen.getByText(/learn react/i);
-    // expect(true).toBe(true);
+    const { container } = render(<HeaderBar sections={navigationSections} />);
+    expect(container).toBeDefined();
 });

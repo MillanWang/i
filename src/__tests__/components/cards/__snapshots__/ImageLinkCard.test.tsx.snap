@@ -23,6 +23,346 @@ exports[`<ImageLinkCard /> should render to snapshot with only props 1`] = `
 </div>
 `;
 
+exports[`<ImageLinkCard /> should show the description strings 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        id="Card_This is the Title"
+      >
+        This is the Title
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Subtitles go here
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Sub sub sub
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Nice and close to the title
+      </p>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+      >
+        Descriptions go here
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+      >
+        Descriptive!
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+      >
+        Sometimes I am inside an accordion
+      </p>
+    </div>
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ImageLinkCard /> should show the descriptions in an accordion 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        id="Card_This is the Title"
+      >
+        This is the Title
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Subtitles go here
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Sub sub sub
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Nice and close to the title
+      </p>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+      />
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+        data-testid="Card_This is the Title_accordion"
+      >
+        <div
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+          >
+            Show Details
+          </div>
+          <div
+            class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              color="white"
+              data-testid="ExpandMoreIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+            >
+              <div
+                class="MuiAccordion-region"
+                role="region"
+              >
+                <div
+                  class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                  >
+                    Descriptions go here
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                  >
+                    Descriptive!
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                  >
+                    Sometimes I am inside an accordion
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+        data-testid="Card_This is the Title_link_0"
+        href="https://www.google.com"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <button
+          class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Good link
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </a>
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+        data-testid="Card_This is the Title_link_1"
+        href="https://github.com/MillanWang/i"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <button
+          class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Nice link
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImageLinkCard /> should show the link buttons 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        id="Card_This is the Title"
+      >
+        This is the Title
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Subtitles go here
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Sub sub sub
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Nice and close to the title
+      </p>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+      >
+        Descriptions go here
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+      >
+        Descriptive!
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+      >
+        Sometimes I am inside an accordion
+      </p>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+        data-testid="Card_This is the Title_link_0"
+        href="https://www.google.com"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <button
+          class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Good link
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </a>
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+        data-testid="Card_This is the Title_link_1"
+        href="https://github.com/MillanWang/i"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <button
+          class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Nice link
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImageLinkCard /> should show the subtitles 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        id="Card_This is the Title"
+      >
+        This is the Title
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Subtitles go here
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Sub sub sub
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        Nice and close to the title
+      </p>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+    />
+  </div>
+</div>
+`;
+
 exports[`<ImageLinkCard /> should show the title 1`] = `
 <div>
   <div

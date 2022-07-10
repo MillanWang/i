@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardGrid /> should render 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-dud83n"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-cn8dkf-MuiGrid-root"
+    />
+  </div>
+</div>
+`;

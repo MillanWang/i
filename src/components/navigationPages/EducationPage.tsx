@@ -322,6 +322,7 @@ type CourseObject = {
 };
 
 function createCourse(courseCode: string, courseName: string, grade: string, description: string, personalNotes: string): CourseObject {
+    //TODO To be deprecated in favour of just using JSON files directly for file access
     return { courseCode, courseName, grade, description, personalNotes }
 }
 
@@ -331,6 +332,7 @@ type SemesterObject = {
 }
 
 function createSemester(semesterName: string, courses: CourseObject[]): SemesterObject {
+    //TODO To be deprecated in favour of just using JSON files directly for file access
     return { semesterName, courses }
 }
 

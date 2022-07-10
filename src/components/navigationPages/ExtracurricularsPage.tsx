@@ -18,8 +18,8 @@ const martialArts: ImageLinkCardProps = createImageLinkCardProps(
         "Can be very effective as physical security during emergency situations",
     ],
     [
-        createLinkObject("2014 Worlds", "https://www.toronto.com/community-story/4881165-csma-academy-athletes-capture-33-medals/"),
-        createLinkObject("2012 Worlds", "https://www.toronto.com/community-story/3961498-stittsville-youth-heading-to-2012-world-karate-championships-west-end-teen-qualifies-for-world-kickboxing-and-karate-championship-in-orlando-fla-/")
+        createLinkObject("2014 Worlds", "https://issuu.com/stittsvillenews/docs/stittsville092514/26"),
+        createLinkObject("2012 Worlds", "https://issuu.com/westcarletonreview/docs/kanata062812/42")
     ],
     // tornadoKick
     require("../../images/tornadoKick.gif")

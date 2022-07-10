@@ -5,12 +5,15 @@ import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom'; // For .toHaveTextContent(string)
 import CardGrid from '../../../components/cards/CardGrid';
 
-
+//TODO Get all of the ImageCardProps objects into external files so that they are easier to retrieve from anywhere
 
 describe("<CardGrid />", () => {
-
-    it('should render to snapshot with only props', () => {
-        const { container } = render(<CardGrid />);
-        expect(container).toBeDefined()
+    it('should render', () => {
+        const { container } = render(
+            <CardGrid
+                cardArray={[]}
+            />);
+        expect(container).toBeDefined();
+        expect(container).toMatchSnapshot();
     });
 });

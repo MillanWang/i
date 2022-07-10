@@ -36,6 +36,7 @@ export type TitleUrlPair = {
 }
 
 export function createTitleUrlPair(title: string, url: string): TitleUrlPair {
+    //TODO To be deprecated in favour of just using JSON files directly for file access
     return { title, url }
 }
 
@@ -101,6 +102,7 @@ type NavGifTooltipProps = {
 }
 
 function createNavGifTooltipProps(header: string, descriptions: string[]): NavGifTooltipProps {
+    //TODO To be deprecated in favour of just using JSON files directly for file access
     return { header, descriptions }
 }
 
