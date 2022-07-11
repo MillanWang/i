@@ -10,7 +10,7 @@ import ImageLinkCard, {
 } from '../cards/ImageLinkCard';
 
 const COLUMN_WIDTH: number = 500;
-
+//console.log(JSON.stringify()); TODO Get the raw json strings
 export type TwoColumnCardGridProps = {
     leftColumnStackHeader: string,
     leftColumnCardProps: ImageLinkCardProps[],
