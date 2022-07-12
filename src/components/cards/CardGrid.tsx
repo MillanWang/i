@@ -9,8 +9,6 @@ type CardGridProps = {
     cardArray: ImageLinkCardProps[]
 }
 
-//console.log(JSON.stringify()); TODO Get the raw json strings
-
 const CardGrid = ({ cardArray }: CardGridProps) => {
     return (
         <Box sx={gridBoxTheme}>
