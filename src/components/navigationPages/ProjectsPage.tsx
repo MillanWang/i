@@ -10,23 +10,39 @@ import iLetteredTabs from '../../images/LetteredTabs.gif';
 import iMSP_Board from '../../images/MSPBoard.gif';
 import iRisk from '../../images/risk.jpg';
 import iElevator from '../../images/Elevator.gif';
+import iSimulation from '../../images/simulation.gif';
+import iReactNative from '../../images/ReactNative.jpg';
+import iEngineeringProject from '../../images/CyberSecurity.jpg';
 
-const projects: ImageLinkCardProps[] = [    
+
+const projects: ImageLinkCardProps[] = [
+    {
+        ...ProjectsData.EngineeringProject,
+        img: iEngineeringProject
+    },
+    {
+        ...ProjectsData.ReactNative,
+        img: iReactNative
+    },
     {
         ...ProjectsData.Elevator,
-        img:iElevator
+        img: iElevator
     },
     {
         ...ProjectsData.LetteredTabs,
-        img:iLetteredTabs
+        img: iLetteredTabs
     },
     {
         ...ProjectsData.MSP_Buzzer,
-        img:iMSP_Board
+        img: iMSP_Board
+    },
+    {
+        ...ProjectsData.Simulation,
+        img: iSimulation
     },
     {
         ...ProjectsData.Risk,
-        img:iRisk
+        img: iRisk
     },
 ];
 
