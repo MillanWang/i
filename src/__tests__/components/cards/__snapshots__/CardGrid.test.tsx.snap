@@ -1,5 +1,1330 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<CardGrid /> should not lose any cards 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-dud83n"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-cn8dkf-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Capstone Engineering Projectcard_1"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Capstone Engineering Project"
+            >
+              Capstone Engineering Project
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2022-2023 Academic Project (Work in Progress)
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Capstone Engineering Project_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          With a team of 5 software engineering students, the objective is to deliver a cybersecurity themed game to be used as an educational tool for technical employees to enhance network security and defence skills.
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Supervised by Dr. Jason Jaskolka, P.Eng
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Capstone Engineering Project_link_0"
+              href="https://carleton.ca/jaskolka/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Professor Profile
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Top Secret Mobile Projectcard_2"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Top Secret Mobile Project"
+            >
+              Top Secret Mobile Project
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              202? Personal Project (Work in Progress)
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Top Secret Mobile Project_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Development in React is super cool, so why not escalate into the world of mobile application development?
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          This project will involve RTP-MIDI communications, DAW integration, and user customization
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          However, revealing too much about works in progress is bad luck...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Top Secret Mobile Project_link_0"
+              href="https://greatergood.berkeley.edu/article/item/four_reasons_to_cultivate_patience"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                The Importance of Patience
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Elevator System Simulatorcard_3"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Elevator System Simulator"
+            >
+              Elevator System Simulator
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2022 Academic Group Project
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Elevator System Simulator_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Designed and implemented an elevator system simulation using multithreaded design patterns
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Developed elevator scheduling algorithms with feature flag controls to quantify performance differences between algorithms
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Developed UDP communication systems to facilitate communications between the different subsystems to distribute computation remotely over VPN
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Conducted integration testing & debugging in multithreaded contexts to ensure all subsystems interacted as expected
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Led and organized team meetings to assign tasks and to parallelize workflow resulting in a 97% on the project
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Elevator System Simulator_link_0"
+              href="https://github.com/MillanWang/3303ElevatorProject"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Source Code
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Lettered Tabs Web Appcard_4"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Lettered Tabs Web App"
+            >
+              Lettered Tabs Web App
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2019 Personal Project (My First)
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Lettered Tabs Web App_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Designed & developed a web application that converts fret numbers in guitar tabs into their corresponding notes in any tuning to help musicians enhance their music theory knowledge through learning songs
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Developed the conversion algorithms using Python, and the webapp using HTML, CSS, & JavaScript to create a simple user experience
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Lettered Tabs Web App_link_0"
+              href="https://youtu.be/hG0Y2D5sdWU"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Video Demo
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Lettered Tabs Web App_link_1"
+              href="https://lettered-tabs.herokuapp.com/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Tool
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Lettered Tabs Web App_link_2"
+              href="https://gitlab.com/MillanWang/lettered-tabs"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Source Code
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Circuitboard Buzzer Instrumentcard_5"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Circuitboard Buzzer Instrument"
+            >
+              Circuitboard Buzzer Instrument
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2020 Personal Project
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Circuitboard Buzzer Instrument_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Developed & deployed embedded C code to circuitboard to map musical notes to joystick positions to create a musical instrument for performances
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          This performance was then used as an example to demonstrate the hardware's capabilities to future classes 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Circuitboard Buzzer Instrument_link_0"
+              href="https://youtu.be/FasY_z7dEuU"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Video Demo
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Assembly Line Simulationcard_6"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Assembly Line Simulation"
+            >
+              Assembly Line Simulation
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2022 Academic Group Project
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Assembly Line Simulation_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Designed and implemented an event based simulation engine to simulate an algorithmic production line process
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Developed statistical analysis functionality to quantify how changes in simulation algorithms and parameters impact performance metrics
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Implemented multiplicative congruential random number generation mechanisms to allow for determinanistic simulation sequences for verification and validation
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Using simulation, statistics, or random number generation libraries came with mark deductions because forced inefficiency is a better teacher than efficiency
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Led and organized team meetings to groom & assign tasks to parallelize workflow resulting in an A+ on the project
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Assembly Line Simulation_link_0"
+              href="https://github.com/MillanWang/4005Project"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Source Code
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="RISK GUI Board Gamecard_7"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_RISK GUI Board Game"
+            >
+              RISK GUI Board Game
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2020 Academic Group Project
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_RISK GUI Board Game_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Designed and implemented MVC design pattern to build a GUI, ensuring code maintainability for the continuous integration of new features
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Developed and tested behavior for AI players to provide users with automated opponents
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Developed processes for saving/loading using Java de/serialization libraries
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Led and organized team meetings to assign tasks and to parallelize workflow resulting in an A+ on the project
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_RISK GUI Board Game_link_0"
+              href="https://github.com/MillanWang/3110Project"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Source Code
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Martial Artscard_8"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Martial Arts"
+            >
+              Martial Arts
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2005-Present
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Martial Arts_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          World Champion from international competitions in Orlando FL, and London UK
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          (500 pushups + 150 pullups)/day to maintain conditioning
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Black belt in Karate
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Weekly training with occasional coaching of friends
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Can be very effective as physical security during emergency situations
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Martial Arts_link_0"
+              href="https://issuu.com/stittsvillenews/docs/stittsville092514/26"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                2014 Worlds
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Martial Arts_link_1"
+              href="https://issuu.com/westcarletonreview/docs/kanata062812/42"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                2012 Worlds
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Guitar & Audio Productioncard_9"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Guitar & Audio Production"
+            >
+              Guitar & Audio Production
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2009-Present
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Guitar & Audio Production_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Self taught in FL Studio for composing, sample recording, sound synthesis, FX chaining, and parameter automation
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          5 Years of guitar teaching before self teaching
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Guitar & Audio Production_link_0"
+              href="https://soundcloud.com/user-507249210/sets/mills-beat-tape/s-Twm49p7Rfzb?si=7d0f0edb57a24f709e1c1bf9d79145a2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Soundcloud
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Guitar & Audio Production_link_1"
+              href="https://youtu.be/oVREEHV2s54"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                1 min Guitar solo
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        id="Video Productioncard_10"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          role="Card"
+        >
+          <div
+            class="MuiCardContent-root css-1fnncg9-MuiCardContent-root"
+          >
+            <h5
+              class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+              id="Card_Video Production"
+            >
+              Video Production
+            </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+            >
+              2009-Present
+            </p>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1n0ge38-MuiDivider-root"
+            />
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-nc6vxf-MuiPaper-root-MuiAccordion-root"
+              data-testid="Card_Video Production_accordion"
+            >
+              <div
+                aria-expanded="false"
+                class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-daoujn-MuiButtonBase-root-MuiAccordionSummary-root"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                >
+                  Show Details
+                </div>
+                <div
+                  class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    color="white"
+                    data-testid="ExpandMoreIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                style="min-height: 0px;"
+              >
+                <div
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiAccordion-region"
+                      role="region"
+                    >
+                      <div
+                        class="MuiAccordionDetails-root css-aqd9p9-MuiAccordionDetails-root"
+                      >
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Self taught in DaVinci Resolve for compositing & grading
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignLeft css-9uzqay-MuiTypography-root"
+                        >
+                          Experienced with DSLRs, gimbals, lighting, & streaming
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1cesc95-MuiDivider-root"
+            />
+          </div>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing css-10r5to9-MuiCardActions-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              data-testid="Card_Video Production_link_0"
+              href="https://youtu.be/Z-KnKM-gzQA"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <button
+                class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-wqreyj-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                100km Bike ride video
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<CardGrid /> should render 1`] = `
 <div>
   <div

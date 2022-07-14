@@ -24,8 +24,8 @@ export type ImageLinkCardProps = {
     subtitles: string[],
     descriptionStrings: string[],
     links: LinkObject[],
-    img: string,
 
+    img?: string,
     width?: number,
     useAccordionDescription?: boolean,
     imageHeightLimit?: number,
@@ -56,7 +56,7 @@ const ImageLinkCard = (
     }: ImageLinkCardProps) => {
 
     return (
-        <Card sx={outerCardTheme(width)} raised>
+        <Card sx={outerCardTheme(width)} raised role="Card">
 
             {/* Optional top image. Only shows if non empty is given */}
             <CardImage img={img} imageHeightLimit={imageHeightLimit} />
@@ -99,12 +99,12 @@ const ImageLinkCard = (
 }
 
 type CardImageProps = {
-    img: string,
+    img?: string,
     imageHeightLimit?: number,
 }
 
 const CardImage = ({ img, imageHeightLimit }: CardImageProps) => {
-    if (img === '') {
+    if (!img) {
         return <React.Fragment></React.Fragment>
     } else {
         return (

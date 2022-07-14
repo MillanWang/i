@@ -1,83 +1,131 @@
 {
-	"Elevator":{
-		"title":"Elevator System Simulator",
-		"subtitles":[
+	"Elevator": {
+		"title": "Elevator System Simulator",
+		"subtitles": [
 			"2022 Academic Group Project"
 		],
-		"descriptionStrings":[
+		"descriptionStrings": [
 			"Designed and implemented an elevator system simulation using multithreaded design patterns",
 			"Developed elevator scheduling algorithms with feature flag controls to quantify performance differences between algorithms",
 			"Developed UDP communication systems to facilitate communications between the different subsystems to distribute computation remotely over VPN",
 			"Conducted integration testing & debugging in multithreaded contexts to ensure all subsystems interacted as expected",
 			"Led and organized team meetings to assign tasks and to parallelize workflow resulting in a 97% on the project"
 		],
-		"links":[
+		"links": [
 			{
-				"linkText":"Source Code",
-				"url":"https://github.com/MillanWang/3303ElevatorProject"
+				"linkText": "Source Code",
+				"url": "https://github.com/MillanWang/3303ElevatorProject"
 			}
-		],
-		"img":""
+		]
 	},
-	"LetteredTabs":{
-		"title":"Lettered Tabs Web App",
-		"subtitles":[
-			"2019 Personal Project"
+	"LetteredTabs": {
+		"title": "Lettered Tabs Web App",
+		"subtitles": [
+			"2019 Personal Project (My First)"
 		],
-		"descriptionStrings":[
+		"descriptionStrings": [
 			"Designed & developed a web application that converts fret numbers in guitar tabs into their corresponding notes in any tuning to help musicians enhance their music theory knowledge through learning songs",
 			"Developed the conversion algorithms using Python, and the webapp using HTML, CSS, & JavaScript to create a simple user experience"
 		],
-		"links":[
+		"links": [
 			{
-				"linkText":"Video Demo",
-				"url":"https://youtu.be/hG0Y2D5sdWU"
+				"linkText": "Video Demo",
+				"url": "https://youtu.be/hG0Y2D5sdWU"
 			},
 			{
-				"linkText":"Tool",
-				"url":"https://lettered-tabs.herokuapp.com/"
+				"linkText": "Tool",
+				"url": "https://lettered-tabs.herokuapp.com/"
 			},
 			{
-				"linkText":"Source Code",
-				"url":"https://gitlab.com/MillanWang/lettered-tabs"
+				"linkText": "Source Code",
+				"url": "https://gitlab.com/MillanWang/lettered-tabs"
 			}
-		],
-		"img":""
+		]
 	},
-	"MSP_Buzzer":{
-		"title":"Circuitboard Buzzer Instrument",
-		"subtitles":[
+	"MSP_Buzzer": {
+		"title": "Circuitboard Buzzer Instrument",
+		"subtitles": [
 			"2020 Personal Project"
 		],
-		"descriptionStrings":[
+		"descriptionStrings": [
 			"Developed & deployed embedded C code to circuitboard to map musical notes to joystick positions to create a musical instrument for performances",
 			"This performance was then used as an example to demonstrate the hardware's capabilities to future classes "
 		],
-		"links":[
+		"links": [
 			{
-				"linkText":"Video Demo",
-				"url":"https://youtu.be/FasY_z7dEuU"
+				"linkText": "Video Demo",
+				"url": "https://youtu.be/FasY_z7dEuU"
 			}
-		],
-		"img":""
+		]
 	},
-	"Risk":{
-		"title":"RISK GUI Board Game",
-		"subtitles":[
+	"Risk": {
+		"title": "RISK GUI Board Game",
+		"subtitles": [
 			"2020 Academic Group Project"
 		],
-		"descriptionStrings":[
+		"descriptionStrings": [
 			"Designed and implemented MVC design pattern to build a GUI, ensuring code maintainability for the continuous integration of new features",
 			"Developed and tested behavior for AI players to provide users with automated opponents",
 			"Developed processes for saving/loading using Java de/serialization libraries",
 			"Led and organized team meetings to assign tasks and to parallelize workflow resulting in an A+ on the project"
 		],
-		"links":[
+		"links": [
 			{
-				"linkText":"Source Code",
-				"url":"https://github.com/MillanWang/3110Project"
+				"linkText": "Source Code",
+				"url": "https://github.com/MillanWang/3110Project"
 			}
+		]
+	},
+	"Simulation": {
+		"title": "Assembly Line Simulation",
+		"subtitles": [
+			"2022 Academic Group Project"
 		],
-		"img":""
+		"descriptionStrings": [
+			"Designed and implemented an event based simulation engine to simulate an algorithmic production line process",
+			"Developed statistical analysis functionality to quantify how changes in simulation algorithms and parameters impact performance metrics",
+			"Implemented multiplicative congruential random number generation mechanisms to allow for determinanistic simulation sequences for verification and validation",
+			"Using simulation, statistics, or random number generation libraries came with mark deductions because forced inefficiency is a better teacher than efficiency",
+			"Led and organized team meetings to groom & assign tasks to parallelize workflow resulting in an A+ on the project"
+		],
+		"links": [
+			{
+				"linkText": "Source Code",
+				"url": "https://github.com/MillanWang/4005Project"
+			}
+		]
+	},
+	"ReactNative": {
+		"title": "Top Secret Mobile Project",
+		"subtitles": [
+			"202? Personal Project (Work in Progress)"
+		],
+		"descriptionStrings": [
+			"Development in React is super cool, so why not escalate into the world of mobile application development?",
+			"This project will involve RTP-MIDI communications, DAW integration, and user customization",
+			"However, revealing too much about works in progress is bad luck..."
+		],
+		"links": [
+			{
+				"linkText": "The Importance of Patience",
+				"url": "https://greatergood.berkeley.edu/article/item/four_reasons_to_cultivate_patience"
+			}
+		]
+	},
+	"EngineeringProject": {
+		"title": "Capstone Engineering Project",
+		"subtitles": [
+			"2022-2023 Academic Project (Work in Progress)"
+		],
+		"descriptionStrings": [
+			"With a team of 5 software engineering students, the objective is to deliver a cybersecurity themed game to be used as an educational tool for technical employees to enhance network security and defence skills.",
+			"Supervised by Dr. Jason Jaskolka, P.Eng"
+		],
+		"links": [
+			{
+				"linkText": "Professor Profile",
+				"url": "https://carleton.ca/jaskolka/"
+			}
+		]
 	}
 }

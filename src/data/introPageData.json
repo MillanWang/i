@@ -1,86 +1,66 @@
 {
-	"HelloCard":{
-		"title":"Hello!!!",
-		"subtitles":[
+	"HelloCard": {
+		"title": "Hello!!!",
+		"subtitles": [
 			"Welcome to my personal website!"
 		],
-		"descriptionStrings":[
+		"descriptionStrings": [
 			"The development of this site was a fun lil challenge to introduce myself to React, Material UI, and Github pages",
-			"Try resizing the page! Variable screen size is a fun design challenge. I based most of this site on Material UI cards to make content easier to divide and better on mobile"
+			"Try resizing the page! Variable screen size is a fun design challenge. I based most of this site on Material UI cards to make content easier to divide and better on mobile",
+			"If you find any issues on this site, please contact me about it! Forgive me as my QA team is simply just me when I'm not in development mode"
 		],
-		"links":[
+		"links": [
 			{
-				"linkText":"Source Code",
-				"url":"https://github.com/MillanWang/i"
+				"linkText": "Source Code",
+				"url": "https://github.com/MillanWang/i"
 			}
-		],
-		"img":""
+		]
 	},
-	"MillWithMap":{
-		"title":"",
-		"subtitles":[
+	"MillWithMap": {
+		"title": "",
+		"subtitles": [
 			"Big fan of maps! Both in Type/JavaScript & geography!"
 		],
-		"descriptionStrings":[
-			
-		],
-		"links":[
-			
-		],
-		"img":""
+		"descriptionStrings": [],
+		"links": []
 	},
-	"AboutMe":{
-		"title":"About Me",
-		"subtitles":[
-			
-		],
-		"descriptionStrings":[
-			"My name is Millan Wang and I am a fifth year software engineering student at Carleton University, expecting to graduate April 2023",
+	"AboutMe": {
+		"title": "About Me",
+		"subtitles": [],
+		"descriptionStrings": [
+			"My name is Millan Wang and I am a 5th year software engineering student at Carleton University, expecting to graduate April 2023",
 			"I am very passionate about software development, with a special interest in full-stack application design, and working with multimedia technologies"
 		],
-		"links":[
-			
-		],
-		"img":""
+		"links": []
 	},
-	"LinksCard":{
-		"title":"Links",
-		"subtitles":[
-			
-		],
-		"descriptionStrings":[
-			
-		],
-		"links":[
+	"LinksCard": {
+		"title": "Links",
+		"subtitles": [],
+		"descriptionStrings": [],
+		"links": [
 			{
-				"linkText":"Resume",
-				"url":"https://docs.google.com/document/d/1fJpibJ1Cb_HbVXiF-PU8EkPah9ylEPLp_XWIe8xxkPY/edit?usp=sharing"
+				"linkText": "Resume",
+				"url": "https://docs.google.com/document/d/1fJpibJ1Cb_HbVXiF-PU8EkPah9ylEPLp_XWIe8xxkPY/edit?usp=sharing"
 			},
 			{
-				"linkText":"Github",
-				"url":"https://github.com/MillanWang"
+				"linkText": "Github",
+				"url": "https://github.com/MillanWang"
 			},
 			{
-				"linkText":"LinkedIn",
-				"url":"https://www.linkedin.com/in/real-millan-wang/"
+				"linkText": "LinkedIn",
+				"url": "https://www.linkedin.com/in/real-millan-wang/"
 			}
-		],
-		"img":""
+		]
 	},
-	"Technologies":{
-		"title":"Technologies",
-		"subtitles":[
-			
-		],
-		"descriptionStrings":[
+	"Technologies": {
+		"title": "Technologies",
+		"subtitles": [],
+		"descriptionStrings": [
 			"Languages: Python, Java, C#/.NET, Type/JavaScript, HTML, CSS, PHP, Delphi, C, SQL, Scheme/Racket, Go, Verilog, VHDL, MATLAB",
 			"Favourite Language: Python. It introduced me to programming and I like it's versatility in with lists and how concise it is. 2nd place is JavaScript cause WebDev is fun",
 			"Tools: Git, Linux/Bash, VirtualBox, Visual Studio, VSCode, Eclipse, IntelliJ, React, Angular, Microsoft SQL Server, Kafka, Jasmine, Protractor, Postman, Jenkins, REST APIs, node.js, Kubernetes, SSH",
 			"Favourite IDEs: VSCode for WebDev, Visual Studio for C#/.NET, IntelliJ for Java"
 		],
-		"links":[
-			
-		],
-		"img":""
+		"links": []
 	}
 }
