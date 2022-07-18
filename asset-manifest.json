@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/i/static/css/main.364c207f.css",
-    "main.js": "/i/static/js/main.c5f52cde.js",
+    "main.js": "/i/static/js/main.8b154661.js",
     "static/js/787.e8a613bc.chunk.js": "/i/static/js/787.e8a613bc.chunk.js",
     "static/media/Looking4Work.gif": "/i/static/media/Looking4Work.872016e99b5504f723d1.gif",
     "static/media/Elevator.gif": "/i/static/media/Elevator.48cd94ac10ce998c79a7.gif",
@@ -20,11 +20,11 @@
     "static/media/ReactNative.jpg": "/i/static/media/ReactNative.d1cb2a487b5e12db1142.jpg",
     "index.html": "/i/index.html",
     "main.364c207f.css.map": "/i/static/css/main.364c207f.css.map",
-    "main.c5f52cde.js.map": "/i/static/js/main.c5f52cde.js.map",
+    "main.8b154661.js.map": "/i/static/js/main.8b154661.js.map",
     "787.e8a613bc.chunk.js.map": "/i/static/js/787.e8a613bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.364c207f.css",
-    "static/js/main.c5f52cde.js"
+    "static/js/main.8b154661.js"
   ]
 }
