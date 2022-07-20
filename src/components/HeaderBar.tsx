@@ -4,6 +4,7 @@ import {
     Button,
     Grid,
     Link,
+    Drawer,
     Toolbar,
     Typography
 } from '@mui/material';
@@ -60,19 +61,26 @@ const HeaderBar = ({ sections }: HeaderBarProps) => {
                 />{/* This NavBarImage only appears on large screens. Replaced by button on small screens */}
 
                 {/* Navigation buttons */}
-                <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center" maxWidth={1120}>
+                {/* <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center" maxWidth={1120}> */}
 
-                    {sections.map((section) => (
+                {/* {sections.map((section) => (
                         <Grid item xs="auto" key={"NavLinkButton_" + section.title}>
                             <Link href={"#" + section.url}>
                                 <Button children={section.title} sx={navButtonTheme} />
                             </Link>
                         </Grid>
-                    ))}
+                    ))} */}
 
-                    <SmallScreenContactButton />{/* Only appears when on small screens where the nav bar images disapear */}
-                </Grid>
+
+                {/* </Grid> */}
                 {/* End of Navigation buttons */}
+
+
+                {/* DRAWER EXPERIMENTATION */}
+
+
+                <MenuDrawer sections={sections} />
+
 
 
                 <NavBarImage
@@ -95,6 +103,56 @@ function TitleHeaderSection() {
         </Toolbar>
     );
 }
+
+
+
+
+
+
+
+
+
+
+function MenuDrawer({ sections }: HeaderBarProps) {
+    const [drawerIsOpen, setDrawerIsOpen] = React.useState(false);
+    return (
+        <React.Fragment>
+            <Button sx={navButtonTheme} onClick={() => { setDrawerIsOpen(true) }}>
+                MENU
+                {/* TODO : Add buger icon here */}
+            </Button>
+            <Drawer
+                id="MenuDrawer"
+                anchor='top'
+                open={drawerIsOpen}
+                onClose={() => { setDrawerIsOpen(false) }}
+            >
+                <Box sx={{ backgroundColor: "primary.dark" }}>
+
+                    {sections.map((section) => (
+                        <Link href={"#" + section.url} onClick={() => { setDrawerIsOpen(false) }}>
+                            <Button
+                                sx={navButtonTheme}
+
+                                children={section.title}
+                            />
+                        </Link>
+                    ))}
+                </Box>
+            </Drawer>
+        </React.Fragment>
+
+    );
+}
+
+
+
+
+
+//TODO : Use screen size to trigger the reg buttons vs Menu Drawer
+
+
+
 
 type NavGifTooltipProps = {
     header: string,
