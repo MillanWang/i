@@ -61,18 +61,27 @@ const HeaderBar = ({ sections }: HeaderBarProps) => {
                 />{/* This NavBarImage only appears on large screens. Replaced by button on small screens */}
 
                 {/* Navigation buttons */}
-                {/* <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center" maxWidth={1120}> */}
+                <Grid
+                    container
+                    spacing={1}
+                    direction="row"
+                    sx={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        maxWidth: 1120,
+                        display: { xs: 'none', xl: 'flex' }, //Hide on small screen. Only show on big
+                    }}>
 
-                {/* {sections.map((section) => (
+                    {sections.map((section) => (
                         <Grid item xs="auto" key={"NavLinkButton_" + section.title}>
                             <Link href={"#" + section.url}>
                                 <Button children={section.title} sx={navButtonTheme} />
                             </Link>
                         </Grid>
-                    ))} */}
+                    ))}
 
 
-                {/* </Grid> */}
+                </Grid>
                 {/* End of Navigation buttons */}
 
 
@@ -117,7 +126,7 @@ function MenuDrawer({ sections }: HeaderBarProps) {
     const [drawerIsOpen, setDrawerIsOpen] = React.useState(false);
     return (
         <React.Fragment>
-            <Button sx={navButtonTheme} onClick={() => { setDrawerIsOpen(true) }}>
+            <Button sx={menuButtonTheme} onClick={() => { setDrawerIsOpen(true) }}>
                 MENU
                 {/* TODO : Add buger icon here */}
             </Button>
@@ -127,15 +136,23 @@ function MenuDrawer({ sections }: HeaderBarProps) {
                 open={drawerIsOpen}
                 onClose={() => { setDrawerIsOpen(false) }}
             >
-                <Box sx={{ backgroundColor: "primary.dark" }}>
-
+                <Box sx={menuDrawerTheme}>
+                    {/* TODO : Consider how to show these in the drawer */}
+                    <NavBarImage
+                        image={looking4WorkGif}
+                        alt="Looking for work: Full Time 2023"
+                        tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
+                    />
+                    <NavBarImage
+                        image={contactEmail}
+                        alt="Contact: real.millan.wang@gmail.com"
+                        tooltip={<NavGifTooltip {...contactNavGif} />}
+                    />
                     {sections.map((section) => (
                         <Link href={"#" + section.url} onClick={() => { setDrawerIsOpen(false) }}>
-                            <Button
-                                sx={navButtonTheme}
-
-                                children={section.title}
-                            />
+                            <Button sx={navButtonTheme}>
+                                {section.title}
+                            </Button>
                         </Link>
                     ))}
                 </Box>
@@ -201,7 +218,7 @@ const NavBarImage = ({ tooltip, image, alt }: NavBarImageProps) => {
     )
 }
 
-const SmallScreenContactButton = () => {
+const SmallScreenContactButton = () => { //TODO : Figure out a better way to implement this. Tooptips are gonna be confusing on mobile
     const TooltipInfo = (
         <React.Fragment>
             <NavGifTooltip {...contactNavGif} />
@@ -228,7 +245,7 @@ const titleToolbarTheme = {
     borderBottom: 2,
     borderColor: 'text.disabled',
     bgcolor: "primary.dark",
-    justifyContent: "center"
+    justifyContent: "center",
 }
 
 const titleImageTheme = {
@@ -237,7 +254,7 @@ const titleImageTheme = {
     flex: 1,
     width: "100%",
     height: "100%",
-    resizeMode: 'contain'
+    resizeMode: 'contain',
 }
 
 const navToolbarTheme = {
@@ -246,7 +263,7 @@ const navToolbarTheme = {
     borderColor: 'text.disabled',
     bgcolor: "primary.dark",
     flex: 1,
-    resizeMode: 'contain'
+    resizeMode: 'contain',
 }
 
 const navButtonTheme = {
@@ -260,15 +277,27 @@ const navButtonTheme = {
     },
 }
 
+const menuButtonTheme = {
+    ...navButtonTheme,
+    display: { xs: 'block', xl: 'none' }, //Hide on big screen. Only show on small
+};
+
+const menuDrawerTheme = {
+    backgroundColor: "primary.dark",
+    display: "grid",
+    justifyItems: "center",
+
+}
+
 const contactNavButtonTheme = {
     ...navButtonTheme,
-    display: { xs: 'block', xl: 'none' } //Hide on big screen. Only show on small
+    display: { xs: 'block', xl: 'none' }, //Hide on big screen. Only show on small
 }
 
 const navBarImageTheme = {
     height: 50,
     width: 250,
-    display: { xs: 'none', xl: 'block' } //Hide on small screen. Only show on big
+    // display: { xs: 'none', xl: 'block' }, //Hide on small screen. Only show on big
 }
 
 export default HeaderBar;
