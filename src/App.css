@@ -1,21 +1,24 @@
 .App {
   text-align: -webkit-center;
-  height: 101vh; /*So that the custom scrollbar is always visible*/
+  /*So that the custom scrollbar is always visible*/
+  height: 101vh;
+  width: -webkit-fill-available;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   overflow: scroll;
   width: 1rem;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: #455a64;
 }
 
-::-webkit-scrollbar-thumb{
-  background-image: linear-gradient(#546e7a,#90a4ae);
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#546e7a, #90a4ae);
   border-radius: 1rem;
 }
-::-webkit-scrollbar-thumb:hover{
-  background-image: linear-gradient(#90a4ae,#546e7a);
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(#90a4ae, #546e7a);
 }

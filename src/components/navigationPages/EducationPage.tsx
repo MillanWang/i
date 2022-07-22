@@ -24,7 +24,7 @@ import carletonLogoImage from "../../images/CarletonLogo.jpg";
 // Extract the white background from the carleton image by making it transparent with rgba-alpha cause that's the only barrier 
 
 
-const CARLETON_INFO_STRINGS = EducationData.CarletonInfoStrings; 
+const CARLETON_INFO_STRINGS = EducationData.CarletonInfoStrings;
 
 const SEMESTERS: SemesterObject[] = [
     EducationData.Fall2018,
@@ -221,7 +221,7 @@ function CourseNameTableCell({ courseCode, courseName, description, personalNote
                 anchorOrigin={POPOVER_ANCHOR_ORIGIN_POSITION}
                 transformOrigin={POPOVER_TRANSFORM_ORIGIN_POSITION}
             >
-                <FormattedPopoverChild header={COURSE_DESCRIPTION_TEXT} bodyText={description} />
+                <FormattedPopoverChild header={courseCode} subtitle="Course Description" bodyText={description} />
             </Popover>
 
             {/* Personal notes button and popover */}
@@ -234,7 +234,7 @@ function CourseNameTableCell({ courseCode, courseName, description, personalNote
                 anchorOrigin={POPOVER_ANCHOR_ORIGIN_POSITION}
                 transformOrigin={POPOVER_TRANSFORM_ORIGIN_POSITION}
             >
-                <FormattedPopoverChild header={PERSONAL_EXPEREIENCE_TEXT} bodyText={personalNotes} />
+                <FormattedPopoverChild header={courseCode} subtitle="Personal Experience" bodyText={personalNotes} />
             </Popover>
 
             {/* Course name text */}
@@ -265,13 +265,15 @@ function CourseTableHeader() {
 
 type HeaderDescriptionTooltipProps = {
     header: string,
+    subtitle: string,
     bodyText: string
 }
 
-function FormattedPopoverChild({ header, bodyText }: HeaderDescriptionTooltipProps) {
+function FormattedPopoverChild({ header, subtitle, bodyText }: HeaderDescriptionTooltipProps) {
     return (
         <Box sx={popoverContentsBoxTheme}>
             <Typography align="center" variant="h5">{header}</Typography>
+            <Typography align="center" variant="subtitle2" fontStyle="italic">{subtitle}</Typography>
             <Typography maxWidth={350}>{bodyText}</Typography>
         </Box>
     )
@@ -297,7 +299,7 @@ const carletonLogoTheme = {
 };
 
 const carletonInfoStringsBoxTheme = {
-    width: "70%"
+    width: "85%"
 };
 
 const primaryDarkTextTheme = {
@@ -387,6 +389,7 @@ const popoverContentsBoxTheme = {
     p: 2,
     color: "primary.main",
     width: "fit-content",
+    maxWidth: 205, //TODO This should be window size dependant
 }
 
 

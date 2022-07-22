@@ -9,7 +9,7 @@ import ImageLinkCard, {
     ImageLinkCardProps
 } from '../cards/ImageLinkCard';
 
-const COLUMN_WIDTH: number = 500;
+const COLUMN_WIDTH = { xs: "auto", sm: 500 };
 
 export type TwoColumnCardGridProps = {
     leftColumnStackHeader: string,
@@ -20,15 +20,15 @@ export type TwoColumnCardGridProps = {
 
 function TwoColumnCardGrid({ leftColumnStackHeader, leftColumnCardProps, rightColumnStackHeader, rightColumnCardProps }: TwoColumnCardGridProps) {
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={3}>
+        <Grid container direction="row" justifyContent="center" alignItems="flex-start" spacing={3} >
 
             {/* Left Column*/}
-            <Grid item xs="auto">
+            <Grid item xs="auto" sx={t_stackGridElement}>
                 <CardStack stackHeader={leftColumnStackHeader} cardPropsArray={leftColumnCardProps} />
             </Grid>
 
             {/* Right Column */}
-            <Grid item xs="auto">
+            <Grid item xs="auto" sx={t_stackGridElement}>
                 <CardStack stackHeader={rightColumnStackHeader} cardPropsArray={rightColumnCardProps} />
             </Grid>
 
@@ -68,6 +68,11 @@ function StackHeader({ title }: StackHeaderProps) {
 /******************************
  * THEMES
  *****************************/
+
+const t_stackGridElement = {
+    width: "fit-content",
+    margin: "0.5rem",
+};
 
 const t_stackHeader = {
     color: "text.primary",

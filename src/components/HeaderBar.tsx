@@ -2,8 +2,8 @@ import * as React from 'react';
 import {
     Box,
     Button,
-    Grid,
     Link,
+    Drawer,
     Toolbar,
     Typography
 } from '@mui/material';
@@ -53,33 +53,11 @@ const HeaderBar = ({ sections }: HeaderBarProps) => {
             {/* Navigation toolbar */}
             <Toolbar component="nav" variant="dense" sx={navToolbarTheme} >
 
-                <NavBarImage
-                    image={contactEmail}
-                    alt="Contact: real.millan.wang@gmail.com"
-                    tooltip={<NavGifTooltip {...contactNavGif} />}
-                />{/* This NavBarImage only appears on large screens. Replaced by button on small screens */}
+                {/* Bigger screens that can show all without horizontal scroll */}
+                <MenuButtonsRow sections={sections} />
 
-                {/* Navigation buttons */}
-                <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center" maxWidth={1120}>
-
-                    {sections.map((section) => (
-                        <Grid item xs="auto" key={"NavLinkButton_" + section.title}>
-                            <Link href={"#" + section.url}>
-                                <Button children={section.title} sx={navButtonTheme} />
-                            </Link>
-                        </Grid>
-                    ))}
-
-                    <SmallScreenContactButton />{/* Only appears when on small screens where the nav bar images disapear */}
-                </Grid>
-                {/* End of Navigation buttons */}
-
-
-                <NavBarImage
-                    image={looking4WorkGif}
-                    alt="Looking for work: Full Time 2023"
-                    tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
-                /> {/* This NavBarImage only appears on large screens. Replaced by button on small screens */}
+                {/* Smaller Screens */}
+                <MenuDrawer sections={sections} />
 
             </Toolbar>{/* End of Navigation toolbar */}
         </React.Fragment>
@@ -95,6 +73,86 @@ function TitleHeaderSection() {
         </Toolbar>
     );
 }
+
+
+
+function MenuButtonsRow({ sections }: HeaderBarProps) {
+    return (
+        <React.Fragment>
+            <NavBarImage
+                sx={navBarButtonRowImageTheme}
+                image={contactEmail}
+                alt="Contact: real.millan.wang@gmail.com"
+                tooltip={<NavGifTooltip {...contactNavGif} />}
+            />
+
+            {sections.map((section) => (
+                <Link href={"#" + section.url}  >
+                    <Button children={section.title} sx={navButtonButtonRowTheme} />
+                </Link>
+            ))}
+
+            <NavBarImage
+                sx={navBarButtonRowImageTheme}
+                image={looking4WorkGif}
+                alt="Looking for work: Full Time 2023"
+                tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
+            />
+        </React.Fragment>
+    );
+}
+
+
+function MenuDrawer({ sections }: HeaderBarProps) {
+    const [drawerIsOpen, setDrawerIsOpen] = React.useState(false);
+    return (
+        <React.Fragment>
+            <Button sx={menuButtonTheme} onClick={() => { setDrawerIsOpen(true) }}>
+                MENU
+                {/* TODO : Add buger icon here */}
+            </Button>
+            <Drawer
+                id="MenuDrawer"
+                anchor='top'
+                open={drawerIsOpen}
+                onClose={() => { setDrawerIsOpen(false) }}
+            >
+                <Box sx={menuDrawerTheme}>
+                    {/* TODO : Consider how to show these in the drawer */}
+                    <NavBarImage
+                        sx={navBarImageTheme}
+                        image={looking4WorkGif}
+                        alt="Looking for work: Full Time 2023"
+                        tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
+                    />
+                    <NavBarImage
+                        sx={navBarImageTheme}
+                        image={contactEmail}
+                        alt="Contact: real.millan.wang@gmail.com"
+                        tooltip={<NavGifTooltip {...contactNavGif} />}
+                    />
+                    {sections.map((section) => (
+                        <Link href={"#" + section.url} onClick={() => { setDrawerIsOpen(false) }}>
+                            <Button sx={navButtonTheme}>
+                                {section.title}
+                            </Button>
+                        </Link>
+                    ))}
+                </Box>
+            </Drawer>
+        </React.Fragment>
+
+    );
+}
+
+
+
+
+
+//TODO : Use screen size to trigger the reg buttons vs Menu Drawer
+
+
+
 
 type NavGifTooltipProps = {
     header: string,
@@ -128,39 +186,23 @@ type NavBarImageProps = {
     tooltip: JSX.Element,
     image: string,
     alt: string,
+    sx: Object,
 };
 
-const NavBarImage = ({ tooltip, image, alt }: NavBarImageProps) => {
+const NavBarImage = ({ tooltip, image, alt, sx }: NavBarImageProps) => {
     return (
         <HtmlTooltip title={tooltip}>
             <Box
                 component="img"
                 src={image}
                 alt={alt}
-                sx={navBarImageTheme}
+                sx={sx}
             />
         </HtmlTooltip>
     )
 }
 
-const SmallScreenContactButton = () => {
-    const TooltipInfo = (
-        <React.Fragment>
-            <NavGifTooltip {...contactNavGif} />
-            <NavGifTooltip {...looking4WorkNavGif} />
-        </React.Fragment>
-    );
-    return (
-        <Grid item xs="auto" key={"NavLinkButton_SmallScreenContactInfo"} >
-            <HtmlTooltip title={TooltipInfo}>
-                <Button sx={contactNavButtonTheme}>
-                    Contact
-                </Button>
-            </HtmlTooltip>
-        </Grid>
-    )
 
-}
 
 /******************************
  * THEMES
@@ -170,7 +212,7 @@ const titleToolbarTheme = {
     borderBottom: 2,
     borderColor: 'text.disabled',
     bgcolor: "primary.dark",
-    justifyContent: "center"
+    justifyContent: "center",
 }
 
 const titleImageTheme = {
@@ -179,7 +221,7 @@ const titleImageTheme = {
     flex: 1,
     width: "100%",
     height: "100%",
-    resizeMode: 'contain'
+    resizeMode: 'contain',
 }
 
 const navToolbarTheme = {
@@ -188,13 +230,13 @@ const navToolbarTheme = {
     borderColor: 'text.disabled',
     bgcolor: "primary.dark",
     flex: 1,
-    resizeMode: 'contain'
+    resizeMode: 'contain',
 }
 
 const navButtonTheme = {
     color: "primary.contrastText",
     bgcolor: "primary.main",
-    margin: 0.5,
+    margin: 0.4,
     width: 170,
     resizeMode: 'contain',
     '&:hover': {
@@ -202,15 +244,37 @@ const navButtonTheme = {
     },
 }
 
+const navButtonButtonRowTheme = {
+    ...navButtonTheme,
+    display: { xs: "none", md: "block" }
+}
+
+const menuButtonTheme = {
+    ...navButtonTheme,
+    display: { xs: 'block', md: 'none' }, //Hide on big screen. Only show on small
+};
+
+const menuDrawerTheme = {
+    backgroundColor: "primary.dark",
+    display: "grid",
+    justifyItems: "center",
+
+}
+
 const contactNavButtonTheme = {
     ...navButtonTheme,
-    display: { xs: 'block', xl: 'none' } //Hide on big screen. Only show on small
+    display: { xs: 'block', xl: 'none' }, //Hide on big screen. Only show on small
 }
 
 const navBarImageTheme = {
     height: 50,
-    width: 250,
-    display: { xs: 'none', xl: 'block' } //Hide on small screen. Only show on big
 }
+
+const navBarButtonRowImageTheme = {
+    ...navBarImageTheme,
+    display: { xs: 'none', xl: 'block' }, // Only show on big. Disappear before the button row
+}
+
+
 
 export default HeaderBar;
