@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
     Box,
     Button,
-    Grid,
     Link,
     Drawer,
     Toolbar,
@@ -54,49 +53,11 @@ const HeaderBar = ({ sections }: HeaderBarProps) => {
             {/* Navigation toolbar */}
             <Toolbar component="nav" variant="dense" sx={navToolbarTheme} >
 
-                <NavBarImage
-                    image={contactEmail}
-                    alt="Contact: real.millan.wang@gmail.com"
-                    tooltip={<NavGifTooltip {...contactNavGif} />}
-                />{/* This NavBarImage only appears on large screens. Replaced by button on small screens */}
+                {/* Bigger screens that can show all without horizontal scroll */}
+                <MenuButtonsRow sections={sections} />
 
-                {/* Navigation buttons */}
-                <Grid
-                    container
-                    spacing={1}
-                    direction="row"
-                    sx={{
-                        justifyContent: "center",
-                        alignItems: "center",
-                        maxWidth: 1120,
-                        display: { xs: 'none', xl: 'flex' }, //Hide on small screen. Only show on big
-                    }}>
-
-                    {sections.map((section) => (
-                        <Grid item xs="auto" key={"NavLinkButton_" + section.title}>
-                            <Link href={"#" + section.url}>
-                                <Button children={section.title} sx={navButtonTheme} />
-                            </Link>
-                        </Grid>
-                    ))}
-
-
-                </Grid>
-                {/* End of Navigation buttons */}
-
-
-                {/* DRAWER EXPERIMENTATION */}
-
-
+                {/* Smaller Screens */}
                 <MenuDrawer sections={sections} />
-
-
-
-                <NavBarImage
-                    image={looking4WorkGif}
-                    alt="Looking for work: Full Time 2023"
-                    tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
-                /> {/* This NavBarImage only appears on large screens. Replaced by button on small screens */}
 
             </Toolbar>{/* End of Navigation toolbar */}
         </React.Fragment>
@@ -115,11 +76,31 @@ function TitleHeaderSection() {
 
 
 
+function MenuButtonsRow({ sections }: HeaderBarProps) {
+    return (
+        <React.Fragment>
+            <NavBarImage
+                sx={navBarButtonRowImageTheme}
+                image={contactEmail}
+                alt="Contact: real.millan.wang@gmail.com"
+                tooltip={<NavGifTooltip {...contactNavGif} />}
+            />
 
+            {sections.map((section) => (
+                <Link href={"#" + section.url}  >
+                    <Button children={section.title} sx={navButtonButtonRowTheme} />
+                </Link>
+            ))}
 
-
-
-
+            <NavBarImage
+                sx={navBarButtonRowImageTheme}
+                image={looking4WorkGif}
+                alt="Looking for work: Full Time 2023"
+                tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
+            />
+        </React.Fragment>
+    );
+}
 
 
 function MenuDrawer({ sections }: HeaderBarProps) {
@@ -139,11 +120,13 @@ function MenuDrawer({ sections }: HeaderBarProps) {
                 <Box sx={menuDrawerTheme}>
                     {/* TODO : Consider how to show these in the drawer */}
                     <NavBarImage
+                        sx={navBarImageTheme}
                         image={looking4WorkGif}
                         alt="Looking for work: Full Time 2023"
                         tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
                     />
                     <NavBarImage
+                        sx={navBarImageTheme}
                         image={contactEmail}
                         alt="Contact: real.millan.wang@gmail.com"
                         tooltip={<NavGifTooltip {...contactNavGif} />}
@@ -203,39 +186,23 @@ type NavBarImageProps = {
     tooltip: JSX.Element,
     image: string,
     alt: string,
+    sx: Object,
 };
 
-const NavBarImage = ({ tooltip, image, alt }: NavBarImageProps) => {
+const NavBarImage = ({ tooltip, image, alt, sx }: NavBarImageProps) => {
     return (
         <HtmlTooltip title={tooltip}>
             <Box
                 component="img"
                 src={image}
                 alt={alt}
-                sx={navBarImageTheme}
+                sx={sx}
             />
         </HtmlTooltip>
     )
 }
 
-const SmallScreenContactButton = () => { //TODO : Figure out a better way to implement this. Tooptips are gonna be confusing on mobile
-    const TooltipInfo = (
-        <React.Fragment>
-            <NavGifTooltip {...contactNavGif} />
-            <NavGifTooltip {...looking4WorkNavGif} />
-        </React.Fragment>
-    );
-    return (
-        <Grid item xs="auto" key={"NavLinkButton_SmallScreenContactInfo"} >
-            <HtmlTooltip title={TooltipInfo}>
-                <Button sx={contactNavButtonTheme}>
-                    Contact
-                </Button>
-            </HtmlTooltip>
-        </Grid>
-    )
 
-}
 
 /******************************
  * THEMES
@@ -269,7 +236,7 @@ const navToolbarTheme = {
 const navButtonTheme = {
     color: "primary.contrastText",
     bgcolor: "primary.main",
-    margin: 0.5,
+    margin: 0.4,
     width: 170,
     resizeMode: 'contain',
     '&:hover': {
@@ -277,9 +244,14 @@ const navButtonTheme = {
     },
 }
 
+const navButtonButtonRowTheme = {
+    ...navButtonTheme,
+    display: { xs: "none", md: "block" }
+}
+
 const menuButtonTheme = {
     ...navButtonTheme,
-    display: { xs: 'block', xl: 'none' }, //Hide on big screen. Only show on small
+    display: { xs: 'block', md: 'none' }, //Hide on big screen. Only show on small
 };
 
 const menuDrawerTheme = {
@@ -296,8 +268,13 @@ const contactNavButtonTheme = {
 
 const navBarImageTheme = {
     height: 50,
-    width: 250,
-    // display: { xs: 'none', xl: 'block' }, //Hide on small screen. Only show on big
 }
+
+const navBarButtonRowImageTheme = {
+    ...navBarImageTheme,
+    display: { xs: 'none', xl: 'block' }, // Only show on big. Disappear before the button row
+}
+
+
 
 export default HeaderBar;

@@ -13,7 +13,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Capstone Engineering Projectcard_1"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -131,7 +131,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Top Secret Mobile Projectcard_2"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -254,7 +254,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Elevator System Simulatorcard_3"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -387,7 +387,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Lettered Tabs Web Appcard_4"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -541,7 +541,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Circuitboard Buzzer Instrumentcard_5"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -659,7 +659,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Assembly Line Simulationcard_6"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -792,7 +792,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="RISK GUI Board Gamecard_7"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -920,7 +920,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Martial Artscard_8"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -1071,7 +1071,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Guitar & Audio Productioncard_9"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div
@@ -1207,7 +1207,7 @@ exports[`<CardGrid /> should not lose any cards 1`] = `
         id="Video Productioncard_10"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-tmtlm1-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-6y0z9b-MuiPaper-root-MuiCard-root"
           role="Card"
         >
           <div

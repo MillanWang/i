@@ -3,7 +3,7 @@
 exports[`<ImageLinkCard /> should render to snapshot with only props 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-1se058r-MuiPaper-root-MuiCard-root"
     role="Card"
   >
     <div
@@ -27,7 +27,7 @@ exports[`<ImageLinkCard /> should render to snapshot with only props 1`] = `
 exports[`<ImageLinkCard /> should show the description strings 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-1se058r-MuiPaper-root-MuiCard-root"
     role="Card"
   >
     <div
@@ -83,7 +83,7 @@ exports[`<ImageLinkCard /> should show the description strings 1`] = `
 exports[`<ImageLinkCard /> should show the descriptions in an accordion 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-1se058r-MuiPaper-root-MuiCard-root"
     role="Card"
   >
     <div
@@ -234,7 +234,7 @@ exports[`<ImageLinkCard /> should show the descriptions in an accordion 1`] = `
 exports[`<ImageLinkCard /> should show the link buttons 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-1se058r-MuiPaper-root-MuiCard-root"
     role="Card"
   >
     <div
@@ -330,7 +330,7 @@ exports[`<ImageLinkCard /> should show the link buttons 1`] = `
 exports[`<ImageLinkCard /> should show the subtitles 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-1se058r-MuiPaper-root-MuiCard-root"
     role="Card"
   >
     <div
@@ -371,7 +371,7 @@ exports[`<ImageLinkCard /> should show the subtitles 1`] = `
 exports[`<ImageLinkCard /> should show the title 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-h44c8b-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiCard-root css-1se058r-MuiPaper-root-MuiCard-root"
     role="Card"
   >
     <div

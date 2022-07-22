@@ -190,8 +190,13 @@ const DescriptionStringsArea = ({ cardTitle, accordionWrap, descriptionStrings }
 
 const outerCardTheme = (width?: number,) => {
     return {
-        width: width ? width : "auto",
-        minWidth: 400,
+        width: width ? { xs: "auto", sm: width } : "auto",
+        /**
+         * Set minWidth the highest it can be without weird popout
+         * Based on the Samsung Galaxy fold outer screen, which I'm pretty sure is the narrowest screen as of July 2022
+         * This also prevents some wierdenss at the width:600px border between xs and sm
+         */
+        minWidth: 260,
         marginTop: 1,
         height: "fit-content",
         bgcolor: "primary.main",

@@ -32,9 +32,9 @@ const mainAppTheme = createTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 1050,
+      md: 900,
       lg: 1200,
-      xl: 1425,
+      xl: 1400,
     },
   },
 });
@@ -97,9 +97,11 @@ const pageContentTheme = {
   backgroundColor: "primary.dark",
   margin: 0,
   paddingTop: 3,
+  paddingBottom: 5,
+  paddingLeft: 0,
+  paddingRight: 0,
   justifyContent: "center",
   minHeight: "100%",
-  paddingBottom: 5,
 };
 
 export default App;
