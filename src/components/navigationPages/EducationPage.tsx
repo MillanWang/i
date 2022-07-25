@@ -77,16 +77,19 @@ function EducationPage() {
                 ))}
             </Box>
 
-            <Divider variant="middle" sx={transcriptDividerTheme} children="Custom Transcript Browser" />
+            <Divider variant="middle" sx={transcriptDividerTheme} >
+                <Typography variant="subtitle2" >
+                    Custom Transcript Slider Browser
+                </Typography>
+            </Divider>
 
             {/* Main grades table */}
             <SemesterSliderTable />
-        </Paper>
+        </Paper >
     )
 }
 
 function SemesterSliderTable() {
-    const SLIDER_TOOLTIP_TEXT: string = "Use slider to select semester";
     const SEMESTER_SELECTOR_SLIDER_MARKS = [
         { value: 1, label: '2018', },
         { value: 4, label: '2020', },
@@ -111,8 +114,6 @@ function SemesterSliderTable() {
                     onChange={handleSliderChange}
                     sx={sliderTheme}
                 />
-
-                <Tooltip title={SLIDER_TOOLTIP_TEXT} children={<InfoOutlinedIcon sx={sliderInfoIconTheme} />} />
             </Box>
 
             <Box sx={semesterTabsOuterBoxTheme}>
@@ -138,7 +139,7 @@ type SingleSemesterPanelProps = {
 function SingleSemesterPanel({ children, value, index, }: SingleSemesterPanelProps) {
     return (
         <Box hidden={value !== index} sx={tabPanelOuterBoxTheme}>
-            {value === index && (<Box sx={tabPanelInnerBoxTheme} children={children} />)}
+            {value === index && (<Box children={children} />)}
         </Box>
     );
 }
@@ -161,18 +162,19 @@ function GradeTable({ semester }: GradeTableProps) {
                         courses.map((course: CourseObject) => (
                             <TableRow key={semesterName + "_Row_" + course.courseCode} hover sx={tableRowCourseTheme}>
 
-                                {/* Course code */}
-                                <TableCell sx={primaryDarkTextTheme} >
-                                    {course.courseCode}
-                                </TableCell>
+                                {/* Course info and comments */}
+                                <CourseInfoTableCell {...course} />
 
-                                {/* Course Name with description and experience popovers */}
-                                <CourseNameTableCell {...course} />
+                                {/* Course code and name */}
+                                <TableCell sx={primaryDarkTextTheme} >
+                                    {course.courseCode} - {course.courseName}
+                                </TableCell>
 
                                 {/* Course grade */}
-                                <TableCell sx={tableGradeCellTheme} align="right">
+                                <TableCell sx={primaryDarkTextTheme} align="right">
                                     {course.grade}
                                 </TableCell>
+
                             </TableRow>
                         ))
                     }
@@ -182,18 +184,35 @@ function GradeTable({ semester }: GradeTableProps) {
     )
 }
 
+function CourseTableHeader() {
+    return (
+        <TableHead>
+            <TableRow sx={tableRowHeaderTheme}>
+                <TableCell >
+                    <Typography children={"Info"} sx={primaryDarkTextTheme} />
+                </TableCell>
+                <TableCell align="left" width="80%">
+                    <Typography children={"Course"} sx={primaryDarkTextTheme} />
+                </TableCell>
+                <TableCell align="right">
+                    <Typography children={"Grade"} sx={primaryDarkTextTheme} />
+                </TableCell>
+            </TableRow>
+        </TableHead>
+    )
+}
+
 type CourseNameTableCellProps = {
     courseCode: string,
-    courseName: string,
     description: string,
     personalNotes: string,
 }
 
-function CourseNameTableCell({ courseCode, courseName, description, personalNotes }: CourseNameTableCellProps) {
+function CourseInfoTableCell({ courseCode, description, personalNotes }: CourseNameTableCellProps) {
     // Popover positioning props. Reused in both popovers
-    type AnchorOrigin = { vertical: 'bottom' | 'top', horizontal: 'center' };
-    const POPOVER_ANCHOR_ORIGIN_POSITION: AnchorOrigin = { vertical: 'bottom', horizontal: 'center', };
-    const POPOVER_TRANSFORM_ORIGIN_POSITION: AnchorOrigin = { vertical: 'top', horizontal: 'center', };
+    type AnchorOrigin = { vertical: 'bottom' | 'top' | 'center', horizontal: 'left' | 'center' | 'right' };
+    const POPOVER_ANCHOR_ORIGIN_POSITION: AnchorOrigin = { vertical: 'center', horizontal: 'right', };
+    const POPOVER_TRANSFORM_ORIGIN_POSITION: AnchorOrigin = { vertical: 'top', horizontal: 'left', };
 
     // Course information and description popover
     const COURSE_DESCRIPTION_TEXT: string = courseCode + " - Course Description";
@@ -210,10 +229,10 @@ function CourseNameTableCell({ courseCode, courseName, description, personalNote
     const open_comments = Boolean(anchorEl_comments);
 
     return (
-        <TableCell sx={primaryDarkTextTheme}>
+        <TableCell sx={{ ...primaryDarkTextTheme, display: "grid", width: 16, minWidth: 0, justifyContent: "center" }}>
             {/* Course description button and popover */}
             <Tooltip title={COURSE_DESCRIPTION_TEXT}>
-                <Button onClick={handleClick_description} sx={courseInfoIconButtonTheme} children={<InfoOutlinedIcon />} />
+                <Button onClick={handleClick_description} sx={courseInfoIconButtonTheme} children={<InfoOutlinedIcon sx={infoIconTheme} />} />
             </Tooltip>
             <Popover
                 open={open_description} onClose={handleClose_description}
@@ -226,7 +245,7 @@ function CourseNameTableCell({ courseCode, courseName, description, personalNote
 
             {/* Personal notes button and popover */}
             <Tooltip title={PERSONAL_EXPEREIENCE_TEXT}>
-                <Button onClick={handleClick_comments} sx={courseNotesIconButtonTheme} children={<CommentOutlinedIcon />} />
+                <Button onClick={handleClick_comments} sx={courseInfoIconButtonTheme} children={<CommentOutlinedIcon sx={infoIconTheme} />} />
             </Tooltip>
             <Popover
                 open={open_comments} onClose={handleClose}
@@ -236,31 +255,9 @@ function CourseNameTableCell({ courseCode, courseName, description, personalNote
             >
                 <FormattedPopoverChild header={courseCode} subtitle="Personal Experience" bodyText={personalNotes} />
             </Popover>
-
-            {/* Course name text */}
-            {courseName}
-
         </TableCell>
     );
 
-}
-
-function CourseTableHeader() {
-    return (
-        <TableHead>
-            <TableRow sx={tableRowHeaderTheme}>
-                <TableCell width={100}>
-                    <Typography children={"Course Code"} sx={primaryDarkTextTheme} />
-                </TableCell>
-                <TableCell>
-                    <Typography children={"Course Name"} sx={primaryDarkTextTheme} />
-                </TableCell>
-                <TableCell align="right">
-                    <Typography children={"Grade"} sx={primaryDarkTextTheme} />
-                </TableCell>
-            </TableRow>
-        </TableHead>
-    )
 }
 
 type HeaderDescriptionTooltipProps = {
@@ -284,8 +281,7 @@ function FormattedPopoverChild({ header, subtitle, bodyText }: HeaderDescription
  *****************************/
 
 const educationOuterPaperTheme = {
-    width: "70%",
-    minWidth: 500,
+    width: { xs: "auto", sm: "90%", lg: "70%" },
     paddingTop: 2,
     marginBottom: 12,
     minHeight: 1600,
@@ -303,7 +299,8 @@ const carletonInfoStringsBoxTheme = {
 };
 
 const primaryDarkTextTheme = {
-    color: "primary.dark"
+    color: "primary.dark",
+    fontSize: { xs: 11, sm: 16 },
 };
 
 const transcriptDividerTheme = {
@@ -327,23 +324,11 @@ const sliderBoxTheme = {
 const sliderTheme = {
     ...primaryDarkTextTheme,
     marginTop: 2,
-    width: "60%"
-};
-
-const sliderInfoIconTheme = {
-    marginLeft: 3,
-    color: "primary.dark",
-    '&:hover': {
-        color: "text.disabled",
-    }
+    width: "80%"
 };
 
 const tabPanelOuterBoxTheme = {
     width: "100%",
-};
-
-const tabPanelInnerBoxTheme = {
-    minWidth: 100
 };
 
 const semesterTabsOuterBoxTheme = {
@@ -366,30 +351,26 @@ const tableRowCourseTheme = {
     backgroundColor: "#eeeeee"
 };
 
-const tableGradeCellTheme = {
-    maxWidth: 90,
-    color: "primary.dark",
-};
 
 const courseInfoIconButtonTheme = {
     padding: 0,
-    minWidth: 0,
+    paddingTop: 1,
+
     '&:hover': {
         color: "text.disabled",
     }
 };
 
-const courseNotesIconButtonTheme = {
-    ...courseInfoIconButtonTheme,
-    paddingLeft: 1,
-    paddingRight: 2,
-};
+const infoIconTheme = {
+    fontSize: { xs: "16px", sm: "24px" },
+}
+
 
 const popoverContentsBoxTheme = {
     p: 2,
     color: "primary.main",
     width: "fit-content",
-    maxWidth: 205, //TODO This should be window size dependant
+    maxWidth: { xs: 205, md: 400 }, //TODO This should be window size dependant
 }
 
 
