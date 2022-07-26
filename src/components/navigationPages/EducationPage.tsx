@@ -166,8 +166,13 @@ function GradeTable({ semester }: GradeTableProps) {
                                 <CourseInfoTableCell {...course} />
 
                                 {/* Course code and name */}
-                                <TableCell sx={primaryDarkTextTheme} >
-                                    {course.courseCode} - {course.courseName}
+                                <TableCell  >
+                                    <Typography sx={primaryDarkTextTheme}>
+                                        {course.courseCode}
+                                    </Typography>
+                                    <Typography sx={italicPrimaryDarkTextTheme}>
+                                        {course.courseName}
+                                    </Typography>
                                 </TableCell>
 
                                 {/* Course grade */}
@@ -229,7 +234,7 @@ function CourseInfoTableCell({ courseCode, description, personalNotes }: CourseN
     const open_comments = Boolean(anchorEl_comments);
 
     return (
-        <TableCell sx={{ ...primaryDarkTextTheme, display: "grid", width: 16, minWidth: 0, justifyContent: "center" }}>
+        <TableCell sx={courseInfoTableCellTheme}>
             {/* Course description button and popover */}
             <Tooltip title={COURSE_DESCRIPTION_TEXT}>
                 <Button onClick={handleClick_description} sx={courseInfoIconButtonTheme} children={<InfoOutlinedIcon sx={infoIconTheme} />} />
@@ -303,6 +308,11 @@ const primaryDarkTextTheme = {
     fontSize: { xs: 11, sm: 16 },
 };
 
+const italicPrimaryDarkTextTheme = {
+    ...primaryDarkTextTheme,
+    fontStyle: "italic"
+}
+
 const transcriptDividerTheme = {
     marginTop: 3,
     fontSize: 18,
@@ -351,6 +361,13 @@ const tableRowCourseTheme = {
     backgroundColor: "#eeeeee"
 };
 
+const courseInfoTableCellTheme = {
+    ...primaryDarkTextTheme,
+    display: "grid",
+    width: 16,
+    minWidth: 0,
+    justifyContent: "center"
+};
 
 const courseInfoIconButtonTheme = {
     padding: 0,

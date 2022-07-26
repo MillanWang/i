@@ -260,7 +260,7 @@
 		"courses": [
 			{
 				"courseCode": "SYSC 3999",
-				"courseName": "Co-op Work Term - JSI",
+				"courseName": "JSI - Co-op Work Term",
 				"grade": "SAT",
 				"description": "Position: Software Developer - Frontend",
 				"personalNotes": "My favourite part was implementing a feature to be included in the next product release. Super satisfying"
@@ -279,7 +279,7 @@
 		"courses": [
 			{
 				"courseCode": "SYSC 3999",
-				"courseName": "Co-op Work Term - JSI",
+				"courseName": "JSI - Co-op Work Term",
 				"grade": "SAT",
 				"description": "Position: Software Developer - Backend",
 				"personalNotes": "This term was really fun thanks to my team. It was an interesting challenge learning Delphi"
@@ -291,7 +291,7 @@
 		"courses": [
 			{
 				"courseCode": "SYSC 3999",
-				"courseName": "Co-op Work Term - Kinaxis",
+				"courseName": "Kinaxis - Co-op Work Term",
 				"grade": "SAT",
 				"description": "Position: Software Developer, Application Server, Platform",
 				"personalNotes": "This term was fun. I really enjoyed learning about supply chain planning and sharpening my Java skills"
@@ -336,7 +336,7 @@
 		"courses": [
 			{
 				"courseCode": "SYSC 3999",
-				"courseName": "Co-op Work Term - Spiria",
+				"courseName": "Spiria - Co-op Work Term",
 				"grade": "SAT",
 				"description": "Position: Software Developer",
 				"personalNotes": "Working with full stack application development is fun. J'aime aussi le défi de parler en français avec mes collègues francophones"
