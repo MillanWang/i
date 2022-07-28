@@ -10,7 +10,8 @@
 			"Developed frontend React components for the company library using Material UI with thorough test coverage",
 			"Resolved backend API authentication bugs with PHP & asserted expected behavior through integration testing",
 			"Developed MariaDB SQL migration scripts",
-			"Technologies: React, TypeScript, PHP, jQuery, MariaDB, SQL"
+			"Developed Confluence macro plugins using Java to accelerate the process of writing documentation pages",
+			"Technologies: PHP, React, TypeScript, jQuery, MariaDB, SQL"
 		],
 		"links": []
 	},
@@ -53,7 +54,7 @@
 		"descriptionStrings": [
 			"Developed & delivered a web application feature using Type/JavaScript, HTML, & CSS in Angular, and enhanced backend API functionality using C#/.NET",
 			"Developed thorough end-to-end & unit tests with complete code coverage using Protractor & Jasmine",
-			"Received highest performing Co-op award and $300 bonus",
+			"Received highest performing co-op award and $300 bonus",
 			"Technologies: Angular, C#/.NET, Visual Studio, VSCode, MS SQL Server, Postman, Git, Jenkins"
 		],
 		"links": []
@@ -66,7 +67,7 @@
 		],
 		"descriptionStrings": [
 			"Designed ad-hoc network simulations using Eclipse based OMNeT++ to test routing protocol hypotheses",
-			"Matplotlib, NumPy, & Pandas libraries for graphical analysis of ad-hoc network simulation statistics",
+			"Used Matplotlib, NumPy, & Pandas Python libraries for graphical analysis of ad-hoc network simulation statistics",
 			"Wrote in-depth supporting documentation detailing the implementation of the data visualization software, as well as a framework on designing simulations",
 			"Technologies: Python, MatPlotLib, NumPy, Pandas, Linux Bash, Eclipse"
 		],
