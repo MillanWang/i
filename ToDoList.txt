@@ -2,40 +2,20 @@ TODO LIST
 
 -Address TODOs throughout code. Mostly related to css optimization and theming stuff at this time
 
--Make a file dedicated to getting the data. Export all consts and then those who need it will import and pass to funcs
-    -Ideally, any data that is more than just a string should be put into the common data file(s)
-                -Should have multiple which would be sorted by category, i.e. projectData, experienceData etc....
-
-
--HeaderBar
-    -Figure out why Navigation toolbar images popout of the toolbars when the window is resized.
-    -Make it's CSS better
-
 -Education page 
     -Change whole thing to match the main color theme. Bright white is brutal on the eyes. 
     -Extract the white background from the carleton image by making it transparent with rgba-alpha cause that's the own barrier right now. 
     -Refer to the MaterialUI/Colors/BlueGray for hex codes if needed
 
--Projects & Extracurriculars
-    -Make these instantiations of CardGrid
-    -These pages are honestly pretty much the same thing with different input data.
-    -Should be able to make a general component that can be used for both
-    -Find a way to keep the card size constant and then move them around as the page resizes. Not liking the small screen look right now
-        -Might also need to do something about image scaling in the cards
-    -For projects, add some skeleton description materials about the upcoming engineering project. That ain't nothing
-    -Also add some skeleton materials about the ReactNative WIP
-
--Find a better way to organize all of the input data. Probably better to be separated into different files and then imported
-
--Better optimize the site for viewing on mobile and smaller screens. 
-    -Eg, do a vertical stack of cards instead of making them all skinny to fit.
-    -Nav bar needs a mobile specific implementation cause a vertical stack of buttons will be awkward. Maybe a sidebar?
-
 -Implement some unit and integration tests. 
     -Not having an enforced "No test, no pull request" rule shouldn't be taken as an instruction to ignore testing
+    -But realistically, still gotta interally debate how useful it is to have tests that just check if things are there.
+        -Personally set requirements of this site are super dynamic. A lot of effort put into tests gets killed with every requirement change. 
+            -Feels like I'm doing this so that recruiters think I'm competent in testing instead of the testing actually being helpful for my usecase
+            -Passing tests are never a bad thing though...
 
 -Implement another tab to show of skills with APIs and making requests. 
     -What if employers don't trust the work experience I have with it and want to see it in action?
     -Could be something like a dedicated contact page that APIs to an email sender or something like that.
     
-- Investigate WebGL for some 3D graphics. This stuff is real cool
+- Investigate WebGL and Three.JS for some 3D graphics. This stuff is real cool

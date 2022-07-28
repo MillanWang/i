@@ -6,8 +6,8 @@
 		],
 		"descriptionStrings": [
 			"The development of this site was a fun lil challenge to introduce myself to React, Material UI, and Github pages",
-			"Try resizing the page! Variable screen size is a fun design challenge. I based most of this site on Material UI cards to make content easier to deal with on mobile",
-			"If you find any issues on this site, please contact me about it! Forgive me as my QA team is simply just me when I'm not in development mode"
+			"Try resizing the page! Variable screen size is a fun design challenge which I dealt with by basing most of this site on custom Material UI cards to make content easier to deal with on mobile",
+			"If you find any issues on this site, please contact me about it! Forgive me as my QA team is simply just myself when I'm not in development mode"
 		],
 		"links": [
 			{
@@ -19,7 +19,7 @@
 	"MillWithMap": {
 		"title": "",
 		"subtitles": [
-			"Big fan of maps! Both in Type/JavaScript & geography!"
+			"Big fan of maps! Regardless of if they are data structures, geographic, or functions, I like them all!"
 		],
 		"descriptionStrings": [],
 		"links": []
@@ -57,8 +57,8 @@
 		"subtitles": [],
 		"descriptionStrings": [
 			"Languages: Python, Java, C#/.NET, Type/JavaScript, HTML, CSS, PHP, Delphi, C, SQL, Scheme/Racket, Go, Verilog, VHDL, MATLAB",
-			"Favourite Language: Python. It introduced me to programming and I like it's versatility in with lists and how concise it is. 2nd place is JavaScript cause WebDev is fun",
-			"Tools: Git, Linux/Bash, VirtualBox, Visual Studio, VSCode, Eclipse, IntelliJ, React, Angular, Microsoft SQL Server, Kafka, Jasmine, Protractor, Postman, Jenkins, REST APIs, node.js, Kubernetes, SSH",
+			"Favourite Language: Python. It introduced me to programming and I like it's versatility with lists and how concise it is. 2nd place is TypeScript cause WebDev is fun and the strict typing of TS prevents a lot of the pain of raw JS",
+			"Tools: Git, Linux/Bash, VirtualBox, Visual Studio, VSCode, Eclipse, IntelliJ, React, Angular, Microsoft SQL Server, DBeaver, Kafka, Jasmine, Protractor, Postman, Jenkins, REST APIs, node.js, Kubernetes, SSH",
 			"Favourite IDEs: VSCode for WebDev, Visual Studio for C#/.NET, IntelliJ for Java"
 		],
 		"links": []
