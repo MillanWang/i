@@ -98,7 +98,9 @@ function SemesterSliderTable() {
         { value: 13, label: '2023', },
     ];
 
-    const [semesterNumber, setSemesterNumber] = React.useState(1);
+    const DEFAULT_SEMESTER_NUMBER = 12;
+
+    const [semesterNumber, setSemesterNumber] = React.useState(DEFAULT_SEMESTER_NUMBER);
 
     const handleSliderChange = (event: Event, value: number | Array<number>, activeThumb: number) => {
         // Should never be an array but required to avoid error. I suspect it's for the multislider option from MUI
@@ -109,7 +111,8 @@ function SemesterSliderTable() {
         <Paper elevation={24} sx={semesterSliderPaperTheme}>
             <Box sx={sliderBoxTheme}>
                 <Slider
-                    defaultValue={1} step={1} max={13} min={1}
+                    defaultValue={DEFAULT_SEMESTER_NUMBER}
+                    step={1} max={13} min={1}
                     marks={SEMESTER_SELECTOR_SLIDER_MARKS}
                     onChange={handleSliderChange}
                     sx={sliderTheme}
@@ -236,9 +239,11 @@ function CourseInfoTableCell({ courseCode, description, personalNotes }: CourseN
     return (
         <TableCell sx={courseInfoTableCellTheme}>
             {/* Course description button and popover */}
-            <Tooltip title={COURSE_DESCRIPTION_TEXT}>
-                <Button onClick={handleClick_description} sx={courseInfoIconButtonTheme} children={<InfoOutlinedIcon sx={infoIconTheme} />} />
-            </Tooltip>
+            <Button onClick={handleClick_description} sx={courseInfoIconButtonTheme}  >
+                <Tooltip title={COURSE_DESCRIPTION_TEXT} placement="right">
+                    <InfoOutlinedIcon sx={infoIconTheme} />
+                </Tooltip>
+            </Button>
             <Popover
                 open={open_description} onClose={handleClose_description}
                 anchorEl={anchorEl_description}
@@ -249,9 +254,11 @@ function CourseInfoTableCell({ courseCode, description, personalNotes }: CourseN
             </Popover>
 
             {/* Personal notes button and popover */}
-            <Tooltip title={PERSONAL_EXPEREIENCE_TEXT}>
-                <Button onClick={handleClick_comments} sx={courseInfoIconButtonTheme} children={<CommentOutlinedIcon sx={infoIconTheme} />} />
-            </Tooltip>
+            <Button onClick={handleClick_comments} sx={courseInfoIconButtonTheme} >
+                <Tooltip title={PERSONAL_EXPEREIENCE_TEXT} placement="right">
+                    <CommentOutlinedIcon sx={infoIconTheme} />
+                </Tooltip>
+            </Button>
             <Popover
                 open={open_comments} onClose={handleClose}
                 anchorEl={anchorEl_comments}

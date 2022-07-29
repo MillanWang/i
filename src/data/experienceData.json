@@ -9,7 +9,7 @@
 			"Developed a new feature for a timesheeting application that allows system admins and users to conditionally automate time entries using JavaScript, PHP, and SQL",
 			"Developed frontend React components for the company library using Material UI with thorough test coverage",
 			"Resolved backend API authentication bugs with PHP & asserted expected behavior through integration testing",
-			"Developed MariaDB SQL migration scripts",
+			"Developed MariaDB SQL procedures and migration scripts",
 			"Developed Confluence macro plugins using Java to accelerate the process of writing documentation pages",
 			"Technologies: PHP, React, TypeScript, jQuery, MariaDB, SQL"
 		],

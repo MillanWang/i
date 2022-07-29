@@ -23,7 +23,7 @@
 				"courseName": "Introductory Mechanics and Thermodynamics",
 				"grade": "A+",
 				"description": "Mechanics, gravitation, oscillations, and thermodynamics. The application of calculus to solve problems in these areas of physics is introduced. This course is intended for students in the physical sciences and engineering.",
-				"personalNotes": "Prof was spectacular and made everything super clear. Hefty labs, but satisfying"
+				"personalNotes": "Prof was spectacular and made everything super clear. Hefty labs, but satisfying to complete"
 			},
 			{
 				"courseCode": "MATH 1004",
@@ -44,7 +44,7 @@
 				"courseName": "Introduction to Software Development",
 				"grade": "A+",
 				"description": "Software development as an engineering discipline, using a modern programming language, Language syntax. Algorithm design. Tracing and visualizing program execution. Testing and debugging. Program style, documentation, reliability. Lab projects are drawn from a variety of application domains: digital image manipulation, computer games, robotics.",
-				"personalNotes": "Crazy me decided to choose to go into software engineering despite never programming before. Learned how program in this course and found it super fun. Now I TA the new equivalent of this course"
+				"personalNotes": "Crazy me decided to choose to go into software engineering despite never programming before. Learned how program in this course and found it super fun. Now I've TA'd the new equivalent of this course"
 			}
 		]
 	},
@@ -70,21 +70,21 @@
 				"courseName": "Introductory Electromagnetism and Wave Motion",
 				"grade": "A+",
 				"description": "This calculus-based course introduces potential energy, work, electricity, magnetism, oscillations and waves.",
-				"personalNotes": "Lectures were way more intense than the tests. Labs were pretty intense too. Gave me a new appreciation for those who discovered the potential applicatinos of electromagnetism"
+				"personalNotes": "Lectures were way more intense than the tests. Labs were pretty intense too. Gave me a new appreciation for those who discovered the potential applications of electromagnetism"
 			},
 			{
 				"courseCode": "MATH 1005",
 				"courseName": "Differential Equations and Infinite Series for Engineering",
 				"grade": "A+",
 				"description": "First-order differential equations. Second-order linear equations with constant coefficients, undetermined coefficients, variation of parameters. Sequences and series, convergence tests, estimation of sums. Power series, Taylor series, remainders. Fourier series.",
-				"personalNotes": "This A+ felt hollow. Too easy to be satisfying, especially with multiple choice final exam. It was cool learning about fourier series though"
+				"personalNotes": "This A+ felt hollow. Too easy to be satisfying, especially with multiple choice final exam. It was cool learning about fourier series though and how it can be applied to audio and signal processing"
 			},
 			{
 				"courseCode": "SYSC 2006",
 				"courseName": "Foundations of Imperative Programming",
 				"grade": "A+",
 				"description": "The imperative programming paradigm: assignment and state, types and variables, static and dynamic typing. Memory management and object lifetimes: static allocation, automatic allocation in activation frames, dynamic allocation. Function argument passing. Recursion. Data structures: dynamic arrays, linked lists. Encapsulation and information hiding.",
-				"personalNotes": "Pointing out pointers I see in C. Very fun course. I redid all 12 labs in 1 day as exam prep"
+				"personalNotes": "Pointing out pointers I see in C. Very fun course. I redid all 12 labs in 1 day as exam prep."
 			}
 		]
 	},
@@ -96,14 +96,14 @@
 				"courseName": "Communication for Engineers",
 				"grade": "A+",
 				"description": "Development of competence in written and oral communication in engineering. Focus on professional written documents (proposals, technical explanations, research reports, summaries); written responses to engineering communications; related oral work. Attendance and participation are compulsory.",
-				"personalNotes": "I loved doing the presentations, and eventually grew to love writing the essays. A great test for my leadership skills to keep the team organized"
+				"personalNotes": "I loved doing the presentations, and eventually grew to love writing the essays. My group project was about fiber optic communications and I found that super interesting. A great test for my leadership skills to keep the team organized."
 			},
 			{
 				"courseCode": "ELEC 2501",
 				"courseName": "Circuits and Signals",
 				"grade": "A+",
 				"description": "Properties of signals. Basic circuit elements: voltage and current sources. Kirchhoff's laws, linearity, superposition. Thevenin and Norton's theorems. Circuit simplification. AC steady-state analysis: impedance, admittance, phasors, frequency response. Transient response of RL and RC circuits: form of response, initial and final conditions. RLC circuits: resonance.",
-				"personalNotes": "BRUTAL COURSE, but I grew to find the surgical handling of circuits satisfying once I could do it consistently. Classmates made petitions against the prof who wrote the exam. My mark is probably curved up. Many dinnertime coffees and long nights. "
+				"personalNotes": "BRUTAL COURSE, but I grew to find the surgical handling of circuits satisfying once I could do it consistently. Classmates made petitions against the prof who wrote the exam. My mark is probably curved up. This course brought many dinnertime coffees and long nights."
 			},
 			{
 				"courseCode": "MATH 2004",
@@ -117,14 +117,14 @@
 				"courseName": "Object Oriented Software Development",
 				"grade": "A+",
 				"description": "Designing and implementing small-scale programs as communities of collaborating objects, using a dynamically-typed or statically-typed programming language. Fundamental concepts: classes, objects, encapsulation, information hiding, inheritance, polymorphism. Iterative, incremental development and test-driven development.",
-				"personalNotes": "Learning how to develop GUIs in Java was super fun. I thoroughly enjoyed this course"
+				"personalNotes": "Learning how to develop GUIs in Java was super fun. I thoroughly enjoyed this course and consistently relate back to it in my professional career."
 			},
 			{
 				"courseCode": "SYSC 2310",
 				"courseName": "Introduction to Digital Systems",
 				"grade": "A+",
 				"description": "Number systems: binary, decimal, hexadecimal. Digital representation of information. Computer arithmetic: integer, floating point, fixed point. Boolean logic, realization as basic digital circuits. Applications: simple memory circuits, synchronous sequential circuits for computer systems. Finite state machines, state graphs, counters, adders. Asynchronous sequential circuits. Races.",
-				"personalNotes": "Super interesting learning about how to construct computer elements with basic logical circuits"
+				"personalNotes": "Super interesting learning about how to construct computer elements with basic logical circuits."
 			}
 		]
 	},
@@ -143,35 +143,35 @@
 				"courseName": "Issues in Popular Music",
 				"grade": "A+",
 				"description": "History of world popular music from the 19th century until the present. Topics may include the growth of the music industry, the impact of technology, stardom, world music, the role of the press, copyright, censorship, and sexuality.",
-				"personalNotes": "The history of music and how it interacts with technology, culture, & society is super interesting. Favourite elective and prof was spectacular."
+				"personalNotes": "The history of music and how it interacts with technology, culture, & society is super interesting. This was my favourite elective and prof was spectacular."
 			},
 			{
 				"courseCode": "PHIL 1301",
 				"courseName": "Mind, World, and Knowledge",
 				"grade": "A ",
 				"description": "Introduction to a variety of philosophical works, including contemporary, on such topics as: the nature of being, the mental, the external, consciousness, perception, experience, meaning, truth, the nature of knowledge, scientific understanding, and how language and thought represent the world.",
-				"personalNotes": "The prof was super interesting. Learned a lot about history, philosophy, culture, and religion"
+				"personalNotes": "The prof was super interesting. Learned a lot about history, philosophy, culture, metaphysics, and religion."
 			},
 			{
 				"courseCode": "SYSC 2100",
 				"courseName": "Algorithms and Data Structures",
 				"grade": "A+",
 				"description": "Thorough coverage of fundamental abstract collections: stacks, queues, lists, priority queues, dictionaries, sets, graphs. Data structures: review of arrays and linked lists; trees, heaps, hash tables. Specification, design, implementation of collections, complexity analysis of operations. Sorting algorithms.",
-				"personalNotes": "Tied for favourite second year course. Probably the most important course as it helped prepare me for technical interviews."
+				"personalNotes": "Tied for favourite second year course. Probably the most important course as it helped prepare me for technical interviews. I've also TA'd this course which is really fun!"
 			},
 			{
 				"courseCode": "SYSC 2320",
 				"courseName": "Introduction to Computer Organization and Architecture",
 				"grade": "A+",
 				"description": "Computer organization: processor, memory, input/output, system bus. Microarchitecture. Instruction set architecture. Assembly language programming: addressing modes, instruction encoding, execution. Assembler. Simple digital I/O, programmable timer. Input/output methods: polling, hardware interrupts.",
-				"personalNotes": "Tied for favourite second year course. The design of ARM processors is truly a work of art. Also very satisfying because it was really tough, but fair"
+				"personalNotes": "Tied for favourite second year course. The design of ARM processors is truly a work of art. Also very satisfying because it was really tough, but fair. The labs had us build ARM processors with simulators and I was so cool seeing how data flowed with each clock cycle."
 			},
 			{
 				"courseCode": "SYSC 3101",
 				"courseName": "Programming Languages",
 				"grade": "A ",
 				"description": "Principles underlying different kinds of programming languages (procedural, functional, logic programming) and their semantics. Overview of machinery needed for language support (compilers, interpreters and run-time systems).",
-				"personalNotes": "Racket/Scheme definitely isn't my favourite language, but it certainly is an interesting development system."
+				"personalNotes": "Racket/Scheme definitely isn't my favourite language, but it certainly is an interesting development system. Functional programming is really cool though."
 			}
 		]
 	},
@@ -190,7 +190,7 @@
 				"courseName": "Design and Analysis of Engineering Experiments",
 				"grade": "A ",
 				"description": "Statistics and the design of engineering experiments. Basic exploratory data analysis. Central limit theorem. Hypothesis testing: t-test, chi-square test, type-I and type-II errors, multiple-comparison problem. Statistical bias. Design of experiments: randomization, blocking and replication, randomized blocking designs, factorial design. Statistical software packages.",
-				"personalNotes": "Pretty reasonable and average course. Made me question statistics a lot more"
+				"personalNotes": "Pretty reasonable and average course. Made me question statistics a lot more."
 			},
 			{
 				"courseCode": "ECOR 3800",
@@ -204,7 +204,7 @@
 				"courseName": "Electronics I",
 				"grade": "A+",
 				"description": "Qualitative semiconductor physics, leading to the diode equation. Diode applications. Operational amplifiers and their application in feedback configurations including active filters. Introduction to bipolar transistors and MOSFETs, analysis of biasing circuits. Transistor applications including small signal amplifiers.",
-				"personalNotes": "Pure masochism. There were no other options for courses I could take that summer, but I wanted to take 5. Gave me a new found respect for electrical engineers, and taught me how to handle mental health emergencies"
+				"personalNotes": "Pure masochism. There were no other options for courses I could take that summer, but I wanted to take 5. Gave me a new found respect for electrical engineers, and taught me how to handle mental health emergencies. Not helpful at all in my professional career but that's just how it goes sometimes."
 			},
 			{
 				"courseCode": "SYSC 3310",
@@ -218,7 +218,7 @@
 				"courseName": "Computer Systems Design",
 				"grade": "A+",
 				"description": "System on Chip (SoC)-based computer system design. SoC internal organization. Cache memory. Interfacing: external memory, hardware subsystems. Direct memory access. Floating point units. Introduction to field programmable gate arrays.",
-				"personalNotes": "Pretty interesting learning about SoC's and the engineering tradeoffs to implement such systems. Prof was very interesting as well"
+				"personalNotes": "Pretty interesting learning about SoC's and the engineering tradeoffs to implement such systems. Prof was very interesting as well."
 			}
 		]
 	},
@@ -270,7 +270,7 @@
 				"courseName": "Software Requirements Engineering",
 				"grade": "B+ / SAT",
 				"description": "Current techniques, notations, methods, processes and tools used in Requirements Engineering. Requirements elicitation, negotiation, modeling requirements, management, validation. Skills needed for Requirements Engineering and the many disciplines on which it draws. Requirements analysis: domain modeling, modeling object interactions; UML modeling. Introduction to software development processes.",
-				"personalNotes": "School in parallel with work is tough. But it was fun learning about how software requirements and projects are planned out."
+				"personalNotes": "School in parallel with work is tough. But it was fun learning about how software requirements and projects are planned out. Amazing prof."
 			}
 		]
 	},
@@ -282,7 +282,7 @@
 				"courseName": "JSI - Co-op Work Term",
 				"grade": "SAT",
 				"description": "Position: Software Developer - Backend",
-				"personalNotes": "This term was really fun thanks to my team. It was an interesting challenge learning Delphi"
+				"personalNotes": "This term was really fun thanks to my team. It was an interesting challenge learning Delphi and how SOAP communications can work with .NET backends."
 			}
 		]
 	},
@@ -294,7 +294,7 @@
 				"courseName": "Kinaxis - Co-op Work Term",
 				"grade": "SAT",
 				"description": "Position: Software Developer, Application Server, Platform",
-				"personalNotes": "This term was fun. I really enjoyed learning about supply chain planning and sharpening my Java skills"
+				"personalNotes": "This term was fun. I really enjoyed learning about supply chain planning and sharpening my Java and C#/.NET skills"
 			}
 		]
 	},
@@ -306,7 +306,7 @@
 				"courseName": "Real-Time Concurrent Systems",
 				"grade": "A",
 				"description": "Principles and practice of a systems engineering approach to the development of software for real-time, concurrent, distributed systems. Designing to achieve concurrency, performance, and robustness, using visual notations. Converting designs into programs. Introduction to hard real-time systems. Team project.",
-				"personalNotes": "I loved learning about multithreading in Java. The project was TOUGH but it was really rewarding to exercise my project management skills to divide & assign labour, and it was also fun to learn how to do manual integration testing with multithreading. This is the most painful mark I've ever received because I saw multiple sunrises working on the project just to finish the course with an A."
+				"personalNotes": "I loved learning about multithreading in Java. The project was TOUGH but it was really rewarding to exercise my project management skills to divide & assign labour, and it was also fun to learn how to do manual integration testing with multithreading. This is the most painful mark I've ever received because I saw multiple sunrises working on the project just to finish the course with an A. The administration of the course raised some protests."
 			},
 			{
 				"courseCode": "SYSC 4001",
@@ -339,13 +339,20 @@
 				"courseName": "Spiria - Co-op Work Term",
 				"grade": "SAT",
 				"description": "Position: Software Developer",
-				"personalNotes": "Working with full stack application development is fun. J'aime aussi le défi de parler en français avec mes collègues francophones"
+				"personalNotes": "Working with full stack application development is fun. I really loved working from the database, to the API, to the frontend to deliver a feature for a product release and seeing users happy with it knowing \"I did that :)\". J'avais aimé aussi le défi de parler en français avec mes collègues francophones"
 			}
 		]
 	},
 	"Fall2022": {
 		"semesterName": "Fall 2022",
 		"courses": [
+			{
+				"courseCode": "ECOR 4995",
+				"courseName": "Professional Practice",
+				"grade": "Dec. 2022",
+				"description": "Presentations by faculty and external lecturers on the Professional Engineers Act, professional ethics and responsibilities, practice within the discipline and its relationship with other disciplines and to society, health and safety, environmental stewardship, principles and practice of sustainable development. Communication skills are emphasized.",
+				"personalNotes": "I hope that the course is fun and that the material is useful!"
+			},
 			{
 				"courseCode": "ELEC 4705",
 				"courseName": "Electronic Materials, Devices, and Transmission Media",
@@ -379,13 +386,6 @@
 	"Winter2023": {
 		"semesterName": "Winter 2023",
 		"courses": [
-			{
-				"courseCode": "ECOR 4995",
-				"courseName": "Professional Practice",
-				"grade": "Apr. 2023",
-				"description": "Presentations by faculty and external lecturers on the Professional Engineers Act, professional ethics and responsibilities, practice within the discipline and its relationship with other disciplines and to society, health and safety, environmental stewardship, principles and practice of sustainable development. Communication skills are emphasized.",
-				"personalNotes": "I hope that the course is fun and that the material is useful!"
-			},
 			{
 				"courseCode": "SYSC 4120",
 				"courseName": "Software Architecture and Design",

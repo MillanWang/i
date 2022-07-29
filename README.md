@@ -1,5 +1,5 @@
 # Welcome to my Personal Website Source Code Repository
-https://millanwang.github.io/i/#/
+https://millanwang.github.io/i
 Creating this site was my first introduction to React, and it has quickly become my favourite front end framework.
 
 ## TSX Component Structure
