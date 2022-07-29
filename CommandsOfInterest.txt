@@ -8,4 +8,4 @@ Running tests once
 npm run test 
 
 Running tests with watcher
-npm run test -- --watch
+npm run test:watch
