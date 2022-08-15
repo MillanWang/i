@@ -21,7 +21,7 @@ const projects: ImageLinkCardProps[] = [
         img: iEngineeringProject
     },
     {
-        ...ProjectsData.ReactNative,
+        ...ProjectsData.Limidi_App,
         img: iReactNative
     },
     {

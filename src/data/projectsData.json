@@ -95,20 +95,26 @@
 			}
 		]
 	},
-	"ReactNative": {
-		"title": "Top Secret Mobile Project",
+	"Limidi_App": {
+		"title": "MIDI Mobile App",
 		"subtitles": [
 			"202? Personal Project (Work in Progress)"
 		],
 		"descriptionStrings": [
-			"Development in React is super cool, so why not escalate into the world of mobile application development?",
-			"This project will involve RTP-MIDI communications, DAW integration, and user customization",
-			"However, revealing too much about works in progress is bad luck..."
+			"Currently in the process of developing a mobile app that will act as a customizable remote MIDI keyboard to interface with digital audio workstation (DAW) software",
+			"Along with the mobile app acting as a frontend, a supporting desktop app is similtaneously being developed to act as a backend, with communications being facilitated via APIs over LAN networks",
+			"The mobile app is being developed with React Native, in an Expo environment for easy cross-platform development. Eventually, this app shall be available on Android, iOS, and iPad OS",
+			"The supporting desktop app is being developed with C#/.NET to be run as an IIS server. Big thank you to the NuGet package developers!",
+			"My ultimate goal with this project is to implant a mobile device into my guitar so that I will have easy control over software audio effects during performances, so that I can become the ultimate rockstar!"
 		],
 		"links": [
 			{
-				"linkText": "Tool of Interest",
-				"url": "https://www.tobias-erichsen.de/software/rtpmidi.html"
+				"linkText": "Mobile Source Code",
+				"url": "https://github.com/MillanWang/Limidi_Mobile"
+			},
+			{
+				"linkText": "Desktop Source Code",
+				"url": "https://github.com/MillanWang/Limidi_Desktop"
 			}
 		]
 	},
