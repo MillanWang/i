@@ -6,7 +6,8 @@ import TwoColumnCardGrid from '../cards/TwoColumnCardGrid';
 import IntroPageData from '../../data/introPageData.json';
 
 // Images
-import MillPortrait from "../../images/MillPortrait.jpg"; 
+import MillPortrait from "../../images/MillPortrait.jpg";
+import MillTunnel from '../../images/Mill_Tunnel.jpg';
 
 const leftColumnCards: ImageLinkCardProps[] = [
     IntroPageData.HelloCard,
@@ -20,6 +21,10 @@ const rightColumnCards: ImageLinkCardProps[] = [
     IntroPageData.AboutMe,
     IntroPageData.LinksCard,
     IntroPageData.Technologies,
+    {
+        ...IntroPageData.MillTunnel,
+        img: MillTunnel,
+    }
 ];
 
 function IntroPage() {

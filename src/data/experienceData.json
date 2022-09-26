@@ -2,11 +2,12 @@
 	"Spiria": {
 		"title": "Spiria",
 		"subtitles": [
-			"May - Aug. 2022 (4 Months, In Progress)",
+			"May - Aug. 2022 (4 Months)",
 			"Software Developer, Full-Stack"
 		],
 		"descriptionStrings": [
-			"Developed a new feature for a timesheeting application that allows system admins and users to conditionally automate time entries using JavaScript, PHP, and SQL",
+			"Developed a new feature for a timesheeting application that allows system administrators & users to setup & use conditionally automated time entries using JavaScript, PHP+Laravel, and SQL",
+			"Developed a new feature for system administrators of a timesheeting application that better organizes time tracking to gain better project management insights using JavaScript, PHP+Laravel, and SQL",
 			"Developed frontend React components for the company library using Material UI with thorough test coverage",
 			"Resolved backend API authentication bugs with PHP & asserted expected behavior through integration testing",
 			"Developed MariaDB SQL procedures and migration scripts",
