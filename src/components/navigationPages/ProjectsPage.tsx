@@ -11,7 +11,7 @@ import iMSP_Board from '../../images/MSPBoard.gif';
 import iRisk from '../../images/risk.jpg';
 import iElevator from '../../images/Elevator.gif';
 import iSimulation from '../../images/simulation.gif';
-import iReactNative from '../../images/ReactNative.jpg';
+import iLiMIDI from '../../images/LiMIDI.gif';
 import iEngineeringProject from '../../images/CyberSecurity.jpg';
 
 
@@ -22,7 +22,7 @@ const projects: ImageLinkCardProps[] = [
     },
     {
         ...ProjectsData.Limidi_App,
-        img: iReactNative
+        img: iLiMIDI
     },
     {
         ...ProjectsData.Elevator,

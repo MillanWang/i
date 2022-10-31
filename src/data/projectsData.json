@@ -98,12 +98,12 @@
 	"Limidi_App": {
 		"title": "MIDI Controller Mobile App",
 		"subtitles": [
-			"202? Personal Project (Work in Progress)"
+			"2022 Personal Project (Work in Progress)"
 		],
 		"descriptionStrings": [
 			"Currently in the process of developing a mobile app that will act as a customizable remote MIDI controller to interface with digital audio workstation (DAW) software",
 			"Along with the mobile app acting as a frontend, a supporting desktop app is similtaneously being developed to act as a backend, with communications being facilitated via API calls over LAN networks",
-			"The mobile app is being developed with React Native, in an Expo environment for easy cross-platform development. Eventually, this app shall be available on Android, iOS, and iPad OS",
+			"The mobile app is being developed with React Native & Redux, in an Expo environment for easy cross-platform development. Eventually, this app shall be available on Android, iOS, and iPad OS",
 			"The supporting desktop app is being developed with C#/.NET to be run as an IIS server. Big thank you to the NuGet package developers!",
 			"My ultimate goal with this project is to implant a mobile device into my guitar so that I will have easy control over software audio effects during performances, so that I can become the ultimate rockstar!"
 		],
@@ -124,10 +124,10 @@
 			"2022-2023 Academic Project (Work in Progress)"
 		],
 		"descriptionStrings": [
-			"Designing & developing a web based game to be used as an educational tool for technical employees to enhance corporate security skills, exploring themes of network security, physical security, and social engineering.",
-			"The game is themed around corporate warfare, and the player assumes the role of a top executive of a company, making decisions on defensive security investment while balancing limited budgets.",
-			"Along with the defensive side of security, the player will also have the ability conduct attacks on other companies, and economic conditions within the game will force the player to confront conflicts between morality and corporate survival.",
-			"Conducting attacks and defending against attacks will be implemented as minigames representing the security concept of interest.",
+			"Designing & developing a web based game using the Unity engine to be used as an educational tool for technical employees to enhance corporate security skills, exploring themes of network security, physical security, and social engineering.",
+			"The game is themed around a company security competition where two teams test eachother's security policies to find vulnerabilities to improve on",
+			"Players will learn about the attack and defense sides of security by engaging with interactive learning minigames designed around specific security concepts",
+			"My security concept is firewall technologies and my minigames will detail how different implementations affect security, and this will be represented through in game mechanics",
 			"Developed by a team of myself and 4 other software engineering students. Supervised by Dr. Jason Jaskolka, P.Eng"
 		],
 		"links": [
