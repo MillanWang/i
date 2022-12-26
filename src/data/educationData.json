@@ -349,37 +349,37 @@
 			{
 				"courseCode": "ECOR 4995",
 				"courseName": "Professional Practice",
-				"grade": "Dec. 2022",
+				"grade": "Awaiting Mark",
 				"description": "Presentations by faculty and external lecturers on the Professional Engineers Act, professional ethics and responsibilities, practice within the discipline and its relationship with other disciplines and to society, health and safety, environmental stewardship, principles and practice of sustainable development. Communication skills are emphasized.",
-				"personalNotes": "I hope that the course is fun and that the material is useful!"
+				"personalNotes": "This course was a set OLD pre-recorded videos and is mandatory for all engineering students. This course applies more to streams of engineering where it is important to be professionally licensed as an engineer, such as civil engineering."
 			},
 			{
 				"courseCode": "ELEC 4705",
 				"courseName": "Electronic Materials, Devices, and Transmission Media",
-				"grade": "Dec. 2022",
+				"grade": "A+",
 				"description": "Review of solid-state theory, conductors, semiconductors, superconductors, insulators, and optical and magnetic properties. Devices used in modern high speed electronic and communication systems: transistors, lasers, photodiodes, fiber optics, Josephson junctions. Implications of material properties on fabrication and operation of devices and circuits.",
-				"personalNotes": "I hope that the course is fun and that the material is useful!"
+				"personalNotes": "Mandatory, pretty interesting, very difficult, and questionably useful. The most interesting part of this course was learning about the process of integrated circuit fabrication."
 			},
 			{
 				"courseCode": "SYSC 4101",
 				"courseName": "Software Validation",
-				"grade": "Dec. 2022",
+				"grade": "Awaiting Mark",
 				"description": "Techniques for the systematic testing of software systems. Software validation and verification, software debugging, quality assurance, measurement and prediction of software reliability. Emphasis on the treatment of these topics in the context of real-time and distributed systems.",
-				"personalNotes": "I hope that the course is fun and that the material is useful!"
+				"personalNotes": "My favourite part of this course was learning about balancing test coverage criterion with development budget in different contexts."
 			},
 			{
 				"courseCode": "SYSC 4810",
 				"courseName": "Introduction to Network and Software Security",
-				"grade": "Dec. 2022",
+				"grade": "Awaiting Mark",
 				"description": "Fundamental concepts, terminologies, and theories of computer security; principles underlying common security controls; various types of threats and attacks on networks and software systems, how they work, and controls for dealing with them; security risk assessment and management; legal and ethical aspects of computer security.",
-				"personalNotes": "I hope that the course is fun and that the material is useful!"
+				"personalNotes": "My favourite course this semester. I loved learning about different security defenses, and how to design systems in the face of risks"
 			},
 			{
 				"courseCode": "SYSC 4907",
 				"courseName": "Engineering Project (1/2)",
-				"grade": "Dec. 2022",
+				"grade": "CTN",
 				"description": "Student teams develop professional-level experience by applying previously acquired knowledge to a major design project. Lectures discuss project-related issues and student presentations. A project proposal, interim report, oral presentations, and a comprehensive final report are required.",
-				"personalNotes": "Selected Project Title : Games for Teaching Cybersecurity: Network Defence for Technical Employees"
+				"personalNotes": "The project is to make a video game that teaches corporate security principles to technical employees. The project is coming along well, and hs been a fun introduction to game development with the Unity engine."
 			}
 		]
 	},
