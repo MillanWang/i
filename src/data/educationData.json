@@ -2,10 +2,10 @@
 	"CarletonInfoStrings": [
 		"Bachelor of Engineering, Software Engineering",
 		"5th Year Standing, Co-Op Status",
-		"Cumulative GPA: 11.53/12 (A)",
-		"Academic Terms Completed: 7",
+		"Cumulative GPA: 11.50/12 (A)",
+		"Academic Terms Completed: 8",
 		"Co-op Work Terms Completed: 4",
-		"Remaining Courses: 6 + 2(Engineering Project)",
+		"Remaining Courses: 2 + 1(Engineering Project)",
 		"Expected Graduation Date: April 2023"
 	],
 	"Fall2018": {
@@ -349,7 +349,7 @@
 			{
 				"courseCode": "ECOR 4995",
 				"courseName": "Professional Practice",
-				"grade": "Awaiting Mark",
+				"grade": "B+",
 				"description": "Presentations by faculty and external lecturers on the Professional Engineers Act, professional ethics and responsibilities, practice within the discipline and its relationship with other disciplines and to society, health and safety, environmental stewardship, principles and practice of sustainable development. Communication skills are emphasized.",
 				"personalNotes": "This course was a set OLD pre-recorded videos and is mandatory for all engineering students. This course applies more to streams of engineering where it is important to be professionally licensed as an engineer, such as civil engineering."
 			},
@@ -363,16 +363,16 @@
 			{
 				"courseCode": "SYSC 4101",
 				"courseName": "Software Validation",
-				"grade": "Awaiting Mark",
+				"grade": "A+",
 				"description": "Techniques for the systematic testing of software systems. Software validation and verification, software debugging, quality assurance, measurement and prediction of software reliability. Emphasis on the treatment of these topics in the context of real-time and distributed systems.",
-				"personalNotes": "My favourite part of this course was learning about balancing test coverage criterion with development budget in different contexts."
+				"personalNotes": "My favourite part of this course was learning about balancing test coverage criterion with development budget in different contexts. This course gave me some very interesting insights about software testing."
 			},
 			{
 				"courseCode": "SYSC 4810",
 				"courseName": "Introduction to Network and Software Security",
-				"grade": "Awaiting Mark",
+				"grade": "A+",
 				"description": "Fundamental concepts, terminologies, and theories of computer security; principles underlying common security controls; various types of threats and attacks on networks and software systems, how they work, and controls for dealing with them; security risk assessment and management; legal and ethical aspects of computer security.",
-				"personalNotes": "My favourite course this semester. I loved learning about different security defenses, and how to design systems in the face of risks"
+				"personalNotes": "My favourite course this semester. I loved learning about different security defenses, and how to design systems in the face of risks. There was a very cool assignment where I made a attribute based access control system."
 			},
 			{
 				"courseCode": "SYSC 4907",

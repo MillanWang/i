@@ -74,6 +74,19 @@
 		],
 		"links": []
 	},
+	"CarletonTA2023": {
+		"title": "Carleton University",
+		"subtitles": [
+			"Jan. - Apr. 2023  (4 Months)",
+			"Teaching Assistant"
+		],
+		"descriptionStrings": [
+			"For SYSC 2100 (Algorithms & Data Structures)",
+			"Code reviewed & marked programming assignments to provide detailed feedback to students",
+			"Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns"
+		],
+		"links": []
+	},
 	"CarletonTA2022": {
 		"title": "Carleton University",
 		"subtitles": [
@@ -82,8 +95,8 @@
 		],
 		"descriptionStrings": [
 			"For SYSC 2100 (Algorithms & Data Structures) and ECOR 1041 (Computation & Programming)",
-			"Code review & mark programming assignments to provide detailed feedback to students",
-			"Lead software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns"
+			"Code reviewed & marked programming assignments to provide detailed feedback to students",
+			"Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns"
 		],
 		"links": []
 	},
