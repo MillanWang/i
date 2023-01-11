@@ -14,6 +14,7 @@ const softwareExperiences: ImageLinkCardProps[] = [
 ];
 
 const educationExperiences: ImageLinkCardProps[] = [
+    ExperienceData.CarletonTA2023,
     ExperienceData.CarletonTA2022,
     ExperienceData.OneClass,
     ExperienceData.CarletonTA2020,
