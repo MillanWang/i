@@ -11,7 +11,7 @@ import HtmlTooltip from '@mui/material/Tooltip';
 
 //images
 import titleGif from "../images/MillNameGlow.gif";
-import looking4WorkGif from "../images/Looking4Work.gif";
+// import looking4WorkGif from "../images/Looking4Work.gif";
 import contactEmail from "../images/ContactEmail.gif";
 
 const contactNavGif = createNavGifTooltipProps(
@@ -22,13 +22,13 @@ const contactNavGif = createNavGifTooltipProps(
     ]
 );
 
-const looking4WorkNavGif = createNavGifTooltipProps(
-    "Availability:",
-    [
-        "Full-time : 2023",
-        "Canadian Citizen & Willing to Relocate!"
-    ]
-);
+// const looking4WorkNavGif = createNavGifTooltipProps(
+//     "Availability:",
+//     [
+//         "Full-time : 2023",
+//         "Canadian Citizen & Willing to Relocate!"
+//     ]
+// );
 
 export type TitleUrlPair = {
     title: string,
@@ -79,12 +79,13 @@ function TitleHeaderSection() {
 function MenuButtonsRow({ sections }: HeaderBarProps) {
     return (
         <React.Fragment>
+            {/* // Not currently looking for work
             <NavBarImage
                 sx={navBarButtonRowImageTheme}
                 image={contactEmail}
                 alt="Contact: real.millan.wang@gmail.com"
                 tooltip={<NavGifTooltip {...contactNavGif} />}
-            />
+            /> */}
 
             {sections.map((section) => (
                 <Link href={"#" + section.url}  >
@@ -92,12 +93,13 @@ function MenuButtonsRow({ sections }: HeaderBarProps) {
                 </Link>
             ))}
 
+            {/* // Not currently looking for work
             <NavBarImage
                 sx={navBarButtonRowImageTheme}
                 image={looking4WorkGif}
                 alt="Looking for work: Full Time 2023"
                 tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
-            />
+            /> */}
         </React.Fragment>
     );
 }
@@ -118,13 +120,14 @@ function MenuDrawer({ sections }: HeaderBarProps) {
                 onClose={() => { setDrawerIsOpen(false) }}
             >
                 <Box sx={menuDrawerTheme}>
-                    {/* TODO : Consider how to show these in the drawer */}
+                    {/* // Not currently looking for work
                     <NavBarImage
                         sx={navBarImageTheme}
                         image={looking4WorkGif}
                         alt="Looking for work: Full Time 2023"
                         tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
-                    />
+                        />
+                    */}
                     <NavBarImage
                         sx={navBarImageTheme}
                         image={contactEmail}
@@ -259,11 +262,6 @@ const menuDrawerTheme = {
     display: "grid",
     justifyItems: "center",
 
-}
-
-const contactNavButtonTheme = {
-    ...navButtonTheme,
-    display: { xs: 'block', xl: 'none' }, //Hide on big screen. Only show on small
 }
 
 const navBarImageTheme = {
