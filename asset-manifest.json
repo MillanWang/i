@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/i/static/css/main.91cd7d1e.css",
-    "main.js": "/i/static/js/main.082a4064.js",
+    "main.js": "/i/static/js/main.fe0b992a.js",
     "static/js/787.ebea371e.chunk.js": "/i/static/js/787.ebea371e.chunk.js",
     "static/media/Mill_Tunnel.jpg": "/i/static/media/Mill_Tunnel.7384d13536e43c6dfe8c.jpg",
     "static/media/Elevator.gif": "/i/static/media/Elevator.48cd94ac10ce998c79a7.gif",
@@ -13,7 +13,6 @@
     "static/media/MillPortrait.jpg": "/i/static/media/MillPortrait.5e0761c1a800fee48682.jpg",
     "static/media/soundWaves.gif": "/i/static/media/soundWaves.c9e0df1abb4836a5585a.gif",
     "static/media/MillNameGlow.gif": "/i/static/media/MillNameGlow.84761f328e963a8f7ff6.gif",
-    "static/media/Looking4Work.gif": "/i/static/media/Looking4Work.54550637f1bbcde9b29c.gif",
     "static/media/LetteredTabs.gif": "/i/static/media/LetteredTabs.a270cef8cd2418a8ceda.gif",
     "static/media/ContactEmail.gif": "/i/static/media/ContactEmail.ab03f59f904fc172b336.gif",
     "static/media/CyberSecurity.jpg": "/i/static/media/CyberSecurity.029afbeae4a0ab51c78a.jpg",
@@ -21,11 +20,11 @@
     "static/media/CarletonLogo.jpg": "/i/static/media/CarletonLogo.47e2b48106516d21d156.jpg",
     "index.html": "/i/index.html",
     "main.91cd7d1e.css.map": "/i/static/css/main.91cd7d1e.css.map",
-    "main.082a4064.js.map": "/i/static/js/main.082a4064.js.map",
+    "main.fe0b992a.js.map": "/i/static/js/main.fe0b992a.js.map",
     "787.ebea371e.chunk.js.map": "/i/static/js/787.ebea371e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.91cd7d1e.css",
-    "static/js/main.082a4064.js"
+    "static/js/main.fe0b992a.js"
   ]
 }
