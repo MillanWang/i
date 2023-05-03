@@ -1,12 +1,10 @@
 {
 	"CarletonInfoStrings": [
 		"Bachelor of Engineering, Software Engineering",
-		"5th Year Standing, Co-Op Status",
 		"Cumulative GPA: 11.50/12 (A)",
-		"Academic Terms Completed: 8",
+		"Academic Terms Completed: 9",
 		"Co-op Work Terms Completed: 4",
-		"Remaining Courses: 2 + 1(Engineering Project)",
-		"Expected Graduation Date: April 2023"
+		"Graduation Date: April 2023"
 	],
 	"Fall2018": {
 		"semesterName": "Fall 2018",
@@ -391,21 +389,21 @@
 				"courseName": "Software Architecture and Design",
 				"grade": "Apr. 2023",
 				"description": "Introduction and importance of software architectures and software system design in software engineering. Current techniques, modeling notations, methods, processes and tools used in software architecture and system design. Software architectures, architectural patterns, design patterns, software qualities, software reuse.",
-				"personalNotes": "I hope that the course is fun and that the material is useful!"
+				"personalNotes": "Architecture is very cool and it is interesting to think of software systems from a higher level perspective. The course material felt a little out of date, but there were still many interesting lessons to be learned."
 			},
 			{
 				"courseCode": "SYSC 4806",
 				"courseName": "Software Engineering Lab",
 				"grade": "Apr. 2023",
 				"description": "Applying the full spectrum of engineering and programming knowledge acquired in the program through team projects in the laboratory. Practice in doing presentations and reviews. Lectures will discuss software engineering issues as they relate to the projects, from a mature point of view.",
-				"personalNotes": "I hope that the course is fun and that the material is useful!"
+				"personalNotes": "The most fun part of this course was learning how to use Java Spring and then creating a webapp with it. That webapp project was a great exercise in project management and provided solid full-stack development experience."
 			},
 			{
 				"courseCode": "SYSC 4907",
 				"courseName": "Engineering Project (2/2)",
 				"grade": "Apr. 2023",
 				"description": "Student teams develop professional-level experience by applying previously acquired knowledge to a major design project. Lectures discuss project-related issues and student presentations. A project proposal, interim report, oral presentations, and a comprehensive final report are required.",
-				"personalNotes": "Selected Project Title : Games for Teaching Cybersecurity: Network Defence for Technical Employees"
+				"personalNotes": "This project was a great way to learn about game development, and to put my project management skills to the test"
 			}
 		]
 	}
