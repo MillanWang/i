@@ -11,7 +11,6 @@ import HtmlTooltip from '@mui/material/Tooltip';
 
 //images
 import titleGif from "../images/MillNameGlow.gif";
-// import looking4WorkGif from "../images/Looking4Work.gif";
 import contactEmail from "../images/ContactEmail.gif";
 
 const contactNavGif = createNavGifTooltipProps(
@@ -22,13 +21,7 @@ const contactNavGif = createNavGifTooltipProps(
     ]
 );
 
-// const looking4WorkNavGif = createNavGifTooltipProps(
-//     "Availability:",
-//     [
-//         "Full-time : 2023",
-//         "Canadian Citizen & Willing to Relocate!"
-//     ]
-// );
+
 
 export type TitleUrlPair = {
     title: string,
@@ -79,27 +72,11 @@ function TitleHeaderSection() {
 function MenuButtonsRow({ sections }: HeaderBarProps) {
     return (
         <React.Fragment>
-            {/* // Not currently looking for work
-            <NavBarImage
-                sx={navBarButtonRowImageTheme}
-                image={contactEmail}
-                alt="Contact: real.millan.wang@gmail.com"
-                tooltip={<NavGifTooltip {...contactNavGif} />}
-            /> */}
-
             {sections.map((section) => (
                 <Link href={"#" + section.url}  >
                     <Button children={section.title} sx={navButtonButtonRowTheme} />
                 </Link>
             ))}
-
-            {/* // Not currently looking for work
-            <NavBarImage
-                sx={navBarButtonRowImageTheme}
-                image={looking4WorkGif}
-                alt="Looking for work: Full Time 2023"
-                tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
-            /> */}
         </React.Fragment>
     );
 }
@@ -120,14 +97,6 @@ function MenuDrawer({ sections }: HeaderBarProps) {
                 onClose={() => { setDrawerIsOpen(false) }}
             >
                 <Box sx={menuDrawerTheme}>
-                    {/* // Not currently looking for work
-                    <NavBarImage
-                        sx={navBarImageTheme}
-                        image={looking4WorkGif}
-                        alt="Looking for work: Full Time 2023"
-                        tooltip={<NavGifTooltip {...looking4WorkNavGif} />}
-                        />
-                    */}
                     <NavBarImage
                         sx={navBarImageTheme}
                         image={contactEmail}
@@ -147,14 +116,6 @@ function MenuDrawer({ sections }: HeaderBarProps) {
 
     );
 }
-
-
-
-
-
-//TODO : Use screen size to trigger the reg buttons vs Menu Drawer
-
-
 
 
 type NavGifTooltipProps = {
@@ -266,11 +227,6 @@ const menuDrawerTheme = {
 
 const navBarImageTheme = {
     height: 50,
-}
-
-const navBarButtonRowImageTheme = {
-    ...navBarImageTheme,
-    display: { xs: 'none', xl: 'block' }, // Only show on big. Disappear before the button row
 }
 
 
