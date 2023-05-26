@@ -98,7 +98,7 @@ function SemesterSliderTable() {
         { value: 13, label: '2023', },
     ];
 
-    const DEFAULT_SEMESTER_NUMBER = 12;
+    const DEFAULT_SEMESTER_NUMBER = 2;
 
     const [semesterNumber, setSemesterNumber] = React.useState(DEFAULT_SEMESTER_NUMBER);
 
