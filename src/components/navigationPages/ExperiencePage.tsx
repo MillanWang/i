@@ -1,11 +1,12 @@
-import * as React from 'react';
-import { ImageLinkCardProps } from '../cards/ImageLinkCard';
-import TwoColumnCardGrid from '../cards/TwoColumnCardGrid';
+import * as React from "react";
+import { ImageLinkCardProps } from "../cards/ImageLinkCard";
+import TwoColumnCardGrid from "../cards/TwoColumnCardGrid";
 
 // Data
-import ExperienceData from '../../data/experienceData.json';
+import ExperienceData from "../../data/experienceData.json";
 
 const softwareExperiences: ImageLinkCardProps[] = [
+    ExperienceData.Gadget,
     ExperienceData.Spiria,
     ExperienceData.Kinaxis,
     ExperienceData.JSI_Backend,
@@ -30,6 +31,6 @@ function ExperiencePage() {
             rightColumnCardProps={educationExperiences}
         />
     );
-};
+}
 
 export default ExperiencePage;

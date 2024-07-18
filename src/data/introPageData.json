@@ -1,74 +1,68 @@
 {
-	"HelloCard": {
-		"title": "Hello!!!",
-		"subtitles": [
-			"Welcome to my personal website!"
-		],
-		"descriptionStrings": [
-			"The development of this site was a fun lil challenge to introduce myself to React, Material UI, and Github pages",
-			"Try resizing the page! Variable screen size is a fun design challenge which I dealt with by basing most of this site on custom Material UI cards to make content easier to deal with on mobile",
-			"If you find any issues on this site, please contact me about it! Forgive me as my QA team is simply just myself when I'm not in development mode"
-		],
-		"links": [
-			{
-				"linkText": "Source Code",
-				"url": "https://github.com/MillanWang/i"
-			}
-		]
-	},
-	"MillWithMap": {
-		"title": "",
-		"subtitles": [
-			"Big fan of maps! Regardless of if they are data structures, geographic, or functions, I like them all!"
-		],
-		"descriptionStrings": [],
-		"links": []
-	},
-	"AboutMe": {
-		"title": "About Me",
-		"subtitles": [],
-		"descriptionStrings": [
-			"My name is Millan Wang and I am a 2023 software engineering graduate from Carleton University, currently working at Gadget in Ottawa",
-			"I am very passionate about software development, with a special interest in full-stack application design, and working with multimedia technologies"
-		],
-		"links": []
-	},
-	"LinksCard": {
-		"title": "Links",
-		"subtitles": [],
-		"descriptionStrings": [],
-		"links": [
-			{
-				"linkText": "Resume",
-				"url": "https://docs.google.com/document/d/1fJpibJ1Cb_HbVXiF-PU8EkPah9ylEPLp_XWIe8xxkPY/edit?usp=sharing"
-			},
-			{
-				"linkText": "Github",
-				"url": "https://github.com/MillanWang"
-			},
-			{
-				"linkText": "LinkedIn",
-				"url": "https://www.linkedin.com/in/real-millan-wang/"
-			}
-		]
-	},
-	"Technologies": {
-		"title": "Technologies",
-		"subtitles": [],
-		"descriptionStrings": [
-			"Languages: Python, Java, C#/.NET, Type/JavaScript, HTML, CSS, PHP, Delphi, C, SQL, Scheme/Racket, Go, Verilog, VHDL, MATLAB",
-			"Favourite Language: Python. It introduced me to programming and I like it's versatility with lists and how concise it is. 2nd place is TypeScript cause WebDev is fun and the strict typing of TS prevents a lot of the pain of raw JS",
-			"Tools: Git, Linux/Bash, VirtualBox, Visual Studio, VSCode, Eclipse, IntelliJ, React, Angular, Microsoft SQL Server, DBeaver, Kafka, Jasmine, Protractor, Postman, Jenkins, REST APIs, node.js, Kubernetes, SSH",
-			"Favourite IDEs: VSCode for WebDev, Visual Studio for C#/.NET, IntelliJ for Java"
-		],
-		"links": []
-	},
-	"MillTunnel": {
-		"title": "",
-		"subtitles": [
-			"Millan : Pronounced Mill-N, like chillin' with Millan is a real good feelin'"
-		],
-		"descriptionStrings": [],
-		"links": []
-	}
+    "HelloCard": {
+        "title": "Hello!!!",
+        "subtitles": ["Welcome to my personal website!"],
+        "descriptionStrings": [
+            "The development of this site was a fun lil challenge to introduce myself to React, Material UI, and Github pages",
+            "Try resizing the page! Variable screen size is a fun design challenge which I dealt with by basing most of this site on custom Material UI cards to make content easier to deal with on mobile",
+            "If you find any issues on this site, please contact me about it! Forgive me as my QA team is simply just myself when I'm not in development mode"
+        ],
+        "links": [
+            {
+                "linkText": "Source Code",
+                "url": "https://github.com/MillanWang/i"
+            }
+        ]
+    },
+    "MillWithMap": {
+        "title": "",
+        "subtitles": ["Big fan of maps! Regardless of if they are data structures, geographic, or functions, I like them all!"],
+        "descriptionStrings": [],
+        "links": []
+    },
+    "AboutMe": {
+        "title": "About Me",
+        "subtitles": [],
+        "descriptionStrings": [
+            "My name is Millan Wang and I am a software engineer currently working at Gadget in Ottawa",
+            "I am very passionate about software development, with a special interest in full-stack application design, and working with multimedia technologies"
+        ],
+        "links": []
+    },
+    "LinksCard": {
+        "title": "Links",
+        "subtitles": [],
+        "descriptionStrings": [],
+        "links": [
+            {
+                "linkText": "Resume",
+                "url": "https://docs.google.com/document/d/1dmEDkz9zdjILOQp6bAYpw8-UYZzM-Z8Brd7REtDcoMc/edit?usp=sharing"
+            },
+            {
+                "linkText": "Github",
+                "url": "https://github.com/MillanWang"
+            },
+            {
+                "linkText": "LinkedIn",
+                "url": "https://www.linkedin.com/in/real-millan-wang/"
+            }
+        ]
+    },
+    "Technologies": {
+        "title": "Technologies",
+        "subtitles": [],
+        "descriptionStrings": [
+            "Languages: Python, Java, C#/.NET, Type/JavaScript, HTML, CSS, PHP, Delphi, C, SQL, Scheme/Racket, Go, Verilog, VHDL, MATLAB",
+            "Favourite Language: Python. It introduced me to programming and I like it's versatility with lists and how concise it is. 2nd place is TypeScript cause WebDev is fun and the strict typing of TS prevents a lot of the pain of raw JS",
+            "Tools: Git, Linux/Bash, VirtualBox, Visual Studio, VSCode, Eclipse, IntelliJ, React, Angular, Microsoft SQL Server, DBeaver, Kafka, Jasmine, Protractor, Postman, Jenkins, REST APIs, node.js, Kubernetes, SSH",
+            "Favourite IDEs: VSCode for WebDev, Visual Studio for C#/.NET, IntelliJ for Java"
+        ],
+        "links": []
+    },
+    "MillTunnel": {
+        "title": "",
+        "subtitles": ["Millan : Pronounced Mill-N, like chillin' with Millan is a real good feelin'"],
+        "descriptionStrings": [],
+        "links": []
+    }
 }
