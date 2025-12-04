@@ -1,130 +1,148 @@
 {
-    "Gadget": {
-        "title": "Gadget",
-        "subtitles": ["May 2023 - Present", "Full-Stack Software Engineer"],
-        "descriptionStrings": [
-            "In a high speed start-up environment, delivered multiple features for a full stack application development platform while providing ongoing support to customers to address technical concerns and implement feature requests, all while the customer count has multiplied by 3X",
-            "Developed an application serialization system for source controlling application states, allowing for easier user collaboration and feature staging, removing the biggest technical barrier for adoption by ecommerce agencies",
-            "Developed a migration system to allow for app serialization in existing user apps, with backup & dry-run systems to build migration success confidence",
-            "Developed a data model action system based on JavaScript files to replace the previous GUI-based system to increase app extensibility for power users",
-            "Developed a migration system to convert apps from the old GUI-based data model action system to the code based system, and oversaw the force migration of all user apps while adding special systems for the oldest user apps containing unchangeable legacy features in their production apps",
-            "Developing customizable automatic frontend component generation systems for user apps to accelerate user onboarding and to minimize early churn",
-            "Providing mentorship and in-depth code review for interns and new hires"
-        ],
-        "links": [
-            {
-                "linkText": "Gadget",
-                "url": "https://gadget.dev/"
-            }
-        ]
-    },
-    "Spiria": {
-        "title": "Spiria",
-        "subtitles": ["May - Aug. 2022 (4 Months)", "Software Developer, Full-Stack"],
-        "descriptionStrings": [
-            "Developed a new feature for a timesheeting application that allows system administrators & users to setup & use conditionally automated time entries resulting in daily time saves for all users using JavaScript, PHP+Laravel, and SQL",
-            "Developed a new feature for system administrators of a timesheeting application that better organizes time tracking to gain better project management insights using JavaScript, PHP+Laravel, and SQL",
-            "Developed frontend React components for the company library using Material UI with thorough test coverage",
-            "Resolved backend API authentication bugs with PHP & asserted expected behavior through integration testing",
-            "Developed MariaDB SQL procedures and migration scripts",
-            "Developed Confluence macro plugins using Java to accelerate the process of writing documentation pages",
-            "Technologies: PHP, React, TypeScript, jQuery, MariaDB, SQL"
-        ],
-        "links": []
-    },
-    "Kinaxis": {
-        "title": "Kinaxis",
-        "subtitles": ["Sep. - Dec. 2021 (4 Months)", "Software Developer, Application Server, Platform"],
-        "descriptionStrings": [
-            "Conducted migrations and refactored the server & test environments to assist in removing subscription based dependencies, saving up to $250/developer/month",
-            "Implemented user stories & resolved bugs to develop & maintain supply chain management application platform features using Java GUIs & C#/.NET backend APIs",
-            "Designed thorough integration & unit tests to validate functionality and increase code coverage during CI/CD",
-            "Technologies: Java GUIs, C#/.NET APIs, Visual Studio, Eclipse, Postman, Git, Jenkins"
-        ],
-        "links": []
-    },
-    "JSI_Backend": {
-        "title": "JSI",
-        "subtitles": ["May - Aug. 2021 (4 Months)", "Software Developer, Backend"],
-        "descriptionStrings": [
-            "Implemented user stories & resolved bugs to add location tracking & caching functionality to address the updated needs of a client, using Delphi, .NET, & Kafka",
-            "Upgraded C#/.NET backend API to accommodate the growing demands of the frontend",
-            "Developed database procedures using MS SQL Server",
-            "Wrote in-depth wiki guides detailing internal application design techniques, and working with Agile methodology",
-            "Received highest performing co-op award and $300 bonus",
-            "Technologies: Delphi, C#/.NET APIs, Kafka, Visual Studio, MS SQL Server, Postman, Git, Jenkins"
-        ],
-        "links": []
-    },
-    "JSI_Frontend": {
-        "title": "JSI",
-        "subtitles": ["Jan. - Apr. 2021 (4 Months)", "Software Developer, Frontend"],
-        "descriptionStrings": [
-            "Developed & delivered a feature to import custom user templates to a DB to generate reports using an Angular frontend, a C#/.NET API backend, and a MySQL database",
-            "Developed thorough end-to-end & unit tests with complete code coverage using Protractor & Jasmine",
-            "Received highest performing co-op award and $300 bonus",
-            "Technologies: Angular, C#/.NET, Visual Studio, VSCode, MS SQL Server, Postman, Git, Jenkins"
-        ],
-        "links": []
-    },
-    "CarletonResearch": {
-        "title": "Carleton University",
-        "subtitles": ["Jun.-Aug. 2019 (3 Months)", "Undergraduate Research Assistant"],
-        "descriptionStrings": [
-            "Designed ad-hoc network simulations using Eclipse based OMNeT++ to test routing protocol hypotheses",
-            "Used Matplotlib, NumPy, & Pandas Python libraries for graphical analysis of ad-hoc network simulation statistics",
-            "Wrote in-depth supporting documentation detailing the implementation of the data visualization software, as well as a framework on designing simulations",
-            "Technologies: Python, MatPlotLib, NumPy, Pandas, Linux Bash, Eclipse"
-        ],
-        "links": []
-    },
-    "CarletonTA2023": {
-        "title": "Carleton University",
-        "subtitles": ["Jan. - Apr. 2023  (4 Months)", "Teaching Assistant"],
-        "descriptionStrings": [
-            "For SYSC 2100 (Algorithms & Data Structures)",
-            "Code reviewed & marked programming assignments to provide detailed feedback to students",
-            "Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns"
-        ],
-        "links": []
-    },
-    "CarletonTA2022": {
-        "title": "Carleton University",
-        "subtitles": ["Jan. - Apr. 2022  (4 Months)", "Teaching Assistant"],
-        "descriptionStrings": [
-            "For SYSC 2100 (Algorithms & Data Structures) and ECOR 1041 (Computation & Programming)",
-            "Code reviewed & marked programming assignments to provide detailed feedback to students",
-            "Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns"
-        ],
-        "links": []
-    },
-    "OneClass": {
-        "title": "OneClass",
-        "subtitles": ["Sep. 2020 - Jan. 2021 (5 Months)", "Educational Video Producer"],
-        "descriptionStrings": [
-            "Produced 50+ hours of educational videos detailing solutions to calculus, mechanics, electrostatics, and circuit questions",
-            "Videos produced using OBS & DaVinci Resolve"
-        ],
-        "links": []
-    },
-    "CarletonTA2020": {
-        "title": "Carleton University",
-        "subtitles": ["Sep. - Dec. 2020 (4 Months)", "Teaching Assistant"],
-        "descriptionStrings": [
-            "For ECOR 1041 (Computation & Programming)",
-            "Code reviewed & marked programming assignments to provide detailed feedback to students",
-            "Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns",
-            "Nominated for teaching awards by 5 students"
-        ],
-        "links": []
-    },
-    "CarletonEMLC": {
-        "title": "Carleton University",
-        "subtitles": ["Sep. - Dec. 2020 (4 Months)", "EMLC Engineering Scholar"],
-        "descriptionStrings": [
-            "Provide tutoring across 10 different first year courses including programming, calculus, mechanics, electricity, and chemistry",
-            "Maintained the highest tutor ranking out of 20"
-        ],
-        "links": []
-    }
+  "Gadget": {
+    "title": "Gadget",
+    "subtitles": ["May 2023 - Present", "Full-Stack Software Engineer"],
+    "descriptionStrings": [
+      "Delivered major features for a full-stack application development platform in a high-speed startup environment, supporting a customer base that grew by 8x",
+      "Developed and maintained billing and account-control systems using Stripe and Orb to handle usage tracking, invoicing, and automatic account freezing",
+      "Enhanced the platform's AI Assistant by implementing tool calls & contextual app-state based LLM prompting, enabling automated code generation, schema updates, data creation, and error resolution — increasing the potential user base by minimizing the technical expertise required to build an app",
+      "Improved Shopify integration onboarding and app-creation pipelines, reducing time-to-value, increasing activation rates from 32% to 70%, and enabling ecommerce agency users to onboard clients faster and scale growth",
+      "Implemented ChatGPT integration enabling users to build custom MCP servers with authenticated, user-defined React frontends that render within ChatGPT",
+      "Developed an operations dashboard to present detailed app metrics, error analysis, and cost visibility to help users optimize performance & usage",
+      "Authored Autocomponents, a backend schema-driven React component library that automatically generates UI elements synced with backend models to accelerate development by avoiding boilerplate & manual UI redefinitions",
+      "Enhanced the in-browser code editor experience with full-text search, and a TypeScript language server, providing IDE-grade autocomplete, syntax highlighting, reference navigation, and error detection for prompting AI fixes",
+      "Developed a source-controlled, multi-environment application state system and platform-level backup and migration tooling, allowing the platform to seamlessly migrate existing customer apps to the new system and eliminating the biggest technical platform barrier for converting new agency customers",
+      "Providing mentorship and in-depth code review for interns and new hires"
+    ],
+    "links": [
+      {
+        "linkText": "Gadget",
+        "url": "https://gadget.dev/"
+      }
+    ]
+  },
+  "Spiria": {
+    "title": "Spiria",
+    "subtitles": [
+      "May - Aug. 2022 (4 Months)",
+      "Software Developer, Full-Stack"
+    ],
+    "descriptionStrings": [
+      "Developed a new feature for a timesheeting application that allows system administrators & users to setup & use conditionally automated time entries resulting in daily time saves for all users using JavaScript, PHP+Laravel, and SQL",
+      "Developed a new feature for system administrators of a timesheeting application that better organizes time tracking to gain better project management insights using JavaScript, PHP+Laravel, and SQL",
+      "Developed frontend React components for the company library using Material UI with thorough test coverage",
+      "Resolved backend API authentication bugs with PHP & asserted expected behavior through integration testing",
+      "Developed MariaDB SQL procedures and migration scripts",
+      "Developed Confluence macro plugins using Java to accelerate the process of writing documentation pages",
+      "Technologies: PHP, React, TypeScript, jQuery, MariaDB, SQL"
+    ],
+    "links": []
+  },
+  "Kinaxis": {
+    "title": "Kinaxis",
+    "subtitles": [
+      "Sep. - Dec. 2021 (4 Months)",
+      "Software Developer, Application Server, Platform"
+    ],
+    "descriptionStrings": [
+      "Conducted migrations and refactored the server & test environments to assist in removing subscription based dependencies, saving up to $250/developer/month",
+      "Implemented user stories & resolved bugs to develop & maintain supply chain management application platform features using Java GUIs & C#/.NET backend APIs",
+      "Designed thorough integration & unit tests to validate functionality and increase code coverage during CI/CD",
+      "Technologies: Java GUIs, C#/.NET APIs, Visual Studio, Eclipse, Postman, Git, Jenkins"
+    ],
+    "links": []
+  },
+  "JSI_Backend": {
+    "title": "JSI",
+    "subtitles": ["May - Aug. 2021 (4 Months)", "Software Developer, Backend"],
+    "descriptionStrings": [
+      "Implemented user stories & resolved bugs to add location tracking & caching functionality to address the updated needs of a client, using Delphi, .NET, & Kafka",
+      "Upgraded C#/.NET backend API to accommodate the growing demands of the frontend",
+      "Developed database procedures using MS SQL Server",
+      "Wrote in-depth wiki guides detailing internal application design techniques, and working with Agile methodology",
+      "Received highest performing co-op award and $300 bonus",
+      "Technologies: Delphi, C#/.NET APIs, Kafka, Visual Studio, MS SQL Server, Postman, Git, Jenkins"
+    ],
+    "links": []
+  },
+  "JSI_Frontend": {
+    "title": "JSI",
+    "subtitles": [
+      "Jan. - Apr. 2021 (4 Months)",
+      "Software Developer, Frontend"
+    ],
+    "descriptionStrings": [
+      "Developed & delivered a feature to import custom user templates to a DB to generate reports using an Angular frontend, a C#/.NET API backend, and a MySQL database",
+      "Developed thorough end-to-end & unit tests with complete code coverage using Protractor & Jasmine",
+      "Received highest performing co-op award and $300 bonus",
+      "Technologies: Angular, C#/.NET, Visual Studio, VSCode, MS SQL Server, Postman, Git, Jenkins"
+    ],
+    "links": []
+  },
+  "CarletonResearch": {
+    "title": "Carleton University",
+    "subtitles": [
+      "Jun.-Aug. 2019 (3 Months)",
+      "Undergraduate Research Assistant"
+    ],
+    "descriptionStrings": [
+      "Designed ad-hoc network simulations using Eclipse based OMNeT++ to test routing protocol hypotheses",
+      "Used Matplotlib, NumPy, & Pandas Python libraries for graphical analysis of ad-hoc network simulation statistics",
+      "Wrote in-depth supporting documentation detailing the implementation of the data visualization software, as well as a framework on designing simulations",
+      "Technologies: Python, MatPlotLib, NumPy, Pandas, Linux Bash, Eclipse"
+    ],
+    "links": []
+  },
+  "CarletonTA2023": {
+    "title": "Carleton University",
+    "subtitles": ["Jan. - Apr. 2023  (4 Months)", "Teaching Assistant"],
+    "descriptionStrings": [
+      "For SYSC 2100 (Algorithms & Data Structures)",
+      "Code reviewed & marked programming assignments to provide detailed feedback to students",
+      "Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns"
+    ],
+    "links": []
+  },
+  "CarletonTA2022": {
+    "title": "Carleton University",
+    "subtitles": ["Jan. - Apr. 2022  (4 Months)", "Teaching Assistant"],
+    "descriptionStrings": [
+      "For SYSC 2100 (Algorithms & Data Structures) and ECOR 1041 (Computation & Programming)",
+      "Code reviewed & marked programming assignments to provide detailed feedback to students",
+      "Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns"
+    ],
+    "links": []
+  },
+  "OneClass": {
+    "title": "OneClass",
+    "subtitles": [
+      "Sep. 2020 - Jan. 2021 (5 Months)",
+      "Educational Video Producer"
+    ],
+    "descriptionStrings": [
+      "Produced 50+ hours of educational videos detailing solutions to calculus, mechanics, electrostatics, and circuit questions",
+      "Videos produced using OBS & DaVinci Resolve"
+    ],
+    "links": []
+  },
+  "CarletonTA2020": {
+    "title": "Carleton University",
+    "subtitles": ["Sep. - Dec. 2020 (4 Months)", "Teaching Assistant"],
+    "descriptionStrings": [
+      "For ECOR 1041 (Computation & Programming)",
+      "Code reviewed & marked programming assignments to provide detailed feedback to students",
+      "Led software development support sessions to assist students in troubleshooting issues and implementing optimized design patterns",
+      "Nominated for teaching awards by 5 students"
+    ],
+    "links": []
+  },
+  "CarletonEMLC": {
+    "title": "Carleton University",
+    "subtitles": ["Sep. - Dec. 2020 (4 Months)", "EMLC Engineering Scholar"],
+    "descriptionStrings": [
+      "Provide tutoring across 10 different first year courses including programming, calculus, mechanics, electricity, and chemistry",
+      "Maintained the highest tutor ranking out of 20"
+    ],
+    "links": []
+  }
 }
