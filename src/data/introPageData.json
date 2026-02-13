@@ -14,7 +14,7 @@
       },
       {
         "linkText": "Resume",
-        "url": "https://docs.google.com/document/d/1B1U2lbF-Rh_9enJ1lz-HGDZnyBnziu0dGguTSR4wA4s/edit?usp=sharing"
+        "url": "https://docs.google.com/document/d/1Ii0t7dZODGxc7nVjP4kp9aWij8k0bprKF-tvMkVa4CA/edit?usp=sharing"
       },
       {
         "linkText": "Github",
@@ -42,11 +42,11 @@
     "title": "Technologies",
     "subtitles": [],
     "descriptionStrings": [
-      "Languages: TypeScript, JavaScript, Java, Python, C#, SQL, C, PHP, Delphi,",
-      "Frontend: React, React Native, Angular, MobX, Redux, jQuery, Electron, Jest, BaseUI",
-      "Backend: Node.js, GraphQL, .NET, IIS, Laravel, Kafka, Postman, REST APIs",
-      "Database: Postgres, MySQL, MariaDB,",
-      "Cloud: Docker, K8s, Buildkite, Jenkins"
+      "Languages: TypeScript, JavaScript, Java, Python, C#, SQL, C, PHP, Delphi, Bash",
+      "Frontend: React, React Native, Angular, MobX, Redux, jQuery, Electron, Vite, Tailwind",
+      "Backend: Node.js, GraphQL, Temporal, .NET, Laravel, IIS, Kafka, REST, OTel",
+      "Database: Clickhouse, Postgres, Redis, MySQL, MariaDB, ElasticSearch",
+      "Cloud: Docker, K8s, Buildkite, Jenkins, Github actions"
     ],
     "links": []
   },
